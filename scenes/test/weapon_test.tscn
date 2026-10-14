@@ -1,8 +1,8 @@
 [gd_scene format=3]
-[ext_resource type="PackedScene" path="res://scenes/environment/la_tiendita_graybox.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/test/la_tiendita_graybox.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/characters/mango/player.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/test/target_dummy.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/main/hud.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="4"]
 
 [sub_resource type="Environment" id="environment"]
 background_mode = 1

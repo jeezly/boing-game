@@ -1,0 +1,224 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="r1"]
+albedo_color = Color(0.61961,0.43922,0.24314,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r2"]
+size = Vector3(4, 1.15, 5)
+material = SubResource("r1")
+
+[sub_resource type="BoxShape3D" id="r3"]
+size = Vector3(4, 1.15, 5)
+
+[sub_resource type="StandardMaterial3D" id="r4"]
+albedo_color = Color(0.78824,0.59216,0.32549,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r5"]
+size = Vector3(0.1, 0.25, 5)
+material = SubResource("r4")
+
+[sub_resource type="StandardMaterial3D" id="r6"]
+albedo_color = Color(0.92157,0.64706,0.22353,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r7"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r6")
+
+[sub_resource type="StandardMaterial3D" id="r8"]
+albedo_color = Color(0.39608,0.58039,0.28235,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r9"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r8")
+
+[sub_resource type="StandardMaterial3D" id="r10"]
+albedo_color = Color(0.84706,0.35294,0.21961,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r11"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r10")
+
+[node name="produce_display" type="Node3D"]
+
+
+[node name="body" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(0, 0.575, 0)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="body"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r2")
+
+[node name="collision" type="CollisionShape3D" parent="body"]
+shape = SubResource("r3")
+
+[node name="lip_-1" type="MeshInstance3D" parent="."]
+position = Vector3(-1.95, 1.18, 0)
+mesh = SubResource("r5")
+
+[node name="lip_1" type="MeshInstance3D" parent="."]
+position = Vector3(1.95, 1.18, 0)
+mesh = SubResource("r5")
+
+[node name="produce_0" type="MeshInstance3D" parent="."]
+position = Vector3(-1.45, 1.25, -2.02)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r7")
+
+[node name="produce_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.5, 1.25, -2.02)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r9")
+
+[node name="produce_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.45, 1.25, -2.02)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r11")
+
+[node name="produce_3" type="MeshInstance3D" parent="."]
+position = Vector3(1.4, 1.25, -2.02)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r7")
+
+[node name="produce_4" type="MeshInstance3D" parent="."]
+position = Vector3(-1.45, 1.25, -1.36)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r9")
+
+[node name="produce_5" type="MeshInstance3D" parent="."]
+position = Vector3(-0.5, 1.25, -1.36)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r11")
+
+[node name="produce_6" type="MeshInstance3D" parent="."]
+position = Vector3(0.45, 1.25, -1.36)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r7")
+
+[node name="produce_7" type="MeshInstance3D" parent="."]
+position = Vector3(1.4, 1.25, -1.36)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r9")
+
+[node name="produce_8" type="MeshInstance3D" parent="."]
+position = Vector3(-1.45, 1.25, -0.7)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r11")
+
+[node name="produce_9" type="MeshInstance3D" parent="."]
+position = Vector3(-0.5, 1.25, -0.7)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r7")
+
+[node name="produce_10" type="MeshInstance3D" parent="."]
+position = Vector3(0.45, 1.25, -0.7)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r9")
+
+[node name="produce_11" type="MeshInstance3D" parent="."]
+position = Vector3(1.4, 1.25, -0.7)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r11")
+
+[node name="produce_12" type="MeshInstance3D" parent="."]
+position = Vector3(-1.45, 1.25, -0.04)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r7")
+
+[node name="produce_13" type="MeshInstance3D" parent="."]
+position = Vector3(-0.5, 1.25, -0.04)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r9")
+
+[node name="produce_14" type="MeshInstance3D" parent="."]
+position = Vector3(0.45, 1.25, -0.04)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r11")
+
+[node name="produce_15" type="MeshInstance3D" parent="."]
+position = Vector3(1.4, 1.25, -0.04)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r7")
+
+[node name="produce_16" type="MeshInstance3D" parent="."]
+position = Vector3(-1.45, 1.25, 0.62)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r9")
+
+[node name="produce_17" type="MeshInstance3D" parent="."]
+position = Vector3(-0.5, 1.25, 0.62)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r11")
+
+[node name="produce_18" type="MeshInstance3D" parent="."]
+position = Vector3(0.45, 1.25, 0.62)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r7")
+
+[node name="produce_19" type="MeshInstance3D" parent="."]
+position = Vector3(1.4, 1.25, 0.62)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r9")
+
+[node name="produce_20" type="MeshInstance3D" parent="."]
+position = Vector3(-1.45, 1.25, 1.28)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r11")
+
+[node name="produce_21" type="MeshInstance3D" parent="."]
+position = Vector3(-0.5, 1.25, 1.28)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r7")
+
+[node name="produce_22" type="MeshInstance3D" parent="."]
+position = Vector3(0.45, 1.25, 1.28)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r9")
+
+[node name="produce_23" type="MeshInstance3D" parent="."]
+position = Vector3(1.4, 1.25, 1.28)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r11")
+
+[node name="produce_24" type="MeshInstance3D" parent="."]
+position = Vector3(-1.45, 1.25, 1.94)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r7")
+
+[node name="produce_25" type="MeshInstance3D" parent="."]
+position = Vector3(-0.5, 1.25, 1.94)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r9")
+
+[node name="produce_26" type="MeshInstance3D" parent="."]
+position = Vector3(0.45, 1.25, 1.94)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r11")
+
+[node name="produce_27" type="MeshInstance3D" parent="."]
+position = Vector3(1.4, 1.25, 1.94)
+scale = Vector3(0.46, 0.4, 0.5)
+mesh = SubResource("r7")
+
+[node name="price" type="Label3D" parent="."]
+position = Vector3(0, 0.7, 2.54)
+text = "OFERTA DEL DÍA · $19"
+font_size = 26
+pixel_size = 0.006
+outline_size = 5
+modulate = Color(1.0,0.9411764705882353,0.6470588235294118,1)

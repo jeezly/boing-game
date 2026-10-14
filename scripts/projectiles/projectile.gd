@@ -8,6 +8,9 @@ var shooter: CollisionObject3D
 var age: float = 0.0
 var launched: bool = false
 
+func _ready() -> void:
+	add_to_group("projectiles")
+
 func launch(direction: Vector3, speed: float, hit_damage: float, source: CollisionObject3D) -> void:
 	shooter = source
 	damage = hit_damage

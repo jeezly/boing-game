@@ -1,0 +1,68 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="r1"]
+albedo_color = Color(0.30196,0.44314,0.43137,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r2"]
+size = Vector3(0.25, 0.5, 0.18)
+material = SubResource("r1")
+
+[sub_resource type="StandardMaterial3D" id="r3"]
+albedo_color = Color(0.46275,0.65490,0.63922,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r4"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r3")
+
+[sub_resource type="StandardMaterial3D" id="r5"]
+albedo_color = Color(0.68627,0.76863,0.71765,1)
+roughness = 0.8
+
+[sub_resource type="TorusMesh" id="r6"]
+inner_radius = 0.53
+outer_radius = 0.56
+material = SubResource("r5")
+
+[sub_resource type="StandardMaterial3D" id="r7"]
+albedo_color = Color(0.82745,0.86667,0.78431,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r8"]
+size = Vector3(0.43, 0.13, 0.045)
+material = SubResource("r7")
+
+[node name="store_fan" type="Node3D"]
+
+
+[node name="wall_mount" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0.15)
+mesh = SubResource("r2")
+
+[node name="motor" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0.045)
+scale = Vector3(0.26, 0.26, 0.18)
+mesh = SubResource("r4")
+
+[node name="cage" type="MeshInstance3D" parent="."]
+mesh = SubResource("r6")
+rotation = Vector3(1.570796,0,0)
+
+[node name="blade_0" type="MeshInstance3D" parent="."]
+position = Vector3(0.24, 0, -0.035)
+mesh = SubResource("r8")
+rotation = Vector3(0, 0, 0)
+
+[node name="blade_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.12, 0.207846, -0.035)
+mesh = SubResource("r8")
+rotation = Vector3(0, 0, 2.0944)
+
+[node name="blade_2" type="MeshInstance3D" parent="."]
+position = Vector3(-0.12, -0.207846, -0.035)
+mesh = SubResource("r8")
+rotation = Vector3(0, 0, 4.18879)

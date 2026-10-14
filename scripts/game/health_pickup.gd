@@ -1,30 +1,37 @@
 extends Area3D
-const Build = preload("res://scripts/environment/store_builder.gd")
-@export var healing: float = 30.0
+## Temporary authored survival supply; no inventory or drop system.
+signal collected(player: Node3D, restored_hp: float)
+@export_range(1.0, 100.0) var healing: float = 30.0
+@onready var visual: Node3D = $visual
 var clock: float = 0.0
 var used: bool = false
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
-	Build.box($visual, Vector3.ZERO, Vector3(0.6, 0.48, 0.45), Build.mat("fff1ce"), "supply_box")
-	Build.box($visual, Vector3(0, 0, 0.235), Vector3(0.12, 0.33, 0.018), Build.mat("47ac76"), "health_cross")
-	Build.box($visual, Vector3(0, 0, 0.245), Vector3(0.34, 0.12, 0.018), Build.mat("47ac76"))
-	Build.label(self, "+30 SALUD", Vector3(0, 1.08, 0), 24, Color("a6e5b4"))
 
 func _process(delta: float) -> void:
 	clock += delta
-	$visual.position.y = 0.62 + sin(clock * 2.5) * 0.08
-	$visual.rotation.y += delta * 0.5
+	visual.position.y = 0.62 + sin(clock * 2.5) * 0.08
+	visual.rotation.y += delta * 0.5
+	visual.scale = Vector3.ONE * (1.0 + sin(clock * 2.5) * 0.025)
 
 func _on_body_entered(body: Node3D) -> void:
-	if used or not body.is_in_group("player"): return
-	if float(body.get("hp")) <= 0.0 or float(body.get("hp")) >= float(body.get("max_hp")): return
+	if used or get_tree().paused or not body.is_in_group("player") or not body.has_method("heal"): return
+	var previous: float = float(body.get("hp"))
+	if previous <= 0.0 or previous >= float(body.get("max_hp")): return
 	used = true
 	body.call("heal", healing)
+	var restored: float = float(body.get("hp")) - previous
+	if restored <= 0.0:
+		used = false
+		return
+	set_deferred("monitoring", false)
+	visual.hide()
+	collected.emit(body, restored)
 	queue_free()
 
 func _physics_process(_delta: float) -> void:
-	# Also collect while already overlapping, after damage creates room for healing.
+	# A full-health player may already overlap when damage makes room to heal.
 	for body in get_overlapping_bodies():
 		_on_body_entered(body)
 		if used: break

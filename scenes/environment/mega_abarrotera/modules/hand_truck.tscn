@@ -1,0 +1,97 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="r1"]
+albedo_color = Color(0.20392,0.41176,0.42745,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r2"]
+size = Vector3(1, 1.4, 1.2)
+material = SubResource("r1")
+
+[sub_resource type="BoxShape3D" id="r3"]
+size = Vector3(1, 1.4, 1.2)
+
+[sub_resource type="StandardMaterial3D" id="r4"]
+albedo_color = Color(0.79216,0.35294,0.24706,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r5"]
+size = Vector3(0.065, 1.8, 0.065)
+material = SubResource("r4")
+
+[sub_resource type="BoxMesh" id="r6"]
+size = Vector3(0.85, 0.075, 0.075)
+material = SubResource("r4")
+
+[sub_resource type="StandardMaterial3D" id="r7"]
+albedo_color = Color(0.46667,0.49020,0.42745,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r8"]
+size = Vector3(1, 0.1, 0.65)
+material = SubResource("r7")
+
+[sub_resource type="StandardMaterial3D" id="r9"]
+albedo_color = Color(0.16471,0.24706,0.26275,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r10"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r9")
+
+[sub_resource type="StandardMaterial3D" id="r11"]
+albedo_color = Color(0.77255,0.61961,0.40784,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r12"]
+size = Vector3(0.8, 0.9, 0.75)
+material = SubResource("r11")
+
+[node name="hand_truck" type="Node3D"]
+
+
+[node name="body" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(0, 0.7, 0)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="body"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r2")
+visible = false
+
+[node name="collision" type="CollisionShape3D" parent="body"]
+shape = SubResource("r3")
+
+[node name="frame_-0.4" type="MeshInstance3D" parent="."]
+position = Vector3(-0.4, 0.9, 0)
+mesh = SubResource("r5")
+
+[node name="frame_0.4" type="MeshInstance3D" parent="."]
+position = Vector3(0.4, 0.9, 0)
+mesh = SubResource("r5")
+
+[node name="handle" type="MeshInstance3D" parent="."]
+position = Vector3(0, 1.8, 0)
+mesh = SubResource("r6")
+
+[node name="toe_plate" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.15, -0.3)
+mesh = SubResource("r8")
+
+[node name="wheel_-0.43" type="MeshInstance3D" parent="."]
+position = Vector3(-0.43, 0.22, 0.18)
+scale = Vector3(0.28, 0.4, 0.4)
+mesh = SubResource("r10")
+
+[node name="wheel_0.43" type="MeshInstance3D" parent="."]
+position = Vector3(0.43, 0.22, 0.18)
+scale = Vector3(0.28, 0.4, 0.4)
+mesh = SubResource("r10")
+
+[node name="loaded_box" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.65, -0.23)
+mesh = SubResource("r12")

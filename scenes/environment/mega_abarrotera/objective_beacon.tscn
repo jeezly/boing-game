@@ -1,0 +1,40 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="glow"]
+albedo_color = Color(1, 0.76, 0.10, 1)
+shading_mode = 0
+no_depth_test = true
+
+[sub_resource type="CylinderMesh" id="beam"]
+top_radius = 0.09
+bottom_radius = 0.09
+height = 3.0
+material = SubResource("glow")
+
+[sub_resource type="TorusMesh" id="ring"]
+inner_radius = 0.85
+outer_radius = 1.0
+material = SubResource("glow")
+
+[node name="beacon" type="Node3D"]
+
+[node name="beam" type="MeshInstance3D" parent="."]
+position = Vector3(0, 1.8, 0)
+cast_shadow = 0
+mesh = SubResource("beam")
+
+[node name="ring" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.15, 0)
+cast_shadow = 0
+mesh = SubResource("ring")
+
+[node name="label" type="Label3D" parent="."]
+position = Vector3(0, 3.6, 0)
+billboard = 1
+no_depth_test = false
+visibility_range_end = 45.0
+font_size = 32
+pixel_size = 0.012
+outline_size = 2
+modulate = Color(1, 0.9, 0.4, 1)
+text = "ZONA CALIENTE"

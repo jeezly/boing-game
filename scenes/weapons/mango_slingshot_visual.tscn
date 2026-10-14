@@ -2,11 +2,27 @@
 
 [ext_resource type="Script" path="res://scripts/weapons/slingshot_visual.gd" id="1"]
 
+[ext_resource type="PackedScene" path="res://scenes/projectiles/mango_ammo_visual.tscn" id="2"]
+
 [node name="mango_slingshot_visual" type="Node3D"]
 script = ExtResource("1")
+
+[node name="frame" type="Node3D" parent="."]
+
+[node name="elastic" type="Node3D" parent="."]
+
+[node name="pouch" type="Node3D" parent="."]
+position = Vector3(0, 0.24, 0.12)
+
+[node name="fps_hands" type="Node3D" parent="."]
 
 [node name="muzzle" type="Marker3D" parent="."]
 position = Vector3(0, 0.24, -0.06)
 
 [node name="projectile_socket" type="Marker3D" parent="."]
 position = Vector3(0, 0.24, 0.05)
+
+[node name="loaded_ammo" parent="pouch" instance=ExtResource("2")]
+position = Vector3(0, 0.054, 0)
+
+[node name="pulling_glove" type="Node3D" parent="fps_hands"]

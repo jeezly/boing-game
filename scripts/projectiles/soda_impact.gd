@@ -1,5 +1,5 @@
 extends Node3D
-const Build = preload("res://scripts/player/mango_mesh_builder.gd")
+const Build = preload("res://scripts/components/visual_mesh_builder.gd")
 var age: float = 0.0
 var bubbles: Array[MeshInstance3D] = []
 

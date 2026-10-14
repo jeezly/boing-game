@@ -1,11 +1,54 @@
 [gd_scene format=3]
+
 [ext_resource type="Script" path="res://scripts/game/health_pickup.gd" id="1"]
 
 [sub_resource type="CylinderShape3D" id="pickup_shape"]
 radius = 0.85
 height = 1.8
 
+[sub_resource type="StandardMaterial3D" id="cream"]
+albedo_color = Color(0.93, 0.87, 0.69, 1)
+roughness = 0.8
+
+[sub_resource type="StandardMaterial3D" id="green"]
+albedo_color = Color(0.16, 0.63, 0.37, 1)
+roughness = 0.7
+emission_enabled = true
+emission = Color(0.06, 0.24, 0.12, 1)
+emission_energy_multiplier = 0.25
+
+[sub_resource type="BoxMesh" id="kit"]
+size = Vector3(0.60, 0.44, 0.42)
+material = SubResource("cream")
+
+[sub_resource type="BoxMesh" id="lid"]
+size = Vector3(0.63, 0.06, 0.45)
+material = SubResource("green")
+
+[sub_resource type="BoxMesh" id="cross_vertical"]
+size = Vector3(0.105, 0.30, 0.022)
+material = SubResource("green")
+
+[sub_resource type="BoxMesh" id="cross_horizontal"]
+size = Vector3(0.30, 0.105, 0.024)
+material = SubResource("green")
+
+[sub_resource type="TorusMesh" id="handle"]
+inner_radius = 0.075
+outer_radius = 0.105
+rings = 20
+ring_segments = 8
+material = SubResource("green")
+
+[sub_resource type="CylinderMesh" id="floor_marker"]
+top_radius = 0.48
+bottom_radius = 0.48
+height = 0.012
+radial_segments = 24
+material = SubResource("green")
+
 [node name="health_pickup" type="Area3D"]
+process_mode = 1
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1")
@@ -14,5 +57,48 @@ script = ExtResource("1")
 position = Vector3(0, 0.8, 0)
 shape = SubResource("pickup_shape")
 
+[node name="floor_marker" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.015, 0)
+mesh = SubResource("floor_marker")
+cast_shadow = 0
+
 [node name="visual" type="Node3D" parent="."]
 position = Vector3(0, 0.62, 0)
+
+[node name="supply_kit" type="MeshInstance3D" parent="visual"]
+mesh = SubResource("kit")
+
+[node name="lid" type="MeshInstance3D" parent="visual"]
+position = Vector3(0, 0.22, 0)
+mesh = SubResource("lid")
+
+[node name="handle" type="MeshInstance3D" parent="visual"]
+position = Vector3(0, 0.30, 0)
+rotation = Vector3(1.5707963, 0, 0)
+mesh = SubResource("handle")
+
+[node name="cross_front_vertical" type="MeshInstance3D" parent="visual"]
+position = Vector3(0, 0, 0.219)
+mesh = SubResource("cross_vertical")
+
+[node name="cross_front_horizontal" type="MeshInstance3D" parent="visual"]
+position = Vector3(0, 0, 0.226)
+mesh = SubResource("cross_horizontal")
+
+[node name="cross_back_vertical" type="MeshInstance3D" parent="visual"]
+position = Vector3(0, 0, -0.219)
+mesh = SubResource("cross_vertical")
+
+[node name="cross_back_horizontal" type="MeshInstance3D" parent="visual"]
+position = Vector3(0, 0, -0.226)
+mesh = SubResource("cross_horizontal")
+
+[node name="label" type="Label3D" parent="."]
+position = Vector3(0, 1.13, 0)
+billboard = 1
+font_size = 28
+pixel_size = 0.006
+outline_size = 2
+modulate = Color(0.65, 0.95, 0.72, 1)
+visibility_range_end = 22.0
+text = "+30 SALUD"

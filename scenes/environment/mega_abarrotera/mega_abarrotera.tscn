@@ -1,0 +1,5010 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/mega_abarrotera.gd" id="e1"]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/combat_zone.gd" id="e2"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/huacal.tscn" id="e3"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/shopping_cart.tscn" id="e4"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/checkout_module.tscn" id="e5"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/shelf_module.tscn" id="e6"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/pallet_stack.tscn" id="e7"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/fridge_bank.tscn" id="e8"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/produce_display.tscn" id="e9"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/costales.tscn" id="e10"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/sign.tscn" id="e11"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/objective_beacon.tscn" id="e12"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/hand_truck.tscn" id="e13"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/store_fan.tscn" id="e14"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/bottle_crate.tscn" id="e15"]
+
+[ext_resource type="PackedScene" path="res://scenes/game/health_pickup.tscn" id="polish_health"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/offer_display.tscn" id="polish_offer"]
+
+[sub_resource type="StandardMaterial3D" id="r1"]
+albedo_color = Color(0.72157,0.68235,0.58431,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r2"]
+size = Vector3(150, 0.4, 110)
+material = SubResource("r1")
+
+[sub_resource type="BoxShape3D" id="r3"]
+size = Vector3(150, 0.4, 110)
+
+[sub_resource type="StandardMaterial3D" id="r4"]
+albedo_color = Color(0.81569,0.77255,0.67451,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r5"]
+size = Vector3(0.8, 16, 110)
+material = SubResource("r4")
+
+[sub_resource type="BoxShape3D" id="r6"]
+size = Vector3(0.8, 16, 110)
+
+[sub_resource type="StandardMaterial3D" id="r7"]
+albedo_color = Color(0.65490,0.66667,0.62745,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r8"]
+size = Vector3(150, 9, 0.8)
+material = SubResource("r7")
+
+[sub_resource type="BoxShape3D" id="r9"]
+size = Vector3(150, 9, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="r10"]
+albedo_color = Color(0.68235,0.58431,0.43529,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r11"]
+size = Vector3(150, 3, 0.8)
+material = SubResource("r10")
+
+[sub_resource type="BoxShape3D" id="r12"]
+size = Vector3(150, 3, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="r13"]
+albedo_color = Color(0.89412,0.79216,0.62745,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r14"]
+size = Vector3(68, 12, 0.7)
+material = SubResource("r13")
+
+[sub_resource type="BoxShape3D" id="r15"]
+size = Vector3(68, 12, 0.7)
+
+[sub_resource type="StandardMaterial3D" id="r16"]
+albedo_color = Color(0.87059,0.39608,0.25490,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r17"]
+size = Vector3(150, 2, 0.7)
+material = SubResource("r16")
+
+[sub_resource type="BoxShape3D" id="r18"]
+size = Vector3(150, 2, 0.7)
+
+[sub_resource type="StandardMaterial3D" id="r19"]
+albedo_color = Color(0.78824,0.76078,0.68235,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r20"]
+size = Vector3(150, 0.35, 62)
+material = SubResource("r19")
+
+[sub_resource type="StandardMaterial3D" id="r21"]
+albedo_color = Color(0.49412,0.53725,0.52157,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r22"]
+size = Vector3(100, 0.35, 33)
+material = SubResource("r21")
+
+[sub_resource type="StandardMaterial3D" id="r23"]
+albedo_color = Color(0.49412,0.54118,0.51373,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r24"]
+size = Vector3(148, 0.5, 0.45)
+material = SubResource("r23")
+
+[sub_resource type="StandardMaterial3D" id="r25"]
+albedo_color = Color(0.55294,0.61961,0.59216,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r26"]
+size = Vector3(0.4, 8, 8)
+material = SubResource("r25")
+
+[sub_resource type="BoxShape3D" id="r27"]
+size = Vector3(0.4, 8, 8)
+
+[sub_resource type="BoxMesh" id="r28"]
+size = Vector3(0.4, 8, 10)
+material = SubResource("r25")
+
+[sub_resource type="BoxShape3D" id="r29"]
+size = Vector3(0.4, 8, 10)
+
+[sub_resource type="BoxShape3D" id="r30"]
+size = Vector3(14,4,3)
+
+[sub_resource type="StandardMaterial3D" id="r31"]
+albedo_color = Color(0.21176,0.49412,0.50980,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r32"]
+size = Vector3(31, 4, 0.07)
+material = SubResource("r31")
+
+[sub_resource type="StandardMaterial3D" id="r33"]
+albedo_color = Color(0.90196,0.70196,0.27451,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r34"]
+size = Vector3(1, 1.2, 1)
+material = SubResource("r33")
+
+[sub_resource type="BoxShape3D" id="r35"]
+size = Vector3(1, 1.2, 1)
+
+[sub_resource type="StandardMaterial3D" id="r36"]
+albedo_color = Color(0.15686,0.55294,0.76471,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r37"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r36")
+
+[sub_resource type="StandardMaterial3D" id="r38"]
+albedo_color = Color(0.37255,0.58824,0.61176,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r39"]
+size = Vector3(4, 1.4, 14)
+material = SubResource("r38")
+
+[sub_resource type="BoxShape3D" id="r40"]
+size = Vector3(4, 1.4, 14)
+
+[sub_resource type="StandardMaterial3D" id="r41"]
+albedo_color = Color(0.66275,0.87843,0.89412,1)
+roughness = 0.8
+emission_enabled = true
+emission = Color(0.66275,0.87843,0.89412,1)
+emission_energy_multiplier = 0.07
+
+[sub_resource type="BoxMesh" id="r42"]
+size = Vector3(4.1, 0.08, 14.1)
+material = SubResource("r41")
+
+[sub_resource type="StandardMaterial3D" id="r43"]
+albedo_color = Color(0.73333,0.52941,0.30588,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r44"]
+size = Vector3(3, 1.2, 2)
+material = SubResource("r43")
+
+[sub_resource type="BoxShape3D" id="r45"]
+size = Vector3(3, 1.2, 2)
+
+[sub_resource type="StandardMaterial3D" id="r46"]
+albedo_color = Color(0.52941,0.58039,0.54118,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r47"]
+size = Vector3(0.7, 0.5, 0.6)
+material = SubResource("r46")
+
+[sub_resource type="StandardMaterial3D" id="r48"]
+albedo_color = Color(0.43137,0.54510,0.52157,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r49"]
+size = Vector3(38, 0.25, 4)
+material = SubResource("r48")
+
+[sub_resource type="BoxShape3D" id="r50"]
+size = Vector3(38, 0.25, 4)
+
+[sub_resource type="StandardMaterial3D" id="r51"]
+albedo_color = Color(0.34118,0.42745,0.40784,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r52"]
+size = Vector3(0.5, 2.8, 0.5)
+material = SubResource("r51")
+
+[sub_resource type="BoxShape3D" id="r53"]
+size = Vector3(0.5, 2.8, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="r54"]
+albedo_color = Color(0.86667,0.65882,0.27451,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r55"]
+size = Vector3(37, 0.11, 0.11)
+material = SubResource("r54")
+
+[sub_resource type="BoxShape3D" id="r56"]
+size = Vector3(37, 0.11, 0.11)
+
+[sub_resource type="BoxMesh" id="r57"]
+size = Vector3(0.09, 0.65, 0.09)
+material = SubResource("r54")
+
+[sub_resource type="StandardMaterial3D" id="r58"]
+albedo_color = Color(0.53725,0.59608,0.56471,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r59"]
+size = Vector3(4, 0.3, 12.3693)
+material = SubResource("r58")
+
+[sub_resource type="BoxShape3D" id="r60"]
+size = Vector3(4, 0.3, 12.3693)
+
+[sub_resource type="StandardMaterial3D" id="r61"]
+albedo_color = Color(0.77255,0.66667,0.29804,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r62"]
+size = Vector3(3.7, 0.035, 0.1)
+material = SubResource("r61")
+
+[sub_resource type="StandardMaterial3D" id="r63"]
+albedo_color = Color(0.87059,0.84706,0.73725,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r64"]
+size = Vector3(5, 4.2, 10)
+material = SubResource("r63")
+
+[sub_resource type="BoxShape3D" id="r65"]
+size = Vector3(5, 4.2, 10)
+
+[sub_resource type="StandardMaterial3D" id="r66"]
+albedo_color = Color(0.21176,0.54510,0.58039,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r67"]
+size = Vector3(4.3, 3.2, 2.4)
+material = SubResource("r66")
+
+[sub_resource type="StandardMaterial3D" id="r68"]
+albedo_color = Color(0.28627,0.46667,0.50196,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r69"]
+size = Vector3(3.6, 1.25, 0.045)
+material = SubResource("r68")
+
+[sub_resource type="StandardMaterial3D" id="r70"]
+albedo_color = Color(0.60000,0.63922,0.59608,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r71"]
+size = Vector3(6, 1.1, 5)
+material = SubResource("r70")
+
+[sub_resource type="BoxShape3D" id="r72"]
+size = Vector3(6, 1.1, 5)
+
+[sub_resource type="StandardMaterial3D" id="r73"]
+albedo_color = Color(0.52157,0.60784,0.58431,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r74"]
+size = Vector3(4, 0.25, 6.1)
+material = SubResource("r73")
+
+[sub_resource type="BoxShape3D" id="r75"]
+size = Vector3(4, 0.25, 6.1)
+
+[sub_resource type="StandardMaterial3D" id="r76"]
+albedo_color = Color(0.84314,0.67843,0.23529,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r77"]
+size = Vector3(5, 1.2, 0.65)
+material = SubResource("r76")
+
+[sub_resource type="BoxShape3D" id="r78"]
+size = Vector3(5, 1.2, 0.65)
+
+[sub_resource type="StandardMaterial3D" id="r79"]
+albedo_color = Color(1.00000,0.94118,0.79608,1)
+roughness = 0.8
+emission_enabled = true
+emission = Color(1.00000,0.94118,0.79608,1)
+emission_energy_multiplier = 0.18
+
+[sub_resource type="BoxMesh" id="r80"]
+size = Vector3(10, 0.1, 2)
+material = SubResource("r79")
+
+[sub_resource type="StandardMaterial3D" id="r81"]
+albedo_color = Color(0.85098,0.32941,0.26667,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r82"]
+size = Vector3(2.4, 0.95, 0.025)
+material = SubResource("r81")
+
+[sub_resource type="StandardMaterial3D" id="r83"]
+albedo_color = Color(0.93725,0.87843,0.74118,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r84"]
+size = Vector3(0.21, 0.26, 0.016)
+material = SubResource("r83")
+
+[sub_resource type="StandardMaterial3D" id="r85"]
+albedo_color = Color(0.91765,0.75686,0.29020,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r86"]
+size = Vector3(2.4, 0.95, 0.025)
+material = SubResource("r85")
+
+[sub_resource type="StandardMaterial3D" id="r87"]
+albedo_color = Color(0.15686,0.60784,0.68627,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r88"]
+size = Vector3(2.4, 0.95, 0.025)
+material = SubResource("r87")
+
+[sub_resource type="StandardMaterial3D" id="r89"]
+albedo_color = Color(0.72941,0.32941,0.51765,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r90"]
+size = Vector3(2.4, 0.95, 0.025)
+material = SubResource("r89")
+
+[sub_resource type="StandardMaterial3D" id="r91"]
+albedo_color = Color(0.33333,0.61961,0.38039,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r92"]
+size = Vector3(2.4, 0.95, 0.025)
+material = SubResource("r91")
+
+[sub_resource type="StandardMaterial3D" id="r93"]
+albedo_color = Color(0.46275,0.40000,0.30588,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r94"]
+size = Vector3(140, 0.025, 0.025)
+material = SubResource("r93")
+
+[sub_resource type="StandardMaterial3D" id="r95"]
+albedo_color = Color(0.85882,0.40784,0.27843,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r96"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r95")
+
+[sub_resource type="StandardMaterial3D" id="r97"]
+albedo_color = Color(0.83137,0.68627,0.26275,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r98"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r97")
+
+[sub_resource type="StandardMaterial3D" id="r99"]
+albedo_color = Color(0.79608,0.34902,0.46275,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r100"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r99")
+
+[sub_resource type="StandardMaterial3D" id="r101"]
+albedo_color = Color(0.29412,0.65882,0.50196,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r102"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r101")
+
+[sub_resource type="StandardMaterial3D" id="r103"]
+albedo_color = Color(0.15686,0.61569,0.69020,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r104"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r103")
+
+[sub_resource type="StandardMaterial3D" id="r105"]
+albedo_color = Color(0.83137,0.66667,0.23137,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r106"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r105")
+
+[sub_resource type="StandardMaterial3D" id="r107"]
+albedo_color = Color(0.54118,0.43922,0.27059,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r108"]
+size = Vector3(0.045, 2, 0.045)
+material = SubResource("r107")
+
+[sub_resource type="StandardMaterial3D" id="r109"]
+albedo_color = Color(0.79608,0.69804,0.29804,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r110"]
+size = Vector3(0.5, 0.2, 0.18)
+material = SubResource("r109")
+
+[sub_resource type="StandardMaterial3D" id="r111"]
+albedo_color = Color(0.70980,0.64706,0.43529,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r112"]
+size = Vector3(3.8, 0.012, 3.8)
+material = SubResource("r111")
+
+[sub_resource type="StandardMaterial3D" id="r113"]
+albedo_color = Color(0.64314,0.70980,0.62745,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r114"]
+size = Vector3(3.8, 0.012, 3.8)
+material = SubResource("r113")
+
+[sub_resource type="StandardMaterial3D" id="r115"]
+albedo_color = Color(0.78824,0.63922,0.43922,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r116"]
+size = Vector3(3.8, 0.012, 3.8)
+material = SubResource("r115")
+
+[sub_resource type="StandardMaterial3D" id="polish_sign_mat"]
+albedo_color = Color(0.13, 0.24, 0.23, 1)
+roughness = 0.9
+
+[sub_resource type="StandardMaterial3D" id="polish_bracket_mat"]
+albedo_color = Color(0.32, 0.30, 0.25, 1)
+roughness = 0.8
+
+
+[sub_resource type="BoxMesh" id="polish_board_main_sign"]
+size = Vector3(12, 1.3, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_painted_ad_minus47"]
+size = Vector3(7, 0.75, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_painted_ad_47"]
+size = Vector3(7, 0.75, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_entry_direction"]
+size = Vector3(3.6, 0.7, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_lane_number_1"]
+size = Vector3(0.8, 0.65, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_lane_number_2"]
+size = Vector3(0.8, 0.65, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_lane_number_3"]
+size = Vector3(0.8, 0.65, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_lane_number_4"]
+size = Vector3(0.8, 0.65, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_lane_number_5"]
+size = Vector3(0.8, 0.65, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_lane_number_6"]
+size = Vector3(0.8, 0.65, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_thank_you"]
+size = Vector3(7, 0.8, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_category_1"]
+size = Vector3(3.6, 0.7, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_category_2"]
+size = Vector3(3.6, 0.7, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_category_3"]
+size = Vector3(3.6, 0.7, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_category_4"]
+size = Vector3(3.6, 0.7, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_category_5"]
+size = Vector3(3.6, 0.7, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_category_6"]
+size = Vector3(3.6, 0.7, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_category_7"]
+size = Vector3(3.6, 0.7, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_category_8"]
+size = Vector3(3.6, 0.7, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_cooler_banner"]
+size = Vector3(7, 0.8, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_produce_wall"]
+size = Vector3(7, 0.8, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_industrial_sign"]
+size = Vector3(7, 0.8, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_truck_brand"]
+size = Vector3(3.8, 0.6, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_patio_wall"]
+size = Vector3(7, 0.8, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="StandardMaterial3D" id="polish_price_material"]
+albedo_color = Color(0.95, 0.86, 0.64, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="polish_price_mesh"]
+size = Vector3(0.42, 0.17, 0.012)
+material = SubResource("polish_price_material")
+
+[sub_resource type="BoxMesh" id="polish_wire_lane_number_1"]
+size = Vector3(0.018, 10.475000000000001, 0.018)
+material = SubResource("polish_bracket_mat")
+
+
+
+
+
+
+[sub_resource type="BoxMesh" id="polish_wire_category_1"]
+size = Vector3(0.018, 9.850000000000001, 0.018)
+material = SubResource("polish_bracket_mat")
+
+
+
+
+
+
+
+
+[node name="mega_abarrotera" type="Node3D"]
+script = ExtResource("e1")
+
+[node name="architecture" type="Node3D" parent="."]
+
+
+[node name="continuous_floor" type="StaticBody3D" parent="architecture"]
+position = Vector3(0, -0.2, -40)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/continuous_floor"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r2")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/continuous_floor"]
+shape = SubResource("r3")
+
+[node name="side_wall_-74_6" type="StaticBody3D" parent="architecture" groups=["navigation_obstacle"]]
+position = Vector3(-74.6, 8, -40)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/side_wall_-74_6"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r5")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/side_wall_-74_6"]
+shape = SubResource("r6")
+
+[node name="side_wall_74_6" type="StaticBody3D" parent="architecture" groups=["navigation_obstacle"]]
+position = Vector3(74.6, 8, -40)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/side_wall_74_6"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r5")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/side_wall_74_6"]
+shape = SubResource("r6")
+
+[node name="rear_wall" type="StaticBody3D" parent="architecture" groups=["navigation_obstacle"]]
+position = Vector3(0, 4.5, -94.6)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/rear_wall"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r8")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/rear_wall"]
+shape = SubResource("r9")
+
+[node name="approach_boundary" type="StaticBody3D" parent="architecture" groups=["navigation_obstacle"]]
+position = Vector3(0, 1.5, 14.6)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/approach_boundary"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r11")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/approach_boundary"]
+shape = SubResource("r12")
+
+[node name="storefront_-41" type="StaticBody3D" parent="architecture" groups=["navigation_obstacle"]]
+position = Vector3(-41, 6, 0)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/storefront_-41"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r14")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/storefront_-41"]
+shape = SubResource("r15")
+
+[node name="storefront_41" type="StaticBody3D" parent="architecture" groups=["navigation_obstacle"]]
+position = Vector3(41, 6, 0)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/storefront_41"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r14")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/storefront_41"]
+shape = SubResource("r15")
+
+[node name="facade_header" type="StaticBody3D" parent="architecture"]
+position = Vector3(0, 13, 0)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/facade_header"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r17")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/facade_header"]
+shape = SubResource("r18")
+
+[node name="store_roof" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 16, -31)
+mesh = SubResource("r20")
+
+[node name="rear_industrial_roof" type="MeshInstance3D" parent="architecture"]
+position = Vector3(25, 16, -78.5)
+mesh = SubResource("r22")
+
+[node name="roof_truss_12" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 15, -12)
+mesh = SubResource("r24")
+
+[node name="roof_truss_36" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 15, -36)
+mesh = SubResource("r24")
+
+[node name="roof_truss_60" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 15, -60)
+mesh = SubResource("r24")
+
+[node name="industrial_partition_-25_67" type="StaticBody3D" parent="architecture" groups=["navigation_obstacle"]]
+position = Vector3(-25, 4, -67)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/industrial_partition_-25_67"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r26")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/industrial_partition_-25_67"]
+shape = SubResource("r27")
+
+[node name="industrial_partition_-25_90" type="StaticBody3D" parent="architecture" groups=["navigation_obstacle"]]
+position = Vector3(-25, 4, -90)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/industrial_partition_-25_90"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r28")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/industrial_partition_-25_90"]
+shape = SubResource("r29")
+
+[node name="industrial_partition_25_67" type="StaticBody3D" parent="architecture" groups=["navigation_obstacle"]]
+position = Vector3(25, 4, -67)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/industrial_partition_25_67"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r26")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/industrial_partition_25_67"]
+shape = SubResource("r27")
+
+[node name="industrial_partition_25_90" type="StaticBody3D" parent="architecture" groups=["navigation_obstacle"]]
+position = Vector3(25, 4, -90)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="architecture/industrial_partition_25_90"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r28")
+
+[node name="collision" type="CollisionShape3D" parent="architecture/industrial_partition_25_90"]
+shape = SubResource("r29")
+
+[node name="fachada_y_acceso" type="Node3D" parent="."]
+position = Vector3(0, 0, 7.5)
+script = ExtResource("e2")
+zone_id = &"entrance"
+bounds = Vector2(150,15)
+
+[node name="cajas" type="Node3D" parent="."]
+position = Vector3(0, 0, -8.5)
+script = ExtResource("e2")
+zone_id = &"cajas"
+bounds = Vector2(150,17)
+
+[node name="pasillos_centrales" type="Node3D" parent="."]
+position = Vector3(0, 0, -39.5)
+script = ExtResource("e2")
+zone_id = &"pasillos"
+bounds = Vector2(102,45)
+
+[node name="refrigeradores" type="Node3D" parent="."]
+position = Vector3(-63, 0, -39.5)
+script = ExtResource("e2")
+zone_id = &"refrigeradores"
+bounds = Vector2(24,45)
+
+[node name="frutas_granel" type="Node3D" parent="."]
+position = Vector3(50, 0, -78.5)
+script = ExtResource("e2")
+zone_id = &"frutas"
+bounds = Vector2(50,33)
+
+[node name="bodega" type="Node3D" parent="."]
+position = Vector3(0, 0, -78.5)
+script = ExtResource("e2")
+zone_id = &"bodega"
+bounds = Vector2(50,33)
+
+[node name="patio_carga" type="Node3D" parent="."]
+position = Vector3(-50, 0, -78.5)
+script = ExtResource("e2")
+zone_id = &"patio"
+bounds = Vector2(50,33)
+
+[node name="entrance_trigger" type="Area3D" parent="fachada_y_acceso"]
+position = Vector3(0, 2, -8.5)
+collision_layer = 0
+collision_mask = 2
+
+[node name="collision" type="CollisionShape3D" parent="fachada_y_acceso/entrance_trigger"]
+shape = SubResource("r30")
+
+[node name="main_sign" type="Label3D" parent="fachada_y_acceso"]
+position = Vector3(0, 11, -7)
+text = "MEGA ABARROTERA MEXICANA"
+font_size = 64
+pixel_size = 0.01
+outline_size = 2
+modulate = Color(1.0,0.9411764705882353,0.7843137254901961,1)
+
+[node name="painted_ad_-47" type="Label3D" parent="fachada_y_acceso"]
+position = Vector3(-47, 5.5, -7.05)
+text = "PÁSELE MARCHANTE"
+font_size = 38
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0, 0.94, 0.78, 1)
+
+[node name="window_-47" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(-47, 3, -7.1)
+mesh = SubResource("r32")
+
+[node name="painted_ad_47" type="Label3D" parent="fachada_y_acceso"]
+position = Vector3(47, 5.5, -7.05)
+text = "BUEN PRECIO, BUENA GENTE"
+font_size = 38
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0, 0.94, 0.78, 1)
+
+[node name="window_47" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(47, 3, -7.1)
+mesh = SubResource("r32")
+
+[node name="bollard_-6" type="StaticBody3D" parent="fachada_y_acceso" groups=["navigation_obstacle"]]
+position = Vector3(-6, 0.6, -5.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="fachada_y_acceso/bollard_-6"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r34")
+
+[node name="collision" type="CollisionShape3D" parent="fachada_y_acceso/bollard_-6"]
+shape = SubResource("r35")
+
+[node name="bollard_6" type="StaticBody3D" parent="fachada_y_acceso" groups=["navigation_obstacle"]]
+position = Vector3(6, 0.6, -5.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="fachada_y_acceso/bollard_6"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r34")
+
+[node name="collision" type="CollisionShape3D" parent="fachada_y_acceso/bollard_6"]
+shape = SubResource("r35")
+
+[node name="huacal_0" parent="fachada_y_acceso" instance=ExtResource("e3")]
+position = Vector3(-62, 0, -2.5)
+scale = Vector3(1, 1, 1)
+
+[node name="cart_0" parent="fachada_y_acceso" instance=ExtResource("e4")]
+position = Vector3(-59, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="garrafon_0_0" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(-62, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_0_1" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(-61.2, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_0_2" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(-60.4, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_0_3" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(-59.6, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="huacal_1" parent="fachada_y_acceso" instance=ExtResource("e3")]
+position = Vector3(-53, 0, -2.5)
+scale = Vector3(1, 1.3, 1)
+
+[node name="cart_1" parent="fachada_y_acceso" instance=ExtResource("e4")]
+position = Vector3(-50, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="garrafon_1_0" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(-53, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_1_1" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(-52.2, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_1_2" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(-51.4, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_1_3" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(-50.6, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="huacal_2" parent="fachada_y_acceso" instance=ExtResource("e3")]
+position = Vector3(54, 0, -2.5)
+scale = Vector3(1, 1, 1)
+
+[node name="cart_2" parent="fachada_y_acceso" instance=ExtResource("e4")]
+position = Vector3(57, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="garrafon_2_0" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(54, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_2_1" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(54.8, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_2_2" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(55.6, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_2_3" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(56.4, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="huacal_3" parent="fachada_y_acceso" instance=ExtResource("e3")]
+position = Vector3(64, 0, -2.5)
+scale = Vector3(1, 1.3, 1)
+
+[node name="cart_3" parent="fachada_y_acceso" instance=ExtResource("e4")]
+position = Vector3(67, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="garrafon_3_0" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(64, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_3_1" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(64.8, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_3_2" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(65.6, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="garrafon_3_3" type="MeshInstance3D" parent="fachada_y_acceso"]
+position = Vector3(66.4, 0.65, 2.5)
+scale = Vector3(0.58, 1.15, 0.58)
+mesh = SubResource("r37")
+
+[node name="entry_direction" type="Label3D" parent="fachada_y_acceso"]
+position = Vector3(0, 3.5, -6.5)
+text = "ENTRADA · AQUÍ HAY DE TODO"
+font_size = 36
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0,0.9411764705882353,0.7843137254901961,1)
+
+[node name="checkout_1" parent="cajas" instance=ExtResource("e5")]
+position = Vector3(-32, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="lane_number_1" type="Label3D" parent="cajas"]
+position = Vector3(-32, 5, 0.5)
+text = "CAJA 1"
+font_size = 40
+pixel_size = 0.008
+outline_size = 2
+modulate = Color(0.9529411764705882,0.7686274509803922,0.2980392156862745,1)
+
+[node name="impulse_1" parent="cajas" instance=ExtResource("e3")]
+position = Vector3(-28, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="checkout_2" parent="cajas" instance=ExtResource("e5")]
+position = Vector3(-20, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="lane_number_2" type="Label3D" parent="cajas"]
+position = Vector3(-20, 5, 0.5)
+text = "CAJA 2"
+font_size = 40
+pixel_size = 0.008
+outline_size = 2
+modulate = Color(0.9529411764705882,0.7686274509803922,0.2980392156862745,1)
+
+[node name="impulse_2" parent="cajas" instance=ExtResource("e3")]
+position = Vector3(-16, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="checkout_3" parent="cajas" instance=ExtResource("e5")]
+position = Vector3(-8, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="lane_number_3" type="Label3D" parent="cajas"]
+position = Vector3(-8, 5, 0.5)
+text = "CAJA 3"
+font_size = 40
+pixel_size = 0.008
+outline_size = 2
+modulate = Color(0.9529411764705882,0.7686274509803922,0.2980392156862745,1)
+
+[node name="impulse_3" parent="cajas" instance=ExtResource("e3")]
+position = Vector3(-4, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="checkout_4" parent="cajas" instance=ExtResource("e5")]
+position = Vector3(8, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="lane_number_4" type="Label3D" parent="cajas"]
+position = Vector3(8, 5, 0.5)
+text = "CAJA 4"
+font_size = 40
+pixel_size = 0.008
+outline_size = 2
+modulate = Color(0.9529411764705882,0.7686274509803922,0.2980392156862745,1)
+
+[node name="impulse_4" parent="cajas" instance=ExtResource("e3")]
+position = Vector3(12, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="checkout_5" parent="cajas" instance=ExtResource("e5")]
+position = Vector3(20, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="lane_number_5" type="Label3D" parent="cajas"]
+position = Vector3(20, 5, 0.5)
+text = "CAJA 5"
+font_size = 40
+pixel_size = 0.008
+outline_size = 2
+modulate = Color(0.9529411764705882,0.7686274509803922,0.2980392156862745,1)
+
+[node name="impulse_5" parent="cajas" instance=ExtResource("e3")]
+position = Vector3(24, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="checkout_6" parent="cajas" instance=ExtResource("e5")]
+position = Vector3(32, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="lane_number_6" type="Label3D" parent="cajas"]
+position = Vector3(32, 5, 0.5)
+text = "CAJA 6"
+font_size = 40
+pixel_size = 0.008
+outline_size = 2
+modulate = Color(0.9529411764705882,0.7686274509803922,0.2980392156862745,1)
+
+[node name="impulse_6" parent="cajas" instance=ExtResource("e3")]
+position = Vector3(36, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="cart_0" parent="cajas" instance=ExtResource("e4")]
+position = Vector3(-56, 0, -2.5)
+scale = Vector3(1, 1, 1)
+rotation = Vector3(0, 0.22, 0)
+
+[node name="cart_1" parent="cajas" instance=ExtResource("e4")]
+position = Vector3(-44, 0, -2.5)
+scale = Vector3(1, 1, 1)
+rotation = Vector3(0, -0.22, 0)
+
+[node name="cart_2" parent="cajas" instance=ExtResource("e4")]
+position = Vector3(44, 0, -2.5)
+scale = Vector3(1, 1, 1)
+rotation = Vector3(0, 0.22, 0)
+
+[node name="cart_3" parent="cajas" instance=ExtResource("e4")]
+position = Vector3(56, 0, -2.5)
+scale = Vector3(1, 1, 1)
+rotation = Vector3(0, -0.22, 0)
+
+[node name="thank_you" type="Label3D" parent="cajas"]
+position = Vector3(0, 6, -5.5)
+text = "GRACIAS POR SU COMPRA"
+font_size = 38
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0,0.9411764705882353,0.7843137254901961,1)
+
+[node name="aisle_1_section_1" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(-38, 0, 15.5)
+scale = Vector3(1, 1, 1)
+
+[node name="aisle_1_section_2" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(-38, 0, -9.5)
+scale = Vector3(1, 1, 0.875)
+
+[node name="category_1" type="Label3D" parent="pasillos_centrales"]
+position = Vector3(-38, 5.6, 22.5)
+text = "BOTANAS"
+font_size = 36
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0,0.9098039215686274,0.6745098039215687,1)
+
+[node name="endcap_1" parent="pasillos_centrales" instance=ExtResource("e3")]
+position = Vector3(-34.5, 0, 10.5)
+scale = Vector3(1, 0.7, 1)
+
+[node name="stock_pallet_0" parent="pasillos_centrales" instance=ExtResource("e7")]
+position = Vector3(-34, 0, -14.5)
+scale = Vector3(0.8, 0.75, 0.8)
+
+[node name="aisle_2_section_1" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(-27, 0, 15.5)
+scale = Vector3(1, 1.08, 1.0625)
+
+[node name="aisle_2_section_2" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(-27, 0, -9.5)
+scale = Vector3(1, 1.08, 0.9375)
+
+[node name="category_2" type="Label3D" parent="pasillos_centrales"]
+position = Vector3(-27, 5.6, 22.5)
+text = "LIMPIEZA"
+font_size = 36
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0,0.9098039215686274,0.6745098039215687,1)
+
+[node name="endcap_2" parent="pasillos_centrales" instance=ExtResource("e3")]
+position = Vector3(-23.5, 0, 10.5)
+scale = Vector3(1, 0.9, 1)
+
+[node name="aisle_3_section_1" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(-16, 0, 15.5)
+scale = Vector3(1, 1, 1.125)
+
+[node name="aisle_3_section_2" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(-16, 0, -9.5)
+scale = Vector3(1, 1, 1)
+
+[node name="category_3" type="Label3D" parent="pasillos_centrales"]
+position = Vector3(-16, 5.6, 22.5)
+text = "ENLATADOS"
+font_size = 36
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0,0.9098039215686274,0.6745098039215687,1)
+
+[node name="endcap_3" parent="pasillos_centrales" instance=ExtResource("e3")]
+position = Vector3(-12.5, 0, 10.5)
+scale = Vector3(1, 1.1, 1)
+
+[node name="stock_pallet_2" parent="pasillos_centrales" instance=ExtResource("e7")]
+position = Vector3(-12, 0, -14.5)
+scale = Vector3(0.8, 0.75, 0.8)
+
+[node name="aisle_4_section_1" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(-5, 0, 15.5)
+scale = Vector3(1, 1.08, 1)
+
+[node name="aisle_4_section_2" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(-5, 0, -9.5)
+scale = Vector3(1, 1.08, 1.0625)
+
+[node name="category_4" type="Label3D" parent="pasillos_centrales"]
+position = Vector3(-5, 5.6, 22.5)
+text = "HOGAR"
+font_size = 36
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0,0.9098039215686274,0.6745098039215687,1)
+
+[node name="endcap_4" parent="pasillos_centrales" instance=ExtResource("e3")]
+position = Vector3(-1.5, 0, 10.5)
+scale = Vector3(1, 0.7, 1)
+
+[node name="aisle_5_section_1" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(6, 0, 15.5)
+scale = Vector3(1, 1, 1.0625)
+
+[node name="aisle_5_section_2" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(6, 0, -9.5)
+scale = Vector3(1, 1, 0.875)
+
+[node name="category_5" type="Label3D" parent="pasillos_centrales"]
+position = Vector3(6, 5.6, 22.5)
+text = "CEREALES"
+font_size = 36
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0,0.9098039215686274,0.6745098039215687,1)
+
+[node name="endcap_5" parent="pasillos_centrales" instance=ExtResource("e3")]
+position = Vector3(9.5, 0, 10.5)
+scale = Vector3(1, 0.9, 1)
+
+[node name="stock_pallet_4" parent="pasillos_centrales" instance=ExtResource("e7")]
+position = Vector3(10, 0, -14.5)
+scale = Vector3(0.8, 0.75, 0.8)
+
+[node name="aisle_6_section_1" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(17, 0, 15.5)
+scale = Vector3(1, 1.08, 1.125)
+
+[node name="aisle_6_section_2" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(17, 0, -9.5)
+scale = Vector3(1, 1.08, 0.9375)
+
+[node name="category_6" type="Label3D" parent="pasillos_centrales"]
+position = Vector3(17, 5.6, 22.5)
+text = "BEBIDAS"
+font_size = 36
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0,0.9098039215686274,0.6745098039215687,1)
+
+[node name="endcap_6" parent="pasillos_centrales" instance=ExtResource("e3")]
+position = Vector3(20.5, 0, 10.5)
+scale = Vector3(1, 1.1, 1)
+
+[node name="aisle_7_section_1" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(28, 0, 15.5)
+scale = Vector3(1, 1, 1)
+
+[node name="aisle_7_section_2" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(28, 0, -9.5)
+scale = Vector3(1, 1, 1)
+
+[node name="category_7" type="Label3D" parent="pasillos_centrales"]
+position = Vector3(28, 5.6, 22.5)
+text = "DULCES"
+font_size = 36
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0,0.9098039215686274,0.6745098039215687,1)
+
+[node name="endcap_7" parent="pasillos_centrales" instance=ExtResource("e3")]
+position = Vector3(31.5, 0, 10.5)
+scale = Vector3(1, 0.7, 1)
+
+[node name="stock_pallet_6" parent="pasillos_centrales" instance=ExtResource("e7")]
+position = Vector3(32, 0, -14.5)
+scale = Vector3(0.8, 0.75, 0.8)
+
+[node name="aisle_8_section_1" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(39, 0, 15.5)
+scale = Vector3(1, 1.08, 1.0625)
+
+[node name="aisle_8_section_2" parent="pasillos_centrales" instance=ExtResource("e6")]
+position = Vector3(39, 0, -9.5)
+scale = Vector3(1, 1.08, 1.0625)
+
+[node name="category_8" type="Label3D" parent="pasillos_centrales"]
+position = Vector3(39, 5.6, 22.5)
+text = "ABARROTES"
+font_size = 36
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(1.0,0.9098039215686274,0.6745098039215687,1)
+
+[node name="endcap_8" parent="pasillos_centrales" instance=ExtResource("e3")]
+position = Vector3(42.5, 0, 10.5)
+scale = Vector3(1, 0.9, 1)
+
+[node name="cooler_bank_0" parent="refrigeradores" instance=ExtResource("e8")]
+position = Vector3(-6, 0, 14.5)
+scale = Vector3(1, 1, 1.25)
+
+[node name="cooler_bank_1" parent="refrigeradores" instance=ExtResource("e8")]
+position = Vector3(-6, 0, -7.5)
+scale = Vector3(1, 1, 1.25)
+
+[node name="freezer_island" type="StaticBody3D" parent="refrigeradores" groups=["navigation_obstacle"]]
+position = Vector3(3, 0.7, -3.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="refrigeradores/freezer_island"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r39")
+
+[node name="collision" type="CollisionShape3D" parent="refrigeradores/freezer_island"]
+shape = SubResource("r40")
+
+[node name="freezer_glass" type="MeshInstance3D" parent="refrigeradores"]
+position = Vector3(3, 1.43, -3.5)
+mesh = SubResource("r42")
+
+[node name="returnable_crate_0" parent="refrigeradores" instance=ExtResource("e3")]
+position = Vector3(5, 0, 20.5)
+scale = Vector3(1, 0.7, 1)
+
+[node name="returnable_crate_1" parent="refrigeradores" instance=ExtResource("e3")]
+position = Vector3(5, 0, -19.5)
+scale = Vector3(1, 0.7, 1)
+
+[node name="cooler_banner" type="Label3D" parent="refrigeradores"]
+position = Vector3(-1, 5, 7.5)
+text = "REFRIGERADORES Y CONGELADOS"
+font_size = 38
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(0.7137254901960784,0.9372549019607843,1.0,1)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="produce_0_0" parent="frutas_granel" instance=ExtResource("e9")]
+position = Vector3(-15.0, 0.0, 5.5)
+scale = Vector3(1, 1, 1)
+
+[node name="produce_0_1" parent="frutas_granel" instance=ExtResource("e9")]
+position = Vector3(-15.0, 0.0, -7.5)
+scale = Vector3(1, 1, 1)
+
+[node name="produce_1_0" parent="frutas_granel" instance=ExtResource("e9")]
+position = Vector3(-1.0, 0.0, 5.5)
+scale = Vector3(1, 1, 1)
+
+[node name="produce_1_1" parent="frutas_granel" instance=ExtResource("e9")]
+position = Vector3(-1.0, 0.0, -7.5)
+scale = Vector3(1, 1, 1)
+
+[node name="produce_2_0" parent="frutas_granel" instance=ExtResource("e9")]
+position = Vector3(14.0, 0.0, 5.5)
+scale = Vector3(1, 1, 1)
+
+[node name="produce_2_1" parent="frutas_granel" instance=ExtResource("e9")]
+position = Vector3(14.0, 0.0, -7.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_0" parent="frutas_granel" instance=ExtResource("e10")]
+position = Vector3(9.0, 0.0, 12.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_1" parent="frutas_granel" instance=ExtResource("e10")]
+position = Vector3(-10.0, 0.0, -14.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_2" parent="frutas_granel" instance=ExtResource("e10")]
+position = Vector3(11.0, 0.0, -13.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_3" parent="frutas_granel" instance=ExtResource("e10")]
+position = Vector3(19.0, 0.0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_4" parent="frutas_granel" instance=ExtResource("e10")]
+position = Vector3(7.0, 0.0, 45.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_5" parent="frutas_granel" instance=ExtResource("e10")]
+position = Vector3(13.0, 0.0, 25.5)
+scale = Vector3(1, 1, 1)
+
+[node name="plastic_crates_0" parent="frutas_granel" instance=ExtResource("e3")]
+position = Vector3(17.0, 0.0, 55.5)
+scale = Vector3(1, 1.3, 1)
+
+[node name="plastic_crates_1" parent="frutas_granel" instance=ExtResource("e3")]
+position = Vector3(17.0, 0.0, 35.5)
+scale = Vector3(1, 1.3, 1)
+
+[node name="plastic_crates_2" parent="frutas_granel" instance=ExtResource("e3")]
+position = Vector3(17.0, 0.0, 19.5)
+scale = Vector3(1, 1.3, 1)
+
+[node name="scale_counter" type="StaticBody3D" parent="frutas_granel" groups=["navigation_obstacle"]]
+position = Vector3(-4.0, 0.6, 12.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="frutas_granel/scale_counter"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r44")
+
+[node name="collision" type="CollisionShape3D" parent="frutas_granel/scale_counter"]
+shape = SubResource("r45")
+
+[node name="market_scale" type="MeshInstance3D" parent="frutas_granel"]
+position = Vector3(-4.0, 1.5, 12.5)
+mesh = SubResource("r47")
+
+[node name="produce_wall" type="Label3D" parent="frutas_granel"]
+position = Vector3(0.0, 6.0, -15.600000000000001)
+text = "FRUTAS DE NUESTRA TIERRA · FRIJOL · MAÍZ · CHILES"
+font_size = 38
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(0.8862745098039215,0.6784313725490196,0.21176470588235294,1)
+
+[node name="industrial_rack_0_0" parent="bodega" instance=ExtResource("e6")]
+position = Vector3(-8, 0, 3.5)
+scale = Vector3(1, 2, 0.625)
+
+[node name="industrial_rack_0_1" parent="bodega" instance=ExtResource("e6")]
+position = Vector3(-8, 0, -10.5)
+scale = Vector3(1, 2, 0.625)
+
+[node name="industrial_rack_1_0" parent="bodega" instance=ExtResource("e6")]
+position = Vector3(6, 0, 3.5)
+scale = Vector3(1, 2, 0.625)
+
+[node name="industrial_rack_1_1" parent="bodega" instance=ExtResource("e6")]
+position = Vector3(6, 0, -10.5)
+scale = Vector3(1, 2, 0.625)
+
+[node name="stock_0" parent="bodega" instance=ExtResource("e7")]
+position = Vector3(-20, 0, 8.5)
+scale = Vector3(1, 1, 1)
+
+[node name="stock_1" parent="bodega" instance=ExtResource("e7")]
+position = Vector3(20, 0, -8.5)
+scale = Vector3(1, 1, 1)
+
+[node name="stock_2" parent="bodega" instance=ExtResource("e7")]
+position = Vector3(1, 0, 13.5)
+scale = Vector3(1, 1, 1)
+
+[node name="maintenance_walkway" type="StaticBody3D" parent="bodega"]
+position = Vector3(0, 2.875, -6.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="bodega/maintenance_walkway"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r49")
+
+[node name="collision" type="CollisionShape3D" parent="bodega/maintenance_walkway"]
+shape = SubResource("r50")
+
+[node name="walkway_support_-18" type="StaticBody3D" parent="bodega" groups=["navigation_obstacle"]]
+position = Vector3(-18, 1.4, -6.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="bodega/walkway_support_-18"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r52")
+
+[node name="collision" type="CollisionShape3D" parent="bodega/walkway_support_-18"]
+shape = SubResource("r53")
+
+[node name="walkway_support_18" type="StaticBody3D" parent="bodega" groups=["navigation_obstacle"]]
+position = Vector3(18, 1.4, -6.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="bodega/walkway_support_18"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r52")
+
+[node name="collision" type="CollisionShape3D" parent="bodega/walkway_support_18"]
+shape = SubResource("r53")
+
+[node name="handrail_-83_05" type="StaticBody3D" parent="bodega"]
+position = Vector3(0, 3.65, -4.55)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="bodega/handrail_-83_05"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r55")
+
+[node name="collision" type="CollisionShape3D" parent="bodega/handrail_-83_05"]
+shape = SubResource("r56")
+
+[node name="rail_post_-83.05_-12" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-12, 3.3, -4.55)
+mesh = SubResource("r57")
+
+[node name="rail_post_-83.05_0" type="MeshInstance3D" parent="bodega"]
+position = Vector3(0, 3.3, -4.55)
+mesh = SubResource("r57")
+
+[node name="rail_post_-83.05_12" type="MeshInstance3D" parent="bodega"]
+position = Vector3(12, 3.3, -4.55)
+mesh = SubResource("r57")
+
+[node name="handrail_-86_95" type="StaticBody3D" parent="bodega"]
+position = Vector3(0, 3.65, -8.45)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="bodega/handrail_-86_95"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r55")
+
+[node name="collision" type="CollisionShape3D" parent="bodega/handrail_-86_95"]
+shape = SubResource("r56")
+
+[node name="rail_post_-86.95_-12" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-12, 3.3, -8.45)
+mesh = SubResource("r57")
+
+[node name="rail_post_-86.95_0" type="MeshInstance3D" parent="bodega"]
+position = Vector3(0, 3.3, -8.45)
+mesh = SubResource("r57")
+
+[node name="rail_post_-86.95_12" type="MeshInstance3D" parent="bodega"]
+position = Vector3(12, 3.3, -8.45)
+mesh = SubResource("r57")
+
+[node name="industrial_ramp_-16" type="StaticBody3D" parent="bodega" groups=["navigation_obstacle"]]
+position = Vector3(-16, 1.35, 0.5)
+collision_layer = 1
+collision_mask = 7
+rotation = Vector3(0.244979, 0, 0)
+
+[node name="mesh" type="MeshInstance3D" parent="bodega/industrial_ramp_-16"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r59")
+
+[node name="collision" type="CollisionShape3D" parent="bodega/industrial_ramp_-16"]
+shape = SubResource("r60")
+
+[node name="ramp_grip_-16_0" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 0.1, 6.1)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_1" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 0.35, 5.13)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_2" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 0.6, 4.16)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_3" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 0.85, 3.19)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_4" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 1.1, 2.22)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_5" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 1.35, 1.25)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_6" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 1.6, 0.28)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_7" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 1.85, -0.69)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_8" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 2.1, -1.66)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_9" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 2.35, -2.63)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_10" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 2.6, -3.6)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_11" type="MeshInstance3D" parent="bodega"]
+position = Vector3(-16, 2.85, -4.57)
+mesh = SubResource("r62")
+
+[node name="industrial_ramp_16" type="StaticBody3D" parent="bodega" groups=["navigation_obstacle"]]
+position = Vector3(16, 1.35, 0.5)
+collision_layer = 1
+collision_mask = 7
+rotation = Vector3(0.244979, 0, 0)
+
+[node name="mesh" type="MeshInstance3D" parent="bodega/industrial_ramp_16"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r59")
+
+[node name="collision" type="CollisionShape3D" parent="bodega/industrial_ramp_16"]
+shape = SubResource("r60")
+
+[node name="ramp_grip_16_0" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 0.1, 6.1)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_1" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 0.35, 5.13)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_2" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 0.6, 4.16)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_3" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 0.85, 3.19)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_4" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 1.1, 2.22)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_5" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 1.35, 1.25)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_6" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 1.6, 0.28)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_7" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 1.85, -0.69)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_8" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 2.1, -1.66)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_9" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 2.35, -2.63)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_10" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 2.6, -3.6)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_11" type="MeshInstance3D" parent="bodega"]
+position = Vector3(16, 2.85, -4.57)
+mesh = SubResource("r62")
+
+[node name="industrial_sign" type="Label3D" parent="bodega"]
+position = Vector3(0, 9, 14.5)
+text = "BODEGA · RUTA DE MANTENIMIENTO"
+font_size = 38
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(0.9098039215686274,0.7568627450980392,0.3411764705882353,1)
+
+[node name="cargo_truck" type="StaticBody3D" parent="patio_carga" groups=["navigation_obstacle"]]
+position = Vector3(-12, 2.1, -3.5)
+collision_layer = 1
+collision_mask = 7
+rotation = Vector3(0, -0.12, 0)
+
+[node name="mesh" type="MeshInstance3D" parent="patio_carga/cargo_truck"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r64")
+
+[node name="collision" type="CollisionShape3D" parent="patio_carga/cargo_truck"]
+shape = SubResource("r65")
+
+[node name="truck_cab" type="MeshInstance3D" parent="patio_carga"]
+position = Vector3(-12, 1.6, 2.8)
+mesh = SubResource("r67")
+
+[node name="truck_windshield" type="MeshInstance3D" parent="patio_carga"]
+position = Vector3(-12, 2.1, 4.04)
+mesh = SubResource("r69")
+
+[node name="truck_brand" type="Label3D" parent="patio_carga"]
+position = Vector3(-12, 2.3, 1.57)
+text = "RUTA DEL SOL\nABASTO LOCAL"
+font_size = 32
+pixel_size = 0.006
+outline_size = 2
+modulate = Color(1.0, 0.94, 0.78, 1)
+
+[node name="cargo_pallet_0" parent="patio_carga" instance=ExtResource("e7")]
+position = Vector3(18, 0, 10.5)
+scale = Vector3(1, 1, 1)
+
+[node name="cargo_pallet_1" parent="patio_carga" instance=ExtResource("e7")]
+position = Vector3(7, 0, -8.5)
+scale = Vector3(1, 1, 1)
+
+[node name="cargo_pallet_2" parent="patio_carga" instance=ExtResource("e7")]
+position = Vector3(-5, 0, -13.5)
+scale = Vector3(1, 1, 1)
+
+[node name="cargo_pallet_3" parent="patio_carga" instance=ExtResource("e7")]
+position = Vector3(-21, 0, 5.5)
+scale = Vector3(1, 1, 1)
+
+[node name="cargo_pallet_4" parent="patio_carga" instance=ExtResource("e7")]
+position = Vector3(17, 0, -6.5)
+scale = Vector3(1, 1, 1)
+
+[node name="loading_platform" type="StaticBody3D" parent="patio_carga" groups=["navigation_obstacle"]]
+position = Vector3(-3, 0.55, -0.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="patio_carga/loading_platform"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r71")
+
+[node name="collision" type="CollisionShape3D" parent="patio_carga/loading_platform"]
+shape = SubResource("r72")
+
+[node name="loading_ramp" type="StaticBody3D" parent="patio_carga" groups=["navigation_obstacle"]]
+position = Vector3(-3, 0.45, 5)
+collision_layer = 1
+collision_mask = 7
+rotation = Vector3(0.18132, 0, 0)
+
+[node name="mesh" type="MeshInstance3D" parent="patio_carga/loading_ramp"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r74")
+
+[node name="collision" type="CollisionShape3D" parent="patio_carga/loading_ramp"]
+shape = SubResource("r75")
+
+[node name="traffic_barrier_0" type="StaticBody3D" parent="patio_carga" groups=["navigation_obstacle"]]
+position = Vector3(-19, 0.6, 16.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="patio_carga/traffic_barrier_0"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r77")
+
+[node name="collision" type="CollisionShape3D" parent="patio_carga/traffic_barrier_0"]
+shape = SubResource("r78")
+
+[node name="traffic_barrier_1" type="StaticBody3D" parent="patio_carga" groups=["navigation_obstacle"]]
+position = Vector3(0, 0.6, 16.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="patio_carga/traffic_barrier_1"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r77")
+
+[node name="collision" type="CollisionShape3D" parent="patio_carga/traffic_barrier_1"]
+shape = SubResource("r78")
+
+[node name="traffic_barrier_2" type="StaticBody3D" parent="patio_carga" groups=["navigation_obstacle"]]
+position = Vector3(19, 0.6, 16.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="patio_carga/traffic_barrier_2"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r77")
+
+[node name="collision" type="CollisionShape3D" parent="patio_carga/traffic_barrier_2"]
+shape = SubResource("r78")
+
+[node name="patio_wall" type="Label3D" parent="patio_carga"]
+position = Vector3(0, 5, -15.6)
+text = "PATIO DE CARGA · AQUÍ TAMBIÉN SE MUEVE MÉXICO"
+font_size = 38
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(0.8705882352941177,0.4588235294117647,0.27058823529411763,1)
+
+[node name="lighting" type="Node3D" parent="."]
+
+
+[node name="commercial_lamp_0" type="MeshInstance3D" parent="lighting"]
+position = Vector3(-42, 14.6, -16)
+mesh = SubResource("r80")
+
+[node name="warm_fill_0" type="OmniLight3D" parent="lighting"]
+position = Vector3(-42, 10, -16)
+light_color = Color(1,0.88,0.67,1)
+light_energy = 0.80
+omni_range = 32.0
+shadow_enabled = false
+
+[node name="commercial_lamp_1" type="MeshInstance3D" parent="lighting"]
+position = Vector3(0, 14.6, -16)
+mesh = SubResource("r80")
+
+[node name="warm_fill_1" type="OmniLight3D" parent="lighting"]
+position = Vector3(0, 10, -16)
+light_color = Color(1,0.88,0.67,1)
+light_energy = 0.80
+omni_range = 32.0
+shadow_enabled = false
+
+[node name="commercial_lamp_2" type="MeshInstance3D" parent="lighting"]
+position = Vector3(42, 14.6, -16)
+mesh = SubResource("r80")
+
+[node name="warm_fill_2" type="OmniLight3D" parent="lighting"]
+position = Vector3(42, 10, -16)
+light_color = Color(1,0.88,0.67,1)
+light_energy = 0.80
+omni_range = 32.0
+shadow_enabled = false
+
+[node name="commercial_lamp_3" type="MeshInstance3D" parent="lighting"]
+position = Vector3(-36, 14.6, -48)
+mesh = SubResource("r80")
+
+[node name="warm_fill_3" type="OmniLight3D" parent="lighting"]
+position = Vector3(-36, 10, -48)
+light_color = Color(1,0.88,0.67,1)
+light_energy = 0.80
+omni_range = 32.0
+shadow_enabled = false
+
+[node name="commercial_lamp_4" type="MeshInstance3D" parent="lighting"]
+position = Vector3(0, 14.6, -48)
+mesh = SubResource("r80")
+
+[node name="warm_fill_4" type="OmniLight3D" parent="lighting"]
+position = Vector3(0, 10, -48)
+light_color = Color(1,0.88,0.67,1)
+light_energy = 0.80
+omni_range = 32.0
+shadow_enabled = false
+
+[node name="commercial_lamp_5" type="MeshInstance3D" parent="lighting"]
+position = Vector3(36, 14.6, -48)
+mesh = SubResource("r80")
+
+[node name="warm_fill_5" type="OmniLight3D" parent="lighting"]
+position = Vector3(36, 10, -48)
+light_color = Color(1,0.88,0.67,1)
+light_energy = 0.80
+omni_range = 32.0
+shadow_enabled = false
+
+[node name="cooler_fill" type="OmniLight3D" parent="lighting"]
+position = Vector3(-63,7,-39)
+light_color = Color(0.61,0.88,1,1)
+light_energy = 1.0
+omni_range = 32
+shadow_enabled = false
+
+[node name="industrial_fill" type="OmniLight3D" parent="lighting"]
+position = Vector3(0,10,-79)
+light_color = Color(0.80,0.91,0.87,1)
+light_energy = 0.70
+omni_range = 30
+shadow_enabled = false
+
+[node name="papel_picado_0_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-68, 6.888, -7)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_0_0_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-68.65, 6.688, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_0_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-68, 6.688, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_0_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-67.35, 6.688, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-64, 6.924, -7)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_0_1_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-64.65, 6.724, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_1_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-64, 6.724, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_1_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-63.35, 6.724, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-60, 6.96, -7)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_0_2_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-60.65, 6.76, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_2_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-60, 6.76, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_2_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-59.35, 6.76, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-56, 6.996, -7)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_0_3_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-56.65, 6.796, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_3_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-56, 6.796, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_3_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-55.35, 6.796, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_4" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-52, 7.032, -7)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_0_4_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-52.65, 6.832, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_4_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-52, 6.832, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_4_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-51.35, 6.832, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_5" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-48, 7.068, -7)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_0_5_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-48.65, 6.868, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_5_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-48, 6.868, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_5_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-47.35, 6.868, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_6" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-44, 7.104, -7)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_0_6_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-44.65, 6.904, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_6_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-44, 6.904, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_6_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-43.35, 6.904, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_7" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-40, 7.14, -7)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_0_7_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-40.65, 6.94, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_7_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-40, 6.94, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_7_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-39.35, 6.94, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_8" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-36, 7.176, -7)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_0_8_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-36.65, 6.976, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_8_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-36, 6.976, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_8_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-35.35, 6.976, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_9" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-32, 7.212, -7)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_0_9_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-32.65, 7.012, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_9_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-32, 7.012, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_9_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-31.35, 7.012, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_10" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-28, 7.248, -7)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_0_10_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-28.65, 7.048, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_10_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-28, 7.048, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_10_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-27.35, 7.048, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_11" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-24, 7.284, -7)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_0_11_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-24.65, 7.084, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_11_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-24, 7.084, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_11_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-23.35, 7.084, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_12" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-20, 7.32, -7)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_0_12_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-20.65, 7.12, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_12_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-20, 7.12, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_12_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-19.35, 7.12, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_13" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-16, 7.356, -7)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_0_13_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-16.65, 7.156, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_13_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-16, 7.156, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_13_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-15.35, 7.156, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_14" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12, 7.392, -7)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_0_14_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12.65, 7.192, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_14_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12, 7.192, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_14_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-11.35, 7.192, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_15" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8, 7.428, -7)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_0_15_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8.65, 7.228, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_15_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8, 7.228, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_15_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-7.35, 7.228, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_16" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4, 7.464, -7)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_0_16_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4.65, 7.264, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_16_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4, 7.264, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_16_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-3.35, 7.264, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_17" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 7.5, -7)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_0_17_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-0.65, 7.3, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_17_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 7.3, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_17_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0.65, 7.3, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_18" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4, 7.464, -7)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_0_18_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(3.35, 7.264, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_18_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4, 7.264, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_18_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4.65, 7.264, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_19" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8, 7.428, -7)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_0_19_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(7.35, 7.228, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_19_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8, 7.228, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_19_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8.65, 7.228, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_20" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12, 7.392, -7)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_0_20_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(11.35, 7.192, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_20_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12, 7.192, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_20_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12.65, 7.192, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_21" type="MeshInstance3D" parent="architecture"]
+position = Vector3(16, 7.356, -7)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_0_21_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(15.35, 7.156, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_21_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(16, 7.156, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_21_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(16.65, 7.156, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_22" type="MeshInstance3D" parent="architecture"]
+position = Vector3(20, 7.32, -7)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_0_22_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(19.35, 7.12, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_22_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(20, 7.12, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_22_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(20.65, 7.12, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_23" type="MeshInstance3D" parent="architecture"]
+position = Vector3(24, 7.284, -7)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_0_23_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(23.35, 7.084, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_23_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(24, 7.084, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_23_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(24.65, 7.084, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_24" type="MeshInstance3D" parent="architecture"]
+position = Vector3(28, 7.248, -7)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_0_24_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(27.35, 7.048, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_24_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(28, 7.048, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_24_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(28.65, 7.048, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_25" type="MeshInstance3D" parent="architecture"]
+position = Vector3(32, 7.212, -7)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_0_25_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(31.35, 7.012, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_25_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(32, 7.012, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_25_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(32.65, 7.012, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_26" type="MeshInstance3D" parent="architecture"]
+position = Vector3(36, 7.176, -7)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_0_26_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(35.35, 6.976, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_26_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(36, 6.976, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_26_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(36.65, 6.976, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_27" type="MeshInstance3D" parent="architecture"]
+position = Vector3(40, 7.14, -7)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_0_27_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(39.35, 6.94, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_27_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(40, 6.94, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_27_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(40.65, 6.94, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_28" type="MeshInstance3D" parent="architecture"]
+position = Vector3(44, 7.104, -7)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_0_28_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(43.35, 6.904, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_28_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(44, 6.904, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_28_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(44.65, 6.904, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_29" type="MeshInstance3D" parent="architecture"]
+position = Vector3(48, 7.068, -7)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_0_29_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(47.35, 6.868, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_29_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(48, 6.868, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_29_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(48.65, 6.868, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_30" type="MeshInstance3D" parent="architecture"]
+position = Vector3(52, 7.032, -7)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_0_30_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(51.35, 6.832, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_30_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(52, 6.832, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_30_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(52.65, 6.832, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_31" type="MeshInstance3D" parent="architecture"]
+position = Vector3(56, 6.996, -7)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_0_31_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(55.35, 6.796, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_31_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(56, 6.796, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_31_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(56.65, 6.796, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_32" type="MeshInstance3D" parent="architecture"]
+position = Vector3(60, 6.96, -7)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_0_32_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(59.35, 6.76, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_32_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(60, 6.76, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_32_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(60.65, 6.76, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_33" type="MeshInstance3D" parent="architecture"]
+position = Vector3(64, 6.924, -7)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_0_33_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(63.35, 6.724, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_33_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(64, 6.724, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_33_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(64.65, 6.724, -6.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_0_34" type="MeshInstance3D" parent="architecture"]
+position = Vector3(68, 6.888, -7)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_0_34_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(67.35, 6.688, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_34_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(68, 6.688, -6.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_0_34_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(68.65, 6.688, -6.98)
+mesh = SubResource("r84")
+
+[node name="decoration_line_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 7.9, -7)
+mesh = SubResource("r94")
+
+[node name="papel_picado_1_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-68, 6.888, -35)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_1_0_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-68.65, 6.688, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_0_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-68, 6.688, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_0_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-67.35, 6.688, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-64, 6.924, -35)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_1_1_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-64.65, 6.724, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_1_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-64, 6.724, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_1_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-63.35, 6.724, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-60, 6.96, -35)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_1_2_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-60.65, 6.76, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_2_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-60, 6.76, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_2_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-59.35, 6.76, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-56, 6.996, -35)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_1_3_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-56.65, 6.796, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_3_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-56, 6.796, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_3_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-55.35, 6.796, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_4" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-52, 7.032, -35)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_1_4_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-52.65, 6.832, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_4_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-52, 6.832, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_4_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-51.35, 6.832, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_5" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-48, 7.068, -35)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_1_5_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-48.65, 6.868, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_5_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-48, 6.868, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_5_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-47.35, 6.868, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_6" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-44, 7.104, -35)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_1_6_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-44.65, 6.904, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_6_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-44, 6.904, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_6_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-43.35, 6.904, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_7" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-40, 7.14, -35)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_1_7_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-40.65, 6.94, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_7_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-40, 6.94, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_7_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-39.35, 6.94, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_8" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-36, 7.176, -35)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_1_8_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-36.65, 6.976, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_8_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-36, 6.976, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_8_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-35.35, 6.976, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_9" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-32, 7.212, -35)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_1_9_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-32.65, 7.012, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_9_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-32, 7.012, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_9_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-31.35, 7.012, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_10" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-28, 7.248, -35)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_1_10_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-28.65, 7.048, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_10_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-28, 7.048, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_10_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-27.35, 7.048, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_11" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-24, 7.284, -35)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_1_11_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-24.65, 7.084, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_11_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-24, 7.084, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_11_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-23.35, 7.084, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_12" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-20, 7.32, -35)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_1_12_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-20.65, 7.12, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_12_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-20, 7.12, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_12_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-19.35, 7.12, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_13" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-16, 7.356, -35)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_1_13_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-16.65, 7.156, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_13_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-16, 7.156, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_13_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-15.35, 7.156, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_14" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12, 7.392, -35)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_1_14_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12.65, 7.192, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_14_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12, 7.192, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_14_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-11.35, 7.192, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_15" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8, 7.428, -35)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_1_15_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8.65, 7.228, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_15_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8, 7.228, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_15_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-7.35, 7.228, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_16" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4, 7.464, -35)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_1_16_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4.65, 7.264, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_16_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4, 7.264, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_16_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-3.35, 7.264, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_17" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 7.5, -35)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_1_17_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-0.65, 7.3, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_17_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 7.3, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_17_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0.65, 7.3, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_18" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4, 7.464, -35)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_1_18_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(3.35, 7.264, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_18_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4, 7.264, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_18_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4.65, 7.264, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_19" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8, 7.428, -35)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_1_19_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(7.35, 7.228, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_19_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8, 7.228, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_19_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8.65, 7.228, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_20" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12, 7.392, -35)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_1_20_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(11.35, 7.192, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_20_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12, 7.192, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_20_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12.65, 7.192, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_21" type="MeshInstance3D" parent="architecture"]
+position = Vector3(16, 7.356, -35)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_1_21_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(15.35, 7.156, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_21_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(16, 7.156, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_21_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(16.65, 7.156, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_22" type="MeshInstance3D" parent="architecture"]
+position = Vector3(20, 7.32, -35)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_1_22_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(19.35, 7.12, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_22_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(20, 7.12, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_22_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(20.65, 7.12, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_23" type="MeshInstance3D" parent="architecture"]
+position = Vector3(24, 7.284, -35)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_1_23_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(23.35, 7.084, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_23_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(24, 7.084, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_23_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(24.65, 7.084, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_24" type="MeshInstance3D" parent="architecture"]
+position = Vector3(28, 7.248, -35)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_1_24_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(27.35, 7.048, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_24_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(28, 7.048, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_24_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(28.65, 7.048, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_25" type="MeshInstance3D" parent="architecture"]
+position = Vector3(32, 7.212, -35)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_1_25_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(31.35, 7.012, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_25_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(32, 7.012, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_25_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(32.65, 7.012, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_26" type="MeshInstance3D" parent="architecture"]
+position = Vector3(36, 7.176, -35)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_1_26_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(35.35, 6.976, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_26_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(36, 6.976, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_26_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(36.65, 6.976, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_27" type="MeshInstance3D" parent="architecture"]
+position = Vector3(40, 7.14, -35)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_1_27_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(39.35, 6.94, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_27_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(40, 6.94, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_27_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(40.65, 6.94, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_28" type="MeshInstance3D" parent="architecture"]
+position = Vector3(44, 7.104, -35)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_1_28_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(43.35, 6.904, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_28_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(44, 6.904, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_28_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(44.65, 6.904, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_29" type="MeshInstance3D" parent="architecture"]
+position = Vector3(48, 7.068, -35)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_1_29_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(47.35, 6.868, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_29_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(48, 6.868, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_29_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(48.65, 6.868, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_30" type="MeshInstance3D" parent="architecture"]
+position = Vector3(52, 7.032, -35)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_1_30_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(51.35, 6.832, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_30_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(52, 6.832, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_30_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(52.65, 6.832, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_31" type="MeshInstance3D" parent="architecture"]
+position = Vector3(56, 6.996, -35)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_1_31_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(55.35, 6.796, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_31_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(56, 6.796, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_31_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(56.65, 6.796, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_32" type="MeshInstance3D" parent="architecture"]
+position = Vector3(60, 6.96, -35)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_1_32_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(59.35, 6.76, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_32_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(60, 6.76, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_32_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(60.65, 6.76, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_33" type="MeshInstance3D" parent="architecture"]
+position = Vector3(64, 6.924, -35)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_1_33_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(63.35, 6.724, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_33_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(64, 6.724, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_33_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(64.65, 6.724, -34.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_1_34" type="MeshInstance3D" parent="architecture"]
+position = Vector3(68, 6.888, -35)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_1_34_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(67.35, 6.688, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_34_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(68, 6.688, -34.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_1_34_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(68.65, 6.688, -34.98)
+mesh = SubResource("r84")
+
+[node name="decoration_line_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 7.9, -35)
+mesh = SubResource("r94")
+
+[node name="papel_picado_2_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-68, 6.888, -59)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_2_0_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-68.65, 6.688, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_0_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-68, 6.688, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_0_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-67.35, 6.688, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-64, 6.924, -59)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_2_1_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-64.65, 6.724, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_1_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-64, 6.724, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_1_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-63.35, 6.724, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-60, 6.96, -59)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_2_2_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-60.65, 6.76, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_2_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-60, 6.76, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_2_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-59.35, 6.76, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-56, 6.996, -59)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_2_3_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-56.65, 6.796, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_3_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-56, 6.796, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_3_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-55.35, 6.796, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_4" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-52, 7.032, -59)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_2_4_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-52.65, 6.832, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_4_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-52, 6.832, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_4_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-51.35, 6.832, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_5" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-48, 7.068, -59)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_2_5_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-48.65, 6.868, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_5_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-48, 6.868, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_5_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-47.35, 6.868, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_6" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-44, 7.104, -59)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_2_6_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-44.65, 6.904, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_6_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-44, 6.904, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_6_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-43.35, 6.904, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_7" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-40, 7.14, -59)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_2_7_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-40.65, 6.94, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_7_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-40, 6.94, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_7_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-39.35, 6.94, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_8" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-36, 7.176, -59)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_2_8_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-36.65, 6.976, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_8_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-36, 6.976, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_8_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-35.35, 6.976, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_9" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-32, 7.212, -59)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_2_9_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-32.65, 7.012, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_9_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-32, 7.012, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_9_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-31.35, 7.012, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_10" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-28, 7.248, -59)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_2_10_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-28.65, 7.048, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_10_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-28, 7.048, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_10_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-27.35, 7.048, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_11" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-24, 7.284, -59)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_2_11_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-24.65, 7.084, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_11_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-24, 7.084, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_11_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-23.35, 7.084, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_12" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-20, 7.32, -59)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_2_12_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-20.65, 7.12, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_12_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-20, 7.12, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_12_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-19.35, 7.12, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_13" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-16, 7.356, -59)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_2_13_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-16.65, 7.156, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_13_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-16, 7.156, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_13_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-15.35, 7.156, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_14" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12, 7.392, -59)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_2_14_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12.65, 7.192, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_14_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12, 7.192, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_14_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-11.35, 7.192, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_15" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8, 7.428, -59)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_2_15_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8.65, 7.228, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_15_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8, 7.228, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_15_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-7.35, 7.228, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_16" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4, 7.464, -59)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_2_16_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4.65, 7.264, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_16_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4, 7.264, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_16_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-3.35, 7.264, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_17" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 7.5, -59)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_2_17_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-0.65, 7.3, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_17_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 7.3, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_17_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0.65, 7.3, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_18" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4, 7.464, -59)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_2_18_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(3.35, 7.264, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_18_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4, 7.264, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_18_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4.65, 7.264, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_19" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8, 7.428, -59)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_2_19_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(7.35, 7.228, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_19_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8, 7.228, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_19_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8.65, 7.228, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_20" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12, 7.392, -59)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_2_20_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(11.35, 7.192, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_20_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12, 7.192, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_20_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12.65, 7.192, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_21" type="MeshInstance3D" parent="architecture"]
+position = Vector3(16, 7.356, -59)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_2_21_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(15.35, 7.156, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_21_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(16, 7.156, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_21_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(16.65, 7.156, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_22" type="MeshInstance3D" parent="architecture"]
+position = Vector3(20, 7.32, -59)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_2_22_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(19.35, 7.12, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_22_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(20, 7.12, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_22_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(20.65, 7.12, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_23" type="MeshInstance3D" parent="architecture"]
+position = Vector3(24, 7.284, -59)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_2_23_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(23.35, 7.084, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_23_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(24, 7.084, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_23_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(24.65, 7.084, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_24" type="MeshInstance3D" parent="architecture"]
+position = Vector3(28, 7.248, -59)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_2_24_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(27.35, 7.048, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_24_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(28, 7.048, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_24_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(28.65, 7.048, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_25" type="MeshInstance3D" parent="architecture"]
+position = Vector3(32, 7.212, -59)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_2_25_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(31.35, 7.012, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_25_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(32, 7.012, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_25_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(32.65, 7.012, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_26" type="MeshInstance3D" parent="architecture"]
+position = Vector3(36, 7.176, -59)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_2_26_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(35.35, 6.976, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_26_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(36, 6.976, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_26_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(36.65, 6.976, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_27" type="MeshInstance3D" parent="architecture"]
+position = Vector3(40, 7.14, -59)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_2_27_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(39.35, 6.94, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_27_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(40, 6.94, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_27_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(40.65, 6.94, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_28" type="MeshInstance3D" parent="architecture"]
+position = Vector3(44, 7.104, -59)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_2_28_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(43.35, 6.904, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_28_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(44, 6.904, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_28_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(44.65, 6.904, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_29" type="MeshInstance3D" parent="architecture"]
+position = Vector3(48, 7.068, -59)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_2_29_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(47.35, 6.868, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_29_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(48, 6.868, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_29_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(48.65, 6.868, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_30" type="MeshInstance3D" parent="architecture"]
+position = Vector3(52, 7.032, -59)
+mesh = SubResource("r82")
+
+[node name="paper_cutout_2_30_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(51.35, 6.832, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_30_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(52, 6.832, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_30_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(52.65, 6.832, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_31" type="MeshInstance3D" parent="architecture"]
+position = Vector3(56, 6.996, -59)
+mesh = SubResource("r86")
+
+[node name="paper_cutout_2_31_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(55.35, 6.796, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_31_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(56, 6.796, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_31_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(56.65, 6.796, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_32" type="MeshInstance3D" parent="architecture"]
+position = Vector3(60, 6.96, -59)
+mesh = SubResource("r88")
+
+[node name="paper_cutout_2_32_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(59.35, 6.76, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_32_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(60, 6.76, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_32_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(60.65, 6.76, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_33" type="MeshInstance3D" parent="architecture"]
+position = Vector3(64, 6.924, -59)
+mesh = SubResource("r90")
+
+[node name="paper_cutout_2_33_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(63.35, 6.724, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_33_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(64, 6.724, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_33_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(64.65, 6.724, -58.98)
+mesh = SubResource("r84")
+
+[node name="papel_picado_2_34" type="MeshInstance3D" parent="architecture"]
+position = Vector3(68, 6.888, -59)
+mesh = SubResource("r92")
+
+[node name="paper_cutout_2_34_-0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(67.35, 6.688, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_34_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(68, 6.688, -58.98)
+mesh = SubResource("r84")
+
+[node name="paper_cutout_2_34_0.65" type="MeshInstance3D" parent="architecture"]
+position = Vector3(68.65, 6.688, -58.98)
+mesh = SubResource("r84")
+
+[node name="decoration_line_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 7.9, -59)
+mesh = SubResource("r94")
+
+[node name="pinata_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-46, 6.6, -8)
+scale = Vector3(1.5, 1.7, 1.5)
+mesh = SubResource("r96")
+
+[node name="pinata_point_0_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-45, 6.6, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_0_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-45.3765, 7.38183, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_0_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-46.2225, 7.57493, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_0_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-46.901, 7.03388, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_0_4" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-46.901, 6.16612, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_0_5" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-46.2225, 5.62507, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_0_6" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-45.3765, 5.81817, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 6.6, -35)
+scale = Vector3(1.5, 1.7, 1.5)
+mesh = SubResource("r104")
+
+[node name="pinata_point_1_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(1, 6.6, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_1_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0.62349, 7.38183, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_1_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-0.222521, 7.57493, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_1_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-0.900969, 7.03388, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_1_4" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-0.900969, 6.16612, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_1_5" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-0.222521, 5.62507, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_1_6" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0.62349, 5.81817, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(47, 6.6, -58)
+scale = Vector3(1.5, 1.7, 1.5)
+mesh = SubResource("r106")
+
+[node name="pinata_point_2_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(48, 6.6, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_2_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(47.6235, 7.38183, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_2_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(46.7775, 7.57493, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_2_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(46.099, 7.03388, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_2_4" type="MeshInstance3D" parent="architecture"]
+position = Vector3(46.099, 6.16612, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_2_5" type="MeshInstance3D" parent="architecture"]
+position = Vector3(46.7775, 5.62507, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_2_6" type="MeshInstance3D" parent="architecture"]
+position = Vector3(47.6235, 5.81817, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="broom_handle_0" type="MeshInstance3D" parent="cajas"]
+position = Vector3(-44, 1, 3.5)
+mesh = SubResource("r108")
+
+[node name="broom_head_0" type="MeshInstance3D" parent="cajas"]
+position = Vector3(-44, 0.1, 3.5)
+mesh = SubResource("r110")
+
+[node name="broom_handle_1" type="MeshInstance3D" parent="pasillos_centrales"]
+position = Vector3(43, 1, 4.5)
+mesh = SubResource("r108")
+
+[node name="broom_head_1" type="MeshInstance3D" parent="pasillos_centrales"]
+position = Vector3(43, 0.1, 4.5)
+mesh = SubResource("r110")
+
+[node name="broom_handle_2" type="MeshInstance3D" parent="frutas_granel"]
+position = Vector3(15.0, 1.0, 10.5)
+mesh = SubResource("r108")
+
+[node name="broom_head_2" type="MeshInstance3D" parent="frutas_granel"]
+position = Vector3(15.0, 0.1, 10.5)
+mesh = SubResource("r110")
+
+[node name="price_sign_0" parent="architecture" instance=ExtResource("e11")]
+position = Vector3(-48, 4.7, -17)
+scale = Vector3(1, 1, 1)
+text = "OFERTA DEL DÍA"
+
+[node name="price_sign_1" parent="architecture" instance=ExtResource("e11")]
+position = Vector3(47, 4.7, -58)
+scale = Vector3(1, 1, 1)
+text = "SI NO LO ENCUENTRA, PREGUNTE"
+
+[node name="price_sign_2" parent="architecture" instance=ExtResource("e11")]
+position = Vector3(0, 4.7, -64)
+scale = Vector3(1, 1, 1)
+text = "AQUÍ HAY DE TODO"
+
+[node name="decorative_tile_0_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12, 0.008, -14)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_0_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12, 0.008, -10)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_0_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12, 0.008, -6)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_0_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-12, 0.008, -2)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_1_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8, 0.008, -14)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_1_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8, 0.008, -10)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_1_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8, 0.008, -6)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_1_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-8, 0.008, -2)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_2_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4, 0.008, -14)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_2_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4, 0.008, -10)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_2_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4, 0.008, -6)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_2_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-4, 0.008, -2)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_3_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 0.008, -14)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_3_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 0.008, -10)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_3_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 0.008, -6)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_3_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 0.008, -2)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_4_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4, 0.008, -14)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_4_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4, 0.008, -10)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_4_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4, 0.008, -6)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_4_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(4, 0.008, -2)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_5_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8, 0.008, -14)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_5_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8, 0.008, -10)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_5_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8, 0.008, -6)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_5_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(8, 0.008, -2)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_6_0" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12, 0.008, -14)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_6_1" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12, 0.008, -10)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_6_2" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12, 0.008, -6)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_6_3" type="MeshInstance3D" parent="architecture"]
+position = Vector3(12, 0.008, -2)
+mesh = SubResource("r112")
+
+[node name="navigation" type="Node3D" parent="."]
+editor_description = "Runtime planar grid derives from navigation_obstacle collision footprints; 1.5m cells."
+
+[node name="spawn_points" type="Node3D" parent="."]
+
+
+[node name="cajas" type="Node3D" parent="spawn_points"]
+
+
+[node name="spawn_cajas_01" type="Marker3D" parent="spawn_points/cajas" groups=["enemy_spawn"]]
+position = Vector3(-16, 0.05, -3)
+
+[node name="spawn_cajas_02" type="Marker3D" parent="spawn_points/cajas" groups=["enemy_spawn"]]
+position = Vector3(16, 0.05, -3)
+
+[node name="spawn_cajas_03" type="Marker3D" parent="spawn_points/cajas" groups=["enemy_spawn"]]
+position = Vector3(-60, 0.05, -7)
+
+[node name="spawn_cajas_04" type="Marker3D" parent="spawn_points/cajas" groups=["enemy_spawn"]]
+position = Vector3(-47, 0.05, -12)
+
+[node name="spawn_cajas_05" type="Marker3D" parent="spawn_points/cajas" groups=["enemy_spawn"]]
+position = Vector3(47, 0.05, -12)
+
+[node name="spawn_cajas_06" type="Marker3D" parent="spawn_points/cajas" groups=["enemy_spawn"]]
+position = Vector3(63, 0.05, -9)
+
+[node name="spawn_cajas_07" type="Marker3D" parent="spawn_points/cajas" groups=["enemy_spawn"]]
+position = Vector3(-44, 0.05, -3)
+
+[node name="spawn_cajas_08" type="Marker3D" parent="spawn_points/cajas" groups=["enemy_spawn"]]
+position = Vector3(47, 0.05, -3)
+
+[node name="pasillos" type="Node3D" parent="spawn_points"]
+
+
+[node name="spawn_pasillos_01" type="Marker3D" parent="spawn_points/pasillos" groups=["enemy_spawn"]]
+position = Vector3(-45, 0.05, -22)
+
+[node name="spawn_pasillos_02" type="Marker3D" parent="spawn_points/pasillos" groups=["enemy_spawn"]]
+position = Vector3(-45, 0.05, -50)
+
+[node name="spawn_pasillos_03" type="Marker3D" parent="spawn_points/pasillos" groups=["enemy_spawn"]]
+position = Vector3(45, 0.05, -22)
+
+[node name="spawn_pasillos_04" type="Marker3D" parent="spawn_points/pasillos" groups=["enemy_spawn"]]
+position = Vector3(45, 0.05, -52)
+
+[node name="spawn_pasillos_05" type="Marker3D" parent="spawn_points/pasillos" groups=["enemy_spawn"]]
+position = Vector3(0, 0.05, -35)
+
+[node name="spawn_pasillos_06" type="Marker3D" parent="spawn_points/pasillos" groups=["enemy_spawn"]]
+position = Vector3(0, 0.05, -59)
+
+[node name="refrigeradores" type="Node3D" parent="spawn_points"]
+
+
+[node name="spawn_refrigeradores_01" type="Marker3D" parent="spawn_points/refrigeradores" groups=["enemy_spawn"]]
+position = Vector3(-63, 0.05, -18)
+
+[node name="spawn_refrigeradores_02" type="Marker3D" parent="spawn_points/refrigeradores" groups=["enemy_spawn"]]
+position = Vector3(-63, 0.05, -35)
+
+[node name="spawn_refrigeradores_03" type="Marker3D" parent="spawn_points/refrigeradores" groups=["enemy_spawn"]]
+position = Vector3(-63, 0.05, -58)
+
+[node name="spawn_refrigeradores_04" type="Marker3D" parent="spawn_points/refrigeradores" groups=["enemy_spawn"]]
+position = Vector3(-55, 0.05, -26)
+
+[node name="spawn_refrigeradores_05" type="Marker3D" parent="spawn_points/refrigeradores" groups=["enemy_spawn"]]
+position = Vector3(-55, 0.05, -48)
+
+[node name="spawn_refrigeradores_06" type="Marker3D" parent="spawn_points/refrigeradores" groups=["enemy_spawn"]]
+position = Vector3(-72, 0.05, -59)
+
+[node name="frutas" type="Node3D" parent="spawn_points"]
+
+
+[node name="spawn_frutas_01" type="Marker3D" parent="spawn_points/frutas" groups=["enemy_spawn"]]
+position = Vector3(33, 0.05, -65)
+
+[node name="spawn_frutas_02" type="Marker3D" parent="spawn_points/frutas" groups=["enemy_spawn"]]
+position = Vector3(68, 0.05, -65)
+
+[node name="spawn_frutas_03" type="Marker3D" parent="spawn_points/frutas" groups=["enemy_spawn"]]
+position = Vector3(32, 0.05, -91)
+
+[node name="spawn_frutas_04" type="Marker3D" parent="spawn_points/frutas" groups=["enemy_spawn"]]
+position = Vector3(69, 0.05, -91)
+
+[node name="spawn_frutas_05" type="Marker3D" parent="spawn_points/frutas" groups=["enemy_spawn"]]
+position = Vector3(58, 0.05, -76)
+
+[node name="spawn_frutas_06" type="Marker3D" parent="spawn_points/frutas" groups=["enemy_spawn"]]
+position = Vector3(52, 0.05, -64)
+
+[node name="bodega" type="Node3D" parent="spawn_points"]
+
+
+[node name="spawn_bodega_01" type="Marker3D" parent="spawn_points/bodega" groups=["enemy_spawn"]]
+position = Vector3(-21, 0.05, -65)
+
+[node name="spawn_bodega_02" type="Marker3D" parent="spawn_points/bodega" groups=["enemy_spawn"]]
+position = Vector3(21, 0.05, -65)
+
+[node name="spawn_bodega_03" type="Marker3D" parent="spawn_points/bodega" groups=["enemy_spawn"]]
+position = Vector3(-21, 0.05, -91)
+
+[node name="spawn_bodega_04" type="Marker3D" parent="spawn_points/bodega" groups=["enemy_spawn"]]
+position = Vector3(21, 0.05, -91)
+
+[node name="spawn_bodega_05" type="Marker3D" parent="spawn_points/bodega" groups=["enemy_spawn"]]
+position = Vector3(0, 0.05, -68)
+
+[node name="spawn_bodega_06" type="Marker3D" parent="spawn_points/bodega" groups=["enemy_spawn"]]
+position = Vector3(0, 0.05, -92)
+
+[node name="patio" type="Node3D" parent="spawn_points"]
+
+
+[node name="spawn_patio_01" type="Marker3D" parent="spawn_points/patio" groups=["enemy_spawn"]]
+position = Vector3(-28, 0.05, -65)
+
+[node name="spawn_patio_02" type="Marker3D" parent="spawn_points/patio" groups=["enemy_spawn"]]
+position = Vector3(-72, 0.05, -65)
+
+[node name="spawn_patio_03" type="Marker3D" parent="spawn_points/patio" groups=["enemy_spawn"]]
+position = Vector3(-28, 0.05, -91)
+
+[node name="spawn_patio_04" type="Marker3D" parent="spawn_points/patio" groups=["enemy_spawn"]]
+position = Vector3(-72, 0.05, -91)
+
+[node name="spawn_patio_05" type="Marker3D" parent="spawn_points/patio" groups=["enemy_spawn"]]
+position = Vector3(-47, 0.05, -90)
+
+[node name="spawn_patio_06" type="Marker3D" parent="spawn_points/patio" groups=["enemy_spawn"]]
+position = Vector3(-41, 0.05, -70)
+
+[node name="objective_markers" type="Node3D" parent="."]
+
+
+[node name="entrance" type="Marker3D" parent="objective_markers"]
+position = Vector3(0, 0, -2)
+visible = true
+
+[node name="beacon" parent="objective_markers/entrance" instance=ExtResource("e12")]
+position = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="cajas" type="Marker3D" parent="objective_markers"]
+position = Vector3(0, 0, -10)
+visible = false
+
+[node name="beacon" parent="objective_markers/cajas" instance=ExtResource("e12")]
+position = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="pasillos" type="Marker3D" parent="objective_markers"]
+position = Vector3(0, 0, -38)
+visible = false
+
+[node name="beacon" parent="objective_markers/pasillos" instance=ExtResource("e12")]
+position = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="refrigeradores" type="Marker3D" parent="objective_markers"]
+position = Vector3(-60, 0, -30)
+visible = false
+
+[node name="beacon" parent="objective_markers/refrigeradores" instance=ExtResource("e12")]
+position = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="frutas" type="Marker3D" parent="objective_markers"]
+position = Vector3(50, 0, -65)
+visible = false
+
+[node name="beacon" parent="objective_markers/frutas" instance=ExtResource("e12")]
+position = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="bodega" type="Marker3D" parent="objective_markers"]
+position = Vector3(0, 0, -79)
+visible = false
+
+[node name="beacon" parent="objective_markers/bodega" instance=ExtResource("e12")]
+position = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="patio" type="Marker3D" parent="objective_markers"]
+position = Vector3(-41, 0, -79)
+visible = false
+
+[node name="beacon" parent="objective_markers/patio" instance=ExtResource("e12")]
+position = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+
+[node name="diablito_01" parent="bodega" instance=ExtResource("e13")]
+position = Vector3(-21,0,-1.5)
+
+[node name="diablito_02" parent="frutas_granel" instance=ExtResource("e13")]
+position = Vector3(19.0, 0.0, -9.5)
+
+[node name="wall_fan_left" parent="architecture" instance=ExtResource("e14")]
+position = Vector3(-74, 6, -35)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="wall_fan_right" parent="architecture" instance=ExtResource("e14")]
+position = Vector3(74, 6, -35)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="bottle_crate_exterior" parent="fachada_y_acceso" instance=ExtResource("e15")]
+position = Vector3(-37, 0, 0.5)
+
+[node name="bottle_crate_patio_01" parent="patio_carga" instance=ExtResource("e15")]
+position = Vector3(5, 0, 11.5)
+
+[node name="bottle_crate_patio_02" parent="patio_carga" instance=ExtResource("e15")]
+position = Vector3(20, 0, -12.5)
+
+[node name="main_sign_board" type="Node3D" parent="fachada_y_acceso"]
+position = Vector3(0, 11, -7)
+
+[node name="panel" type="MeshInstance3D" parent="fachada_y_acceso/main_sign_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_main_sign")
+cast_shadow = 0
+
+[node name="painted_ad_-47_board" type="Node3D" parent="fachada_y_acceso"]
+position = Vector3(-47, 5.5, -7.05)
+
+[node name="panel" type="MeshInstance3D" parent="fachada_y_acceso/painted_ad_-47_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_painted_ad_minus47")
+cast_shadow = 0
+
+[node name="painted_ad_47_board" type="Node3D" parent="fachada_y_acceso"]
+position = Vector3(47, 5.5, -7.05)
+
+[node name="panel" type="MeshInstance3D" parent="fachada_y_acceso/painted_ad_47_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_painted_ad_47")
+cast_shadow = 0
+
+[node name="entry_direction_board" type="Node3D" parent="fachada_y_acceso"]
+position = Vector3(0, 3.5, -6.5)
+
+[node name="panel" type="MeshInstance3D" parent="fachada_y_acceso/entry_direction_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_entry_direction")
+cast_shadow = 0
+
+[node name="lane_number_1_board" type="Node3D" parent="cajas"]
+position = Vector3(-32, 5, 0.5)
+
+[node name="panel" type="MeshInstance3D" parent="cajas/lane_number_1_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_lane_number_1")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="cajas/lane_number_1_board"]
+position = Vector3(-0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="cajas/lane_number_1_board"]
+position = Vector3(0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="lane_number_2_board" type="Node3D" parent="cajas"]
+position = Vector3(-20, 5, 0.5)
+
+[node name="panel" type="MeshInstance3D" parent="cajas/lane_number_2_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_lane_number_2")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="cajas/lane_number_2_board"]
+position = Vector3(-0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="cajas/lane_number_2_board"]
+position = Vector3(0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="lane_number_3_board" type="Node3D" parent="cajas"]
+position = Vector3(-8, 5, 0.5)
+
+[node name="panel" type="MeshInstance3D" parent="cajas/lane_number_3_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_lane_number_3")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="cajas/lane_number_3_board"]
+position = Vector3(-0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="cajas/lane_number_3_board"]
+position = Vector3(0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="lane_number_4_board" type="Node3D" parent="cajas"]
+position = Vector3(8, 5, 0.5)
+
+[node name="panel" type="MeshInstance3D" parent="cajas/lane_number_4_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_lane_number_4")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="cajas/lane_number_4_board"]
+position = Vector3(-0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="cajas/lane_number_4_board"]
+position = Vector3(0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="lane_number_5_board" type="Node3D" parent="cajas"]
+position = Vector3(20, 5, 0.5)
+
+[node name="panel" type="MeshInstance3D" parent="cajas/lane_number_5_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_lane_number_5")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="cajas/lane_number_5_board"]
+position = Vector3(-0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="cajas/lane_number_5_board"]
+position = Vector3(0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="lane_number_6_board" type="Node3D" parent="cajas"]
+position = Vector3(32, 5, 0.5)
+
+[node name="panel" type="MeshInstance3D" parent="cajas/lane_number_6_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_lane_number_6")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="cajas/lane_number_6_board"]
+position = Vector3(-0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="cajas/lane_number_6_board"]
+position = Vector3(0.27999999999999997, 5.562500000000001, -0.075)
+mesh = SubResource("polish_wire_lane_number_1")
+cast_shadow = 0
+
+[node name="thank_you_board" type="Node3D" parent="cajas"]
+position = Vector3(0, 6, -5.5)
+
+[node name="panel" type="MeshInstance3D" parent="cajas/thank_you_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_thank_you")
+cast_shadow = 0
+
+[node name="category_1_board" type="Node3D" parent="pasillos_centrales"]
+position = Vector3(-38, 5.6, 22.5)
+
+[node name="panel" type="MeshInstance3D" parent="pasillos_centrales/category_1_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_category_1")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="pasillos_centrales/category_1_board"]
+position = Vector3(-1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="pasillos_centrales/category_1_board"]
+position = Vector3(1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="category_2_board" type="Node3D" parent="pasillos_centrales"]
+position = Vector3(-27, 5.6, 22.5)
+
+[node name="panel" type="MeshInstance3D" parent="pasillos_centrales/category_2_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_category_2")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="pasillos_centrales/category_2_board"]
+position = Vector3(-1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="pasillos_centrales/category_2_board"]
+position = Vector3(1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="category_3_board" type="Node3D" parent="pasillos_centrales"]
+position = Vector3(-16, 5.6, 22.5)
+
+[node name="panel" type="MeshInstance3D" parent="pasillos_centrales/category_3_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_category_3")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="pasillos_centrales/category_3_board"]
+position = Vector3(-1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="pasillos_centrales/category_3_board"]
+position = Vector3(1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="category_4_board" type="Node3D" parent="pasillos_centrales"]
+position = Vector3(-5, 5.6, 22.5)
+
+[node name="panel" type="MeshInstance3D" parent="pasillos_centrales/category_4_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_category_4")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="pasillos_centrales/category_4_board"]
+position = Vector3(-1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="pasillos_centrales/category_4_board"]
+position = Vector3(1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="category_5_board" type="Node3D" parent="pasillos_centrales"]
+position = Vector3(6, 5.6, 22.5)
+
+[node name="panel" type="MeshInstance3D" parent="pasillos_centrales/category_5_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_category_5")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="pasillos_centrales/category_5_board"]
+position = Vector3(-1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="pasillos_centrales/category_5_board"]
+position = Vector3(1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="category_6_board" type="Node3D" parent="pasillos_centrales"]
+position = Vector3(17, 5.6, 22.5)
+
+[node name="panel" type="MeshInstance3D" parent="pasillos_centrales/category_6_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_category_6")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="pasillos_centrales/category_6_board"]
+position = Vector3(-1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="pasillos_centrales/category_6_board"]
+position = Vector3(1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="category_7_board" type="Node3D" parent="pasillos_centrales"]
+position = Vector3(28, 5.6, 22.5)
+
+[node name="panel" type="MeshInstance3D" parent="pasillos_centrales/category_7_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_category_7")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="pasillos_centrales/category_7_board"]
+position = Vector3(-1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="pasillos_centrales/category_7_board"]
+position = Vector3(1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="category_8_board" type="Node3D" parent="pasillos_centrales"]
+position = Vector3(39, 5.6, 22.5)
+
+[node name="panel" type="MeshInstance3D" parent="pasillos_centrales/category_8_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_category_8")
+cast_shadow = 0
+
+[node name="hanger_-1" type="MeshInstance3D" parent="pasillos_centrales/category_8_board"]
+position = Vector3(-1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="hanger_1" type="MeshInstance3D" parent="pasillos_centrales/category_8_board"]
+position = Vector3(1.26, 5.275, -0.075)
+mesh = SubResource("polish_wire_category_1")
+cast_shadow = 0
+
+[node name="cooler_banner_board" type="Node3D" parent="refrigeradores"]
+position = Vector3(-1, 5, 7.5)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="panel" type="MeshInstance3D" parent="refrigeradores/cooler_banner_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_cooler_banner")
+cast_shadow = 0
+
+[node name="produce_wall_board" type="Node3D" parent="frutas_granel"]
+position = Vector3(0.0, 6.0, -15.600000000000001)
+
+[node name="panel" type="MeshInstance3D" parent="frutas_granel/produce_wall_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_produce_wall")
+cast_shadow = 0
+
+[node name="industrial_sign_board" type="Node3D" parent="bodega"]
+position = Vector3(0, 9, 14.5)
+
+[node name="panel" type="MeshInstance3D" parent="bodega/industrial_sign_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_industrial_sign")
+cast_shadow = 0
+
+[node name="truck_brand_board" type="Node3D" parent="patio_carga"]
+position = Vector3(-12, 2.3, 1.57)
+
+[node name="panel" type="MeshInstance3D" parent="patio_carga/truck_brand_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_truck_brand")
+cast_shadow = 0
+
+[node name="patio_wall_board" type="Node3D" parent="patio_carga"]
+position = Vector3(0, 5, -15.6)
+
+[node name="panel" type="MeshInstance3D" parent="patio_carga/patio_wall_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_patio_wall")
+cast_shadow = 0
+
+[node name="health_pickups" type="Node3D" parent="."]
+
+[node name="salud_cajas_oeste" parent="health_pickups" instance=ExtResource("polish_health")]
+position = Vector3(-48, 0, -9)
+
+[node name="salud_cajas_este" parent="health_pickups" instance=ExtResource("polish_health")]
+position = Vector3(48, 0, -9)
+
+[node name="salud_pasillo_cruce" parent="health_pickups" instance=ExtResource("polish_health")]
+position = Vector3(0, 0, -35)
+
+[node name="salud_pasillo_sur" parent="health_pickups" instance=ExtResource("polish_health")]
+position = Vector3(20, 0, -59)
+
+[node name="salud_refrigeradores" parent="health_pickups" instance=ExtResource("polish_health")]
+position = Vector3(-57, 0, -31)
+
+[node name="salud_frutas" parent="health_pickups" instance=ExtResource("polish_health")]
+position = Vector3(55, 0, -68)
+
+[node name="salud_bodega" parent="health_pickups" instance=ExtResource("polish_health")]
+position = Vector3(20, 0, -68)
+
+[node name="salud_patio" parent="health_pickups" instance=ExtResource("polish_health")]
+position = Vector3(-40, 0, -88)
+
+[node name="offer_checkout_1" parent="cajas" instance=ExtResource("polish_offer")]
+position = Vector3(-30.85, 1.16, -0.3)
+
+[node name="offer_checkout_2" parent="cajas" instance=ExtResource("polish_offer")]
+position = Vector3(-18.85, 1.16, -0.3)
+
+[node name="offer_checkout_3" parent="cajas" instance=ExtResource("polish_offer")]
+position = Vector3(-6.85, 1.16, -0.3)
+
+[node name="offer_checkout_4" parent="cajas" instance=ExtResource("polish_offer")]
+position = Vector3(9.15, 1.16, -0.3)
+
+[node name="offer_checkout_5" parent="cajas" instance=ExtResource("polish_offer")]
+position = Vector3(21.15, 1.16, -0.3)
+
+[node name="offer_checkout_6" parent="cajas" instance=ExtResource("polish_offer")]
+position = Vector3(33.15, 1.16, -0.3)
+
+
+
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_1_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_1_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_1_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_1_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_1_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_1_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_1_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_1_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_1_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_1_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_1_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_1_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_2_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_2_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_2_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_2_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_2_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_2_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_2_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_2_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_2_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_2_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_2_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_2_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_3_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_3_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_3_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_3_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_3_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_3_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_3_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_3_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_3_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_3_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_3_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_3_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_4_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_4_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_4_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_4_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_4_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_4_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_4_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_4_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_4_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_4_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_4_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_4_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_5_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_5_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_5_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_5_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_5_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_5_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_5_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_5_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_5_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_5_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_5_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_5_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_6_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_6_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_6_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_6_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_6_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_6_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_6_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_6_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_6_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_6_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_6_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_6_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_7_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_7_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_7_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_7_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_7_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_7_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_7_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_7_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_7_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_7_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_7_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_7_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_8_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_8_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_8_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_8_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_8_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_8_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="pasillos_centrales/aisle_8_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_8_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_8_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="pasillos_centrales/aisle_8_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="pasillos_centrales/aisle_8_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="pasillos_centrales/aisle_8_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0

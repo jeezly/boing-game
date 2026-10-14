@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="board_material"]
+albedo_color = Color(0.17, 0.29, 0.25, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="board_mesh"]
+size = Vector3(5, 0.75, 0.08)
+material = SubResource("board_material")
+
+[node name="sign" type="Label3D"]
+text = "PÁSELE MARCHANTE"
+font_size = 32
+pixel_size = 0.006
+outline_size = 2
+modulate = Color(1,0.91,0.65,1)
+
+[node name="painted_board" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, -0.07)
+mesh = SubResource("board_mesh")
+cast_shadow = 0

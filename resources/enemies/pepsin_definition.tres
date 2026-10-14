@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/game/survival/enemy_definition.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/pepsin/pepsin.tscn" id="2"]
+
+[resource]
+script = ExtResource("1")
+enemy_scene = ExtResource("2")
+kill_score = 100
+selection_weight = 1.0

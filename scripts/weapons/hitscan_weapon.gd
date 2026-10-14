@@ -1,6 +1,6 @@
 extends Node
 
-const CameraController = preload("res://scripts/player/camera_controller.gd")
+const CameraController = preload("res://scripts/characters/mango/camera_controller.gd")
 
 @export var weapon_name: String = "debug_blaster"
 @export var range_meters: float = 100.0

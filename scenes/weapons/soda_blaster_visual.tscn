@@ -5,5 +5,18 @@
 [node name="soda_blaster_visual" type="Node3D"]
 script = ExtResource("1")
 
-[node name="projectile_socket" type="Marker3D" parent="."]
-position = Vector3(0, 0, -0.49)
+[node name="barrel" type="Node3D" parent="."]
+
+[node name="projectile_socket" type="Marker3D" parent="barrel"]
+position = Vector3(0, 0, -0.485)
+
+[node name="emission" type="Node3D" parent="barrel"]
+position = Vector3(0, 0, -0.468)
+
+[node name="hardware" type="Node3D" parent="."]
+
+[node name="grip_socket" type="Marker3D" parent="."]
+position = Vector3(0, -0.16, 0.055)
+
+[node name="support_socket" type="Marker3D" parent="."]
+position = Vector3(-0.06, -0.11, -0.18)

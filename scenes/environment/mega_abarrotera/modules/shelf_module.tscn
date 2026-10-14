@@ -1,0 +1,121 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/shelf_stock.gd" id="e1"]
+
+[sub_resource type="StandardMaterial3D" id="r1"]
+albedo_color = Color(0.15294,0.49020,0.46275,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r2"]
+size = Vector3(2.8, 3.5, 16)
+material = SubResource("r1")
+
+[sub_resource type="BoxShape3D" id="r3"]
+size = Vector3(2.8, 3.5, 16)
+
+[sub_resource type="StandardMaterial3D" id="r4"]
+albedo_color = Color(0.15686,0.42353,0.43922,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r5"]
+size = Vector3(0.15, 3.6, 16)
+material = SubResource("r4")
+
+[sub_resource type="StandardMaterial3D" id="r6"]
+albedo_color = Color(0.93725,0.88627,0.73725,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r7"]
+size = Vector3(2.9, 0.1, 16)
+material = SubResource("r6")
+
+[sub_resource type="StandardMaterial3D" id="r8"]
+albedo_color = Color(0.81961,0.30588,0.24314,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r9"]
+size = Vector3(0.045, 0.1, 16)
+material = SubResource("r8")
+
+[node name="shelf_module" type="Node3D"]
+
+
+[node name="body" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(0, 1.75, 0)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="body"]
+visible = false
+position = Vector3(0, 0, 0)
+mesh = SubResource("r2")
+
+[node name="collision" type="CollisionShape3D" parent="body"]
+shape = SubResource("r3")
+
+[node name="back_panel" type="MeshInstance3D" parent="."]
+position = Vector3(0, 1.8, 0)
+mesh = SubResource("r5")
+
+[node name="board_0" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.22, 0)
+mesh = SubResource("r7")
+
+[node name="price_rail_0_-1" type="MeshInstance3D" parent="."]
+position = Vector3(-1.43, 0.265, 0)
+mesh = SubResource("r9")
+
+[node name="price_rail_0_1" type="MeshInstance3D" parent="."]
+position = Vector3(1.43, 0.265, 0)
+mesh = SubResource("r9")
+
+[node name="board_1" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.98, 0)
+mesh = SubResource("r7")
+
+[node name="price_rail_1_-1" type="MeshInstance3D" parent="."]
+position = Vector3(-1.43, 1.025, 0)
+mesh = SubResource("r9")
+
+[node name="price_rail_1_1" type="MeshInstance3D" parent="."]
+position = Vector3(1.43, 1.025, 0)
+mesh = SubResource("r9")
+
+[node name="board_2" type="MeshInstance3D" parent="."]
+position = Vector3(0, 1.74, 0)
+mesh = SubResource("r7")
+
+[node name="price_rail_2_-1" type="MeshInstance3D" parent="."]
+position = Vector3(-1.43, 1.785, 0)
+mesh = SubResource("r9")
+
+[node name="price_rail_2_1" type="MeshInstance3D" parent="."]
+position = Vector3(1.43, 1.785, 0)
+mesh = SubResource("r9")
+
+[node name="board_3" type="MeshInstance3D" parent="."]
+position = Vector3(0, 2.5, 0)
+mesh = SubResource("r7")
+
+[node name="price_rail_3_-1" type="MeshInstance3D" parent="."]
+position = Vector3(-1.43, 2.545, 0)
+mesh = SubResource("r9")
+
+[node name="price_rail_3_1" type="MeshInstance3D" parent="."]
+position = Vector3(1.43, 2.545, 0)
+mesh = SubResource("r9")
+
+[node name="board_4" type="MeshInstance3D" parent="."]
+position = Vector3(0, 3.26, 0)
+mesh = SubResource("r7")
+
+[node name="price_rail_4_-1" type="MeshInstance3D" parent="."]
+position = Vector3(-1.43, 3.305, 0)
+mesh = SubResource("r9")
+
+[node name="price_rail_4_1" type="MeshInstance3D" parent="."]
+position = Vector3(1.43, 3.305, 0)
+mesh = SubResource("r9")
+
+[node name="stock" type="Node3D" parent="."]
+script = ExtResource("e1")

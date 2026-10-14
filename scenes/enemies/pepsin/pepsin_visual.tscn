@@ -1,0 +1,38 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/pepsin/pepsin_visual.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/weapons/soda_blaster_visual.tscn" id="2"]
+
+[node name="visual" type="Node3D"]
+script = ExtResource("1")
+
+[node name="presentation" type="Node3D" parent="."]
+
+[node name="torso" type="Node3D" parent="presentation"]
+
+[node name="face" type="Node3D" parent="presentation"]
+
+[node name="cap" type="Node3D" parent="presentation"]
+
+[node name="left_lobe" type="Node3D" parent="presentation/cap"]
+
+[node name="right_lobe" type="Node3D" parent="presentation/cap"]
+
+[node name="limbs" type="Node3D" parent="presentation"]
+
+[node name="left_leg" type="Node3D" parent="presentation/limbs"]
+position = Vector3(-0.17, 0.47, 0)
+
+[node name="right_leg" type="Node3D" parent="presentation/limbs"]
+position = Vector3(0.17, 0.47, 0)
+
+[node name="left_arm" type="Node3D" parent="presentation/limbs"]
+position = Vector3(-0.30, 0.86, 0)
+
+[node name="right_arm" type="Node3D" parent="presentation/limbs"]
+position = Vector3(0.30, 0.86, 0)
+
+[node name="weapon_mount" type="Node3D" parent="presentation"]
+position = Vector3(0.25, 0.81, -0.285)
+
+[node name="blaster" parent="presentation/weapon_mount" instance=ExtResource("2")]

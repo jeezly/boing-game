@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-const CameraController = preload("res://scripts/player/camera_controller.gd")
+const CameraController = preload("res://scripts/characters/mango/camera_controller.gd")
 
 @export var camera_rig_path: NodePath
 @onready var mode_label: Label = $Screen/ModeLabel

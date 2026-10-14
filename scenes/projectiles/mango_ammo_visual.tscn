@@ -1,0 +1,32 @@
+[gd_scene format=3]
+
+[sub_resource type="StandardMaterial3D" id="skin"]
+albedo_color = Color(1, 0.58, 0.055, 1)
+roughness = 0.55
+
+[sub_resource type="SphereMesh" id="fruit_mesh"]
+radius = 0.073
+height = 0.17
+radial_segments = 32
+rings = 16
+material = SubResource("skin")
+
+[sub_resource type="StandardMaterial3D" id="leaf_material"]
+albedo_color = Color(0.28, 0.48, 0.07, 1)
+
+[sub_resource type="SphereMesh" id="leaf_mesh"]
+radius = 0.022
+height = 0.075
+material = SubResource("leaf_material")
+
+[node name="mango_ammo_visual" type="Node3D"]
+
+[node name="fruit" type="MeshInstance3D" parent="."]
+rotation_degrees = Vector3(0, 0, -12)
+mesh = SubResource("fruit_mesh")
+
+[node name="leaf" type="MeshInstance3D" parent="."]
+position = Vector3(0.024, 0.086, 0)
+rotation_degrees = Vector3(0, 0, -42)
+scale = Vector3(1, 1, 0.40)
+mesh = SubResource("leaf_mesh")
