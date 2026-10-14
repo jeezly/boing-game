@@ -1,0 +1,26 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://scenes/environment/la_tiendita_graybox.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/test/target_dummy.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/main/hud.tscn" id="4"]
+
+[sub_resource type="Environment" id="environment"]
+background_mode = 1
+background_color = Color(0.18, 0.23, 0.3, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.9, 0.92, 1, 1)
+ambient_light_energy = 0.65
+
+[node name="weapon_test" type="Node3D"]
+[node name="graybox" parent="." instance=ExtResource("1")]
+[node name="Player" parent="." instance=ExtResource("2")]
+position = Vector3(0, 0.05, 7.5)
+[node name="target_dummy" parent="." instance=ExtResource("3")]
+position = Vector3(0, 0, 3.5)
+[node name="sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-55, -30, 0)
+shadow_enabled = true
+[node name="world_environment" type="WorldEnvironment" parent="."]
+environment = SubResource("environment")
+[node name="HUD" parent="." instance=ExtResource("4")]
+camera_rig_path = NodePath("../Player/CameraRig")

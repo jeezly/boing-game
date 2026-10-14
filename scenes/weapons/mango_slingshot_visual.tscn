@@ -1,0 +1,12 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/weapons/slingshot_visual.gd" id="1"]
+
+[node name="mango_slingshot_visual" type="Node3D"]
+script = ExtResource("1")
+
+[node name="muzzle" type="Marker3D" parent="."]
+position = Vector3(0, 0.24, -0.06)
+
+[node name="projectile_socket" type="Marker3D" parent="."]
+position = Vector3(0, 0.24, 0.05)

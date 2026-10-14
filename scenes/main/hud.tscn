@@ -43,3 +43,35 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 20
 text = "FIRST PERSON"
+
+[node name="health_label" type="Label" parent="Screen"]
+offset_left = 20.0
+offset_top = 55.0
+offset_right = 260.0
+offset_bottom = 82.0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "HP 100 / 100"
+
+[node name="health_bar" type="ProgressBar" parent="Screen"]
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 220.0
+offset_bottom = 103.0
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+
+[node name="weapon_label" type="Label" parent="Screen"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -80.0
+offset_right = 340.0
+offset_bottom = -20.0
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 20
+text = "Resortera de Mango\nAmmo: infinite"

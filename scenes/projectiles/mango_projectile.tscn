@@ -1,0 +1,38 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/projectiles/projectile.gd" id="1"]
+
+[sub_resource type="SphereShape3D" id="shape"]
+radius = 0.075
+
+[sub_resource type="StandardMaterial3D" id="orange"]
+albedo_color = Color(1, 0.57, 0.06, 1)
+
+[sub_resource type="SphereMesh" id="fruit"]
+radius = 0.075
+height = 0.19
+material = SubResource("orange")
+
+[sub_resource type="StandardMaterial3D" id="green"]
+albedo_color = Color(0.3, 0.55, 0.12, 1)
+
+[sub_resource type="SphereMesh" id="leaf"]
+radius = 0.025
+height = 0.08
+material = SubResource("green")
+
+[node name="mango_projectile" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 5
+script = ExtResource("1")
+
+[node name="collision_shape" type="CollisionShape3D" parent="."]
+shape = SubResource("shape")
+
+[node name="fruit" type="MeshInstance3D" parent="."]
+mesh = SubResource("fruit")
+
+[node name="leaf" type="MeshInstance3D" parent="."]
+position = Vector3(0.025, 0.09, 0)
+rotation = Vector3(0, 0, -0.6)
+mesh = SubResource("leaf")

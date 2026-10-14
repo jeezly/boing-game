@@ -7,7 +7,7 @@ signal camera_mode_changed(mode_name: String)
 @onready var first_camera: Camera3D = $PitchPivot/FirstPersonCamera
 @onready var spring_arm: SpringArm3D = $PitchPivot/ThirdPersonArm
 @onready var third_camera: Camera3D = $PitchPivot/ThirdPersonArm/ThirdPersonCamera
-@onready var placeholder: Node3D = $"../MangoPlaceholder"
+@onready var mango: Node3D = $"../mango_visual"
 var third_person: bool = false
 
 func _ready() -> void:
@@ -27,13 +27,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		_apply_mode()
 	elif event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotation.y -= event.relative.x * mouse_sensitivity
-		placeholder.rotation.y = rotation.y
+		mango.rotation.y = rotation.y
 		pitch_pivot.rotation.x = clampf(pitch_pivot.rotation.x - event.relative.y * mouse_sensitivity, deg_to_rad(-70.0), deg_to_rad(70.0))
 
 func _apply_mode() -> void:
 	first_camera.current = not third_person
 	third_camera.current = third_person
-	placeholder.visible = third_person
+	mango.visible = third_person
 	camera_mode_changed.emit(get_mode_name())
 
 func get_mode_name() -> String:
