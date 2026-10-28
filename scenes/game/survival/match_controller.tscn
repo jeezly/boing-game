@@ -6,6 +6,19 @@
 [ext_resource type="Script" path="res://scripts/game/survival/survival_director.gd" id="4"]
 [ext_resource type="Resource" path="res://resources/enemies/pepsin_definition.tres" id="5"]
 
+[ext_resource type="Script" path="res://scripts/game/survival/respawn_manager.gd" id="6"]
+
+[sub_resource type="StyleBoxFlat" id="panel"]
+bg_color = Color(0.04, 0.08, 0.08, 0.80)
+content_margin_left = 14.0
+content_margin_right = 14.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_left = 8
+corner_radius_bottom_right = 8
+
 [node name="match_controller" type="Node"]
 process_mode = 3
 script = ExtResource("1")
@@ -36,6 +49,12 @@ enemy_root_path = NodePath("../enemies")
 [node name="enemies" type="Node3D" parent="."]
 process_mode = 1
 
+[node name="respawn_manager" type="Node" parent="."]
+process_mode = 1
+script = ExtResource("6")
+player_path = NodePath("../../Player")
+environment_path = NodePath("../../mega_abarrotera")
+
 [node name="match_ui" type="CanvasLayer" parent="."]
 layer = 6
 
@@ -54,34 +73,74 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -260.0
-offset_top = -230.0
+offset_top = -302.0
 offset_right = 260.0
-offset_bottom = 230.0
+offset_bottom = 302.0
+
+theme_override_styles/panel = SubResource("panel")
 
 [node name="layout" type="VBoxContainer" parent="match_ui/screen/panel"]
 layout_mode = 2
-theme_override_constants/separation = 18
+theme_override_constants/separation = 10
 alignment = 1
 
 [node name="heading" type="Label" parent="match_ui/screen/panel/layout"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 text = "SUPERVIVENCIA"
 
 [node name="summary" type="Label" parent="match_ui/screen/panel/layout"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 23
+theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 
 [node name="resume" type="Button" parent="match_ui/screen/panel/layout"]
 layout_mode = 2
-text = "CONTINUAR"
+text = "REANUDAR"
 
 [node name="restart" type="Button" parent="match_ui/screen/panel/layout"]
 layout_mode = 2
 text = "REINICIAR"
 
+[node name="settings" type="Button" parent="match_ui/screen/panel/layout"]
+layout_mode = 2
+text = "AJUSTES"
+
+[node name="settings_panel" type="VBoxContainer" parent="match_ui/screen/panel/layout"]
+layout_mode = 2
+visible = false
+
+[node name="sensitivity_label" type="Label" parent="match_ui/screen/panel/layout/settings_panel"]
+layout_mode = 2
+text = "SENSIBILIDAD DEL MOUSE"
+
+[node name="sensitivity" type="HSlider" parent="match_ui/screen/panel/layout/settings_panel"]
+layout_mode = 2
+min_value = 0.5
+max_value = 6.0
+step = 0.1
+value = 2.5
+
+[node name="volume_label" type="Label" parent="match_ui/screen/panel/layout/settings_panel"]
+layout_mode = 2
+text = "VOLUMEN GENERAL"
+
+[node name="volume" type="HSlider" parent="match_ui/screen/panel/layout/settings_panel"]
+layout_mode = 2
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+value = 100.0
+
 [node name="exit" type="Button" parent="match_ui/screen/panel/layout"]
 layout_mode = 2
 text = "SALIR"
+
+[node name="version" type="Label" parent="match_ui/screen/panel/layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 14
+text = "BOING — Beta 0.1"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.85, 0.75, 0.50, 1)

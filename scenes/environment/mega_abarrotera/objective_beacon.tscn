@@ -3,17 +3,17 @@
 [sub_resource type="StandardMaterial3D" id="glow"]
 albedo_color = Color(1, 0.76, 0.10, 1)
 shading_mode = 0
-no_depth_test = true
+no_depth_test = false
 
 [sub_resource type="CylinderMesh" id="beam"]
-top_radius = 0.09
-bottom_radius = 0.09
+top_radius = 0.035
+bottom_radius = 0.035
 height = 3.0
 material = SubResource("glow")
 
 [sub_resource type="TorusMesh" id="ring"]
-inner_radius = 0.85
-outer_radius = 1.0
+inner_radius = 0.60
+outer_radius = 0.68
 material = SubResource("glow")
 
 [node name="beacon" type="Node3D"]
@@ -34,7 +34,7 @@ billboard = 1
 no_depth_test = false
 visibility_range_end = 45.0
 font_size = 32
-pixel_size = 0.012
+pixel_size = 0.008
 outline_size = 2
 modulate = Color(1, 0.9, 0.4, 1)
 text = "ZONA CALIENTE"

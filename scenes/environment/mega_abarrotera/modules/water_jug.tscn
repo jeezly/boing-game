@@ -1,0 +1,73 @@
+[gd_scene format=3]
+[sub_resource type="StandardMaterial3D" id="blue"]
+albedo_color = Color(0.12, 0.43, 0.69, 1)
+roughness = 0.28
+[sub_resource type="StandardMaterial3D" id="cap_mat"]
+albedo_color = Color(0.03, 0.20, 0.40, 1)
+roughness = 0.7
+[sub_resource type="StandardMaterial3D" id="cream"]
+albedo_color = Color(0.87, 0.91, 0.77, 1)
+[sub_resource type="CylinderMesh" id="body"]
+top_radius = 0.33
+bottom_radius = 0.33
+height = 0.90
+radial_segments = 16
+material = SubResource("blue")
+[sub_resource type="SphereMesh" id="shoulder"]
+radius = 0.33
+height = 0.40
+radial_segments = 16
+rings = 8
+material = SubResource("blue")
+[sub_resource type="CylinderMesh" id="neck"]
+top_radius = 0.13
+bottom_radius = 0.15
+height = 0.22
+radial_segments = 12
+material = SubResource("blue")
+[sub_resource type="CylinderMesh" id="cap"]
+top_radius = 0.145
+bottom_radius = 0.145
+height = 0.08
+radial_segments = 12
+material = SubResource("cap_mat")
+[sub_resource type="TorusMesh" id="rib"]
+inner_radius = 0.305
+outer_radius = 0.35
+rings = 16
+ring_segments = 6
+material = SubResource("blue")
+[sub_resource type="BoxMesh" id="label"]
+size = Vector3(0.40, 0.25, 0.025)
+material = SubResource("cream")
+
+[node name="water_jug" type="Node3D"]
+[node name="body" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.10, 0)
+mesh = SubResource("body")
+[node name="shoulder" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.32, 0)
+mesh = SubResource("shoulder")
+[node name="neck" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.53, 0)
+mesh = SubResource("neck")
+[node name="cap" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.66, 0)
+mesh = SubResource("cap")
+[node name="lower_rib" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.44, 0)
+mesh = SubResource("rib")
+[node name="upper_rib" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.21, 0)
+mesh = SubResource("rib")
+[node name="label" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.02, 0.33)
+mesh = SubResource("label")
+[node name="brand" type="Label3D" parent="."]
+position = Vector3(0, -0.02, 0.35)
+text = "AGUA\nDEL BARRIO"
+font_size = 24
+pixel_size = 0.0014
+outline_size = 0
+modulate = Color(0.1, 0.3, 0.4, 1)
+visibility_range_end = 14.0

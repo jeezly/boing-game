@@ -33,6 +33,15 @@ func hit() -> void:
 func fire() -> void:
 	if not dead: fire_left = 0.18
 
+func reset(pivot: Node3D) -> void:
+	dead = false
+	death_age = 0.0
+	hit_left = 0.0
+	fire_left = 0.0
+	pivot.transform = Transform3D.IDENTITY
+	for index in range(meshes.size()):
+		meshes[index].material_overlay = overlays[index]
+
 func die(direction: float = 1.0) -> void:
 	if dead: return
 	dead = true

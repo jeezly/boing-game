@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/shelf_stock.gd" id="e1"]
 
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/fixture_details.gd" id="beta_details"]
+
 [sub_resource type="StandardMaterial3D" id="r1"]
 albedo_color = Color(0.15294,0.49020,0.46275,1)
 roughness = 0.8
@@ -119,3 +121,7 @@ mesh = SubResource("r9")
 
 [node name="stock" type="Node3D" parent="."]
 script = ExtResource("e1")
+
+[node name="beta_details" type="Node3D" parent="."]
+script = ExtResource("beta_details")
+kind = "shelf"

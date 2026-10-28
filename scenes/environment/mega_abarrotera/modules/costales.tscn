@@ -1,5 +1,7 @@
 [gd_scene format=3]
 
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/fixture_details.gd" id="beta_details"]
+
 [sub_resource type="StandardMaterial3D" id="r1"]
 albedo_color = Color(0.72941,0.64706,0.50588,1)
 roughness = 0.8
@@ -123,3 +125,7 @@ cast_shadow = 0
 position = Vector3(0.75, 0.36000000000000004, 1.0799999999999998)
 mesh = SubResource("price_card_stake")
 cast_shadow = 0
+
+[node name="beta_details" type="Node3D" parent="."]
+script = ExtResource("beta_details")
+kind = "sacks"

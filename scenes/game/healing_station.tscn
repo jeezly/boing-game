@@ -1,0 +1,60 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/game/healing_station.gd" id="1"]
+[ext_resource type="Resource" path="res://resources/game/healing_offer.tres" id="2"]
+
+[sub_resource type="StandardMaterial3D" id="cream"]
+albedo_color = Color(0.94, 0.87, 0.68, 1)
+roughness = 0.85
+[sub_resource type="StandardMaterial3D" id="green"]
+albedo_color = Color(0.08, 0.36, 0.25, 1)
+roughness = 0.7
+[sub_resource type="BoxMesh" id="cabinet"]
+size = Vector3(1.8, 1.5, 0.8)
+material = SubResource("cream")
+[sub_resource type="BoxShape3D" id="shape"]
+size = Vector3(1.8, 1.5, 0.8)
+[sub_resource type="BoxMesh" id="board"]
+size = Vector3(2.4, 1.0, 0.08)
+material = SubResource("green")
+[sub_resource type="BoxMesh" id="counter"]
+size = Vector3(2.0, 0.12, 0.95)
+material = SubResource("green")
+[sub_resource type="BoxMesh" id="cross_v"]
+size = Vector3(0.12, 0.5, 0.035)
+material = SubResource("green")
+[sub_resource type="BoxMesh" id="cross_h"]
+size = Vector3(0.5, 0.12, 0.035)
+material = SubResource("green")
+
+[node name="healing_station" type="Node3D"]
+script = ExtResource("1")
+offer = ExtResource("2")
+
+[node name="body" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(0, 0.75, 0)
+collision_layer = 1
+collision_mask = 7
+[node name="mesh" type="MeshInstance3D" parent="body"]
+mesh = SubResource("cabinet")
+[node name="collision" type="CollisionShape3D" parent="body"]
+shape = SubResource("shape")
+[node name="counter" type="MeshInstance3D" parent="."]
+position = Vector3(0, 1.55, 0)
+mesh = SubResource("counter")
+[node name="cross_vertical" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.85, 0.425)
+mesh = SubResource("cross_v")
+[node name="cross_horizontal" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.85, 0.43)
+mesh = SubResource("cross_h")
+[node name="board" type="MeshInstance3D" parent="."]
+position = Vector3(0, 2.0, -0.32)
+mesh = SubResource("board")
+[node name="sign" type="Label3D" parent="."]
+position = Vector3(0, 2.0, -0.27)
+text = "PRIMEROS AUXILIOS\n+50 HP · 500 CRÉDITOS\nPÁSELE, AQUÍ LO CUIDAMOS"
+font_size = 32
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(1, 0.94, 0.72, 1)

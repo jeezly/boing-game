@@ -19,11 +19,12 @@ var readiness_left: float = 0.0
 func _ready() -> void:
 	first_visual = visual_scene.instantiate()
 	camera_rig.first_camera.add_child(first_visual)
-	first_visual.position = Vector3(0.27, -0.32, -0.65)
+	first_visual.position = Vector3(0.30, -0.34, -0.76)
 	third_visual = mango.weapon_socket.get_node("slingshot")
 	third_visual.third_person_pose = true
 	player.damaged.connect(_on_player_damaged)
 	player.died.connect(_on_player_died)
+	player.respawned.connect(_on_player_respawned)
 	camera_rig.camera_mode_changed.connect(_update_mode)
 	_update_mode(camera_rig.get_mode_name())
 
@@ -96,6 +97,11 @@ func _on_player_damaged(_amount: float) -> void:
 
 func _on_player_died() -> void:
 	first_visual.hide()
+
+func _on_player_respawned() -> void:
+	cooldown = 0.35
+	readiness_left = 0.0
+	_update_mode(camera_rig.get_mode_name())
 
 func get_ammo_text() -> String:
 	return "Ammo: infinite"

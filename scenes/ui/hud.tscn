@@ -1,8 +1,30 @@
 [gd_scene format=3]
-
 [ext_resource type="Script" path="res://scripts/ui/hud.gd" id="1"]
-
 [ext_resource type="PackedScene" path="res://scenes/ui/survival_hud.tscn" id="2"]
+[sub_resource type="StyleBoxFlat" id="panel"]
+bg_color = Color(0.04, 0.08, 0.08, 0.80)
+content_margin_left = 14.0
+content_margin_right = 14.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_left = 8
+corner_radius_bottom_right = 8
+
+[sub_resource type="StyleBoxFlat" id="health_fill"]
+bg_color = Color(0.30, 0.73, 0.45, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_left = 5
+corner_radius_bottom_right = 5
+
+[sub_resource type="StyleBoxFlat" id="health_track"]
+bg_color = Color(0.13, 0.20, 0.17, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_left = 5
+corner_radius_bottom_right = 5
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1")
@@ -16,26 +38,80 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="health_backing" type="ColorRect" parent="Screen"]
+[node name="health_panel" type="PanelContainer" parent="Screen"]
 offset_left = 16.0
 offset_top = 16.0
-offset_right = 224.0
-offset_bottom = 101.0
-color = Color(0.04, 0.08, 0.08, 0.72)
+offset_right = 236.0
+offset_bottom = 156.0
 mouse_filter = 2
+theme_override_styles/panel = SubResource("panel")
 
-[node name="weapon_backing" type="ColorRect" parent="Screen"]
+[node name="layout" type="VBoxContainer" parent="Screen/health_panel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 5
+
+[node name="mode" type="Label" parent="Screen/health_panel/layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 14
+text = "FIRST PERSON"
+
+
+[node name="health_label" type="Label" parent="Screen/health_panel/layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 20
+text = "HP 100 / 100"
+
+
+[node name="health_bar" type="ProgressBar" parent="Screen/health_panel/layout"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 12)
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+theme_override_styles/fill = SubResource("health_fill")
+theme_override_styles/background = SubResource("health_track")
+
+[node name="lives" type="Label" parent="Screen/health_panel/layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 20
+text = "VIDAS ×3"
+theme_override_colors/font_color = Color(1, 0.80, 0.31, 1)
+
+[node name="protection" type="Label" parent="Screen/health_panel/layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 13
+text = "PROTECCIÓN ACTIVA"
+visible = false
+theme_override_colors/font_color = Color(0.45, 1, 0.75, 1)
+
+[node name="weapon_panel" type="PanelContainer" parent="Screen"]
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 16.0
-offset_top = -80.0
+offset_top = -82.0
 offset_right = 276.0
 offset_bottom = -16.0
-color = Color(0.04, 0.08, 0.08, 0.72)
 mouse_filter = 2
+theme_override_styles/panel = SubResource("panel")
+
+[node name="layout" type="VBoxContainer" parent="Screen/weapon_panel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 5
+
+[node name="weapon_label" type="Label" parent="Screen/weapon_panel/layout"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "Resortera de Mango\nAmmo: infinite"
+
 
 [node name="Crosshair" type="Label" parent="Screen"]
-layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -45,56 +121,10 @@ offset_top = -16.0
 offset_right = 12.0
 offset_bottom = 16.0
 mouse_filter = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 18
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 20
 text = "+"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="ModeLabel" type="Label" parent="Screen"]
-offset_left = 28
-offset_top = 23
-offset_right = 210
-offset_bottom = 43
-mouse_filter = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 14
-text = "FIRST PERSON"
-
-[node name="health_label" type="Label" parent="Screen"]
-offset_left = 28
-offset_top = 45
-offset_right = 210
-offset_bottom = 69
-mouse_filter = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 2
-text = "HP 100 / 100"
-theme_override_font_sizes/font_size = 18
-
-[node name="health_bar" type="ProgressBar" parent="Screen"]
-offset_left = 28
-offset_top = 76
-offset_right = 208
-offset_bottom = 88
-mouse_filter = 2
-value = 100.0
-show_percentage = false
-
-[node name="weapon_label" type="Label" parent="Screen"]
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 28
-offset_top = -69
-offset_right = 256
-offset_bottom = -23
-mouse_filter = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 16
-text = "Resortera de Mango\nAmmo: infinite"
 
 [node name="survival_status" parent="." instance=ExtResource("2")]

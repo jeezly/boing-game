@@ -19,7 +19,7 @@ var on_ground: bool = true
 @onready var presentation: Node3D = $presentation
 
 func _ready() -> void:
-	process_mode = Node.PROCESS_MODE_ALWAYS
+	process_mode = Node.PROCESS_MODE_PAUSABLE
 	Appearance.build($presentation/body, $presentation/face, $presentation/helmet)
 	var yellow := Builder.material(Color("ffbd39"))
 	var glove := Builder.material(Color("ffcf62"))
@@ -54,7 +54,7 @@ func present(_delta: float, speed: float, grounded: bool, _pitch: float, _aiming
 	on_ground = grounded
 
 func _process(delta: float) -> void:
-	if Engine.is_editor_hint() or (get_tree().paused and not reactions.dead): return
+	if Engine.is_editor_hint() or get_tree().paused: return
 	var speed := 0.0 if reactions.dead else move_speed
 	var grounded := on_ground
 	clock += delta * (5.0 + speed * 1.3)
@@ -113,3 +113,10 @@ func on_hit() -> void:
 
 func on_death() -> void:
 	reactions.die(-1.0)
+
+func reset_after_life_loss() -> void:
+	reactions.reset(presentation)
+	move_speed = 0.0
+	firing_time = 0.0
+	left_leg.rotation = Vector3.ZERO
+	right_leg.rotation = Vector3.ZERO

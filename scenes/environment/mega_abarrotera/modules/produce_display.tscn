@@ -1,5 +1,7 @@
 [gd_scene format=3]
 
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/fixture_details.gd" id="beta_details"]
+
 [sub_resource type="StandardMaterial3D" id="r1"]
 albedo_color = Color(0.61961,0.43922,0.24314,1)
 roughness = 0.8
@@ -222,3 +224,7 @@ font_size = 26
 pixel_size = 0.006
 outline_size = 5
 modulate = Color(1.0,0.9411764705882353,0.6470588235294118,1)
+
+[node name="beta_details" type="Node3D" parent="."]
+script = ExtResource("beta_details")
+kind = "produce"

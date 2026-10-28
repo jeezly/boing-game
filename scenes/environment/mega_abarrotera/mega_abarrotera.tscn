@@ -34,9 +34,17 @@
 
 [ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/offer_display.tscn" id="polish_offer"]
 
-[sub_resource type="StandardMaterial3D" id="r1"]
-albedo_color = Color(0.72157,0.68235,0.58431,1)
-roughness = 0.8
+[ext_resource type="PackedScene" path="res://scenes/game/healing_station.tscn" id="beta_station"]
+
+[ext_resource type="Shader" path="res://resources/environment/papel_picado.gdshader" id="beta_paper"]
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/star_pinata.tscn" id="beta_pinata"]
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/water_jug.tscn" id="beta_water"]
+
+[ext_resource type="Shader" path="res://resources/environment/store_floor.gdshader" id="beta_floor"]
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/market_mural.tscn" id="beta_mural"]
+
+[sub_resource type="ShaderMaterial" id="r1"]
+shader = ExtResource("beta_floor")
 
 [sub_resource type="BoxMesh" id="r2"]
 size = Vector3(150, 0.4, 110)
@@ -638,6 +646,63 @@ material = SubResource("polish_bracket_mat")
 
 
 
+
+[sub_resource type="ShaderMaterial" id="beta_paper_0"]
+shader = ExtResource("beta_paper")
+shader_parameter/paper_color = Color(0.85, 0.25, 0.22, 1)
+
+[sub_resource type="ShaderMaterial" id="beta_paper_1"]
+shader = ExtResource("beta_paper")
+shader_parameter/paper_color = Color(0.95, 0.68, 0.16, 1)
+
+[sub_resource type="ShaderMaterial" id="beta_paper_2"]
+shader = ExtResource("beta_paper")
+shader_parameter/paper_color = Color(0.12, 0.56, 0.63, 1)
+
+[sub_resource type="ShaderMaterial" id="beta_paper_3"]
+shader = ExtResource("beta_paper")
+shader_parameter/paper_color = Color(0.7, 0.24, 0.49, 1)
+
+[sub_resource type="ShaderMaterial" id="beta_paper_4"]
+shader = ExtResource("beta_paper")
+shader_parameter/paper_color = Color(0.22, 0.61, 0.32, 1)
+
+[sub_resource type="StandardMaterial3D" id="beta_rubber"]
+albedo_color = Color(0.10, 0.13, 0.12, 1)
+roughness = 0.95
+[sub_resource type="CylinderMesh" id="beta_truck_wheel"]
+top_radius = 0.65
+bottom_radius = 0.65
+height = 0.30
+radial_segments = 16
+material = SubResource("beta_rubber")
+
+[sub_resource type="BoxShape3D" id="beta_truck_cab_shape"]
+size = Vector3(4.3, 3.2, 2.4)
+
+[sub_resource type="BoxMesh" id="beta_rear_closure"]
+size = Vector3(100, 7, 0.8)
+material = SubResource("r7")
+
+[sub_resource type="BoxMesh" id="beta_partition_closure"]
+size = Vector3(0.4, 8, 33)
+material = SubResource("r25")
+[sub_resource type="StandardMaterial3D" id="beta_awning_mat"]
+albedo_color = Color(0.73, 0.19, 0.13, 1)
+roughness = 0.95
+[sub_resource type="StandardMaterial3D" id="beta_awning_cream"]
+albedo_color = Color(0.95, 0.82, 0.55, 1)
+roughness = 0.95
+[sub_resource type="BoxMesh" id="beta_awning"]
+size = Vector3(16, 0.14, 2.8)
+material = SubResource("beta_awning_mat")
+[sub_resource type="BoxMesh" id="beta_awning_stripe"]
+size = Vector3(0.45, 0.15, 2.81)
+material = SubResource("beta_awning_cream")
+[sub_resource type="BoxMesh" id="beta_awning_valance"]
+size = Vector3(16, 0.42, 0.06)
+material = SubResource("beta_awning_mat")
+
 [node name="mega_abarrotera" type="Node3D"]
 script = ExtResource("e1")
 
@@ -922,25 +987,21 @@ scale = Vector3(1, 1, 1)
 position = Vector3(-59, 0, 0.5)
 scale = Vector3(1, 1, 1)
 
-[node name="garrafon_0_0" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_0_0" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(-62, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_0_1" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_0_1" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(-61.2, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_0_2" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_0_2" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(-60.4, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_0_3" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_0_3" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(-59.6, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
 [node name="huacal_1" parent="fachada_y_acceso" instance=ExtResource("e3")]
 position = Vector3(-53, 0, -2.5)
@@ -950,25 +1011,21 @@ scale = Vector3(1, 1.3, 1)
 position = Vector3(-50, 0, 0.5)
 scale = Vector3(1, 1, 1)
 
-[node name="garrafon_1_0" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_1_0" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(-53, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_1_1" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_1_1" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(-52.2, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_1_2" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_1_2" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(-51.4, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_1_3" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_1_3" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(-50.6, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
 [node name="huacal_2" parent="fachada_y_acceso" instance=ExtResource("e3")]
 position = Vector3(54, 0, -2.5)
@@ -978,25 +1035,21 @@ scale = Vector3(1, 1, 1)
 position = Vector3(57, 0, 0.5)
 scale = Vector3(1, 1, 1)
 
-[node name="garrafon_2_0" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_2_0" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(54, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_2_1" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_2_1" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(54.8, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_2_2" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_2_2" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(55.6, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_2_3" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_2_3" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(56.4, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
 [node name="huacal_3" parent="fachada_y_acceso" instance=ExtResource("e3")]
 position = Vector3(64, 0, -2.5)
@@ -1006,25 +1059,21 @@ scale = Vector3(1, 1.3, 1)
 position = Vector3(67, 0, 0.5)
 scale = Vector3(1, 1, 1)
 
-[node name="garrafon_3_0" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_3_0" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(64, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_3_1" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_3_1" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(64.8, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_3_2" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_3_2" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(65.6, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
-[node name="garrafon_3_3" type="MeshInstance3D" parent="fachada_y_acceso"]
+[node name="garrafon_3_3" parent="fachada_y_acceso" instance=ExtResource("beta_water")]
 position = Vector3(66.4, 0.65, 2.5)
-scale = Vector3(0.58, 1.15, 0.58)
-mesh = SubResource("r37")
+scale = Vector3(1.2, 1.2, 1.2)
 
 [node name="entry_direction" type="Label3D" parent="fachada_y_acceso"]
 position = Vector3(0, 3.5, -6.5)
@@ -1452,6 +1501,7 @@ position = Vector3(-4.0, 1.5, 12.5)
 mesh = SubResource("r47")
 
 [node name="produce_wall" type="Label3D" parent="frutas_granel"]
+visible = false
 position = Vector3(0.0, 6.0, -15.600000000000001)
 text = "FRUTAS DE NUESTRA TIERRA · FRIJOL · MAÍZ · CHILES"
 font_size = 38
@@ -1904,6 +1954,8 @@ shadow_enabled = false
 
 [node name="papel_picado_0_0" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-68, 6.888, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_0_0_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -1920,6 +1972,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_1" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-64, 6.924, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_0_1_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -1936,6 +1990,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_2" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-60, 6.96, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_0_2_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -1952,6 +2008,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_3" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-56, 6.996, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_0_3_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -1968,6 +2026,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_4" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-52, 7.032, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_0_4_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -1984,6 +2044,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_5" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-48, 7.068, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_0_5_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2000,6 +2062,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_6" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-44, 7.104, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_0_6_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2016,6 +2080,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_7" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-40, 7.14, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_0_7_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2032,6 +2098,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_8" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-36, 7.176, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_0_8_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2048,6 +2116,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_9" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-32, 7.212, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_0_9_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2064,6 +2134,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_10" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-28, 7.248, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_0_10_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2080,6 +2152,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_11" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-24, 7.284, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_0_11_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2096,6 +2170,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_12" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-20, 7.32, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_0_12_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2112,6 +2188,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_13" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-16, 7.356, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_0_13_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2128,6 +2206,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_14" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-12, 7.392, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_0_14_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2144,6 +2224,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_15" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-8, 7.428, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_0_15_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2160,6 +2242,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_16" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-4, 7.464, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_0_16_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2176,6 +2260,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_17" type="MeshInstance3D" parent="architecture"]
 position = Vector3(0, 7.5, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_0_17_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2192,6 +2278,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_18" type="MeshInstance3D" parent="architecture"]
 position = Vector3(4, 7.464, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_0_18_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2208,6 +2296,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_19" type="MeshInstance3D" parent="architecture"]
 position = Vector3(8, 7.428, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_0_19_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2224,6 +2314,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_20" type="MeshInstance3D" parent="architecture"]
 position = Vector3(12, 7.392, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_0_20_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2240,6 +2332,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_21" type="MeshInstance3D" parent="architecture"]
 position = Vector3(16, 7.356, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_0_21_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2256,6 +2350,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_22" type="MeshInstance3D" parent="architecture"]
 position = Vector3(20, 7.32, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_0_22_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2272,6 +2368,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_23" type="MeshInstance3D" parent="architecture"]
 position = Vector3(24, 7.284, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_0_23_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2288,6 +2386,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_24" type="MeshInstance3D" parent="architecture"]
 position = Vector3(28, 7.248, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_0_24_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2304,6 +2404,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_25" type="MeshInstance3D" parent="architecture"]
 position = Vector3(32, 7.212, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_0_25_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2320,6 +2422,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_26" type="MeshInstance3D" parent="architecture"]
 position = Vector3(36, 7.176, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_0_26_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2336,6 +2440,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_27" type="MeshInstance3D" parent="architecture"]
 position = Vector3(40, 7.14, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_0_27_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2352,6 +2458,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_28" type="MeshInstance3D" parent="architecture"]
 position = Vector3(44, 7.104, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_0_28_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2368,6 +2476,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_29" type="MeshInstance3D" parent="architecture"]
 position = Vector3(48, 7.068, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_0_29_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2384,6 +2494,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_30" type="MeshInstance3D" parent="architecture"]
 position = Vector3(52, 7.032, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_0_30_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2400,6 +2512,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_31" type="MeshInstance3D" parent="architecture"]
 position = Vector3(56, 6.996, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_0_31_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2416,6 +2530,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_32" type="MeshInstance3D" parent="architecture"]
 position = Vector3(60, 6.96, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_0_32_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2432,6 +2548,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_33" type="MeshInstance3D" parent="architecture"]
 position = Vector3(64, 6.924, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_0_33_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2448,6 +2566,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_0_34" type="MeshInstance3D" parent="architecture"]
 position = Vector3(68, 6.888, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_0_34_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2468,6 +2588,8 @@ mesh = SubResource("r94")
 
 [node name="papel_picado_1_0" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-68, 6.888, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_1_0_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2484,6 +2606,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_1" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-64, 6.924, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_1_1_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2500,6 +2624,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_2" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-60, 6.96, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_1_2_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2516,6 +2642,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_3" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-56, 6.996, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_1_3_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2532,6 +2660,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_4" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-52, 7.032, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_1_4_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2548,6 +2678,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_5" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-48, 7.068, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_1_5_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2564,6 +2696,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_6" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-44, 7.104, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_1_6_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2580,6 +2714,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_7" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-40, 7.14, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_1_7_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2596,6 +2732,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_8" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-36, 7.176, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_1_8_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2612,6 +2750,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_9" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-32, 7.212, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_1_9_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2628,6 +2768,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_10" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-28, 7.248, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_1_10_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2644,6 +2786,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_11" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-24, 7.284, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_1_11_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2660,6 +2804,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_12" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-20, 7.32, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_1_12_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2676,6 +2822,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_13" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-16, 7.356, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_1_13_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2692,6 +2840,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_14" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-12, 7.392, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_1_14_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2708,6 +2858,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_15" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-8, 7.428, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_1_15_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2724,6 +2876,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_16" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-4, 7.464, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_1_16_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2740,6 +2894,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_17" type="MeshInstance3D" parent="architecture"]
 position = Vector3(0, 7.5, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_1_17_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2756,6 +2912,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_18" type="MeshInstance3D" parent="architecture"]
 position = Vector3(4, 7.464, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_1_18_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2772,6 +2930,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_19" type="MeshInstance3D" parent="architecture"]
 position = Vector3(8, 7.428, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_1_19_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2788,6 +2948,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_20" type="MeshInstance3D" parent="architecture"]
 position = Vector3(12, 7.392, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_1_20_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2804,6 +2966,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_21" type="MeshInstance3D" parent="architecture"]
 position = Vector3(16, 7.356, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_1_21_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2820,6 +2984,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_22" type="MeshInstance3D" parent="architecture"]
 position = Vector3(20, 7.32, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_1_22_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2836,6 +3002,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_23" type="MeshInstance3D" parent="architecture"]
 position = Vector3(24, 7.284, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_1_23_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2852,6 +3020,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_24" type="MeshInstance3D" parent="architecture"]
 position = Vector3(28, 7.248, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_1_24_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2868,6 +3038,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_25" type="MeshInstance3D" parent="architecture"]
 position = Vector3(32, 7.212, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_1_25_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2884,6 +3056,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_26" type="MeshInstance3D" parent="architecture"]
 position = Vector3(36, 7.176, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_1_26_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2900,6 +3074,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_27" type="MeshInstance3D" parent="architecture"]
 position = Vector3(40, 7.14, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_1_27_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2916,6 +3092,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_28" type="MeshInstance3D" parent="architecture"]
 position = Vector3(44, 7.104, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_1_28_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2932,6 +3110,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_29" type="MeshInstance3D" parent="architecture"]
 position = Vector3(48, 7.068, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_1_29_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2948,6 +3128,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_30" type="MeshInstance3D" parent="architecture"]
 position = Vector3(52, 7.032, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_1_30_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2964,6 +3146,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_31" type="MeshInstance3D" parent="architecture"]
 position = Vector3(56, 6.996, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_1_31_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2980,6 +3164,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_32" type="MeshInstance3D" parent="architecture"]
 position = Vector3(60, 6.96, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_1_32_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -2996,6 +3182,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_33" type="MeshInstance3D" parent="architecture"]
 position = Vector3(64, 6.924, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_1_33_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3012,6 +3200,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_1_34" type="MeshInstance3D" parent="architecture"]
 position = Vector3(68, 6.888, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_1_34_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3032,6 +3222,8 @@ mesh = SubResource("r94")
 
 [node name="papel_picado_2_0" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-68, 6.888, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_2_0_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3048,6 +3240,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_1" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-64, 6.924, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_2_1_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3064,6 +3258,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_2" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-60, 6.96, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_2_2_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3080,6 +3276,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_3" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-56, 6.996, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_2_3_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3096,6 +3294,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_4" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-52, 7.032, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_2_4_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3112,6 +3312,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_5" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-48, 7.068, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_2_5_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3128,6 +3330,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_6" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-44, 7.104, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_2_6_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3144,6 +3348,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_7" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-40, 7.14, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_2_7_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3160,6 +3366,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_8" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-36, 7.176, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_2_8_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3176,6 +3384,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_9" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-32, 7.212, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_2_9_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3192,6 +3402,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_10" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-28, 7.248, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_2_10_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3208,6 +3420,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_11" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-24, 7.284, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_2_11_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3224,6 +3438,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_12" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-20, 7.32, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_2_12_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3240,6 +3456,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_13" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-16, 7.356, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_2_13_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3256,6 +3474,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_14" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-12, 7.392, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_2_14_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3272,6 +3492,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_15" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-8, 7.428, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_2_15_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3288,6 +3510,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_16" type="MeshInstance3D" parent="architecture"]
 position = Vector3(-4, 7.464, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_2_16_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3304,6 +3528,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_17" type="MeshInstance3D" parent="architecture"]
 position = Vector3(0, 7.5, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_2_17_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3320,6 +3546,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_18" type="MeshInstance3D" parent="architecture"]
 position = Vector3(4, 7.464, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_2_18_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3336,6 +3564,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_19" type="MeshInstance3D" parent="architecture"]
 position = Vector3(8, 7.428, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_2_19_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3352,6 +3582,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_20" type="MeshInstance3D" parent="architecture"]
 position = Vector3(12, 7.392, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_2_20_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3368,6 +3600,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_21" type="MeshInstance3D" parent="architecture"]
 position = Vector3(16, 7.356, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_2_21_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3384,6 +3618,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_22" type="MeshInstance3D" parent="architecture"]
 position = Vector3(20, 7.32, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_2_22_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3400,6 +3636,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_23" type="MeshInstance3D" parent="architecture"]
 position = Vector3(24, 7.284, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_2_23_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3416,6 +3654,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_24" type="MeshInstance3D" parent="architecture"]
 position = Vector3(28, 7.248, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_2_24_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3432,6 +3672,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_25" type="MeshInstance3D" parent="architecture"]
 position = Vector3(32, 7.212, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_2_25_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3448,6 +3690,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_26" type="MeshInstance3D" parent="architecture"]
 position = Vector3(36, 7.176, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_2_26_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3464,6 +3708,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_27" type="MeshInstance3D" parent="architecture"]
 position = Vector3(40, 7.14, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_2_27_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3480,6 +3726,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_28" type="MeshInstance3D" parent="architecture"]
 position = Vector3(44, 7.104, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_2_28_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3496,6 +3744,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_29" type="MeshInstance3D" parent="architecture"]
 position = Vector3(48, 7.068, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_2_29_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3512,6 +3762,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_30" type="MeshInstance3D" parent="architecture"]
 position = Vector3(52, 7.032, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
 mesh = SubResource("r82")
 
 [node name="paper_cutout_2_30_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3528,6 +3780,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_31" type="MeshInstance3D" parent="architecture"]
 position = Vector3(56, 6.996, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
 mesh = SubResource("r86")
 
 [node name="paper_cutout_2_31_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3544,6 +3798,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_32" type="MeshInstance3D" parent="architecture"]
 position = Vector3(60, 6.96, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
 mesh = SubResource("r88")
 
 [node name="paper_cutout_2_32_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3560,6 +3816,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_33" type="MeshInstance3D" parent="architecture"]
 position = Vector3(64, 6.924, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
 mesh = SubResource("r90")
 
 [node name="paper_cutout_2_33_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3576,6 +3834,8 @@ mesh = SubResource("r84")
 
 [node name="papel_picado_2_34" type="MeshInstance3D" parent="architecture"]
 position = Vector3(68, 6.888, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
 mesh = SubResource("r92")
 
 [node name="paper_cutout_2_34_-0.65" type="MeshInstance3D" parent="architecture"]
@@ -3595,121 +3855,145 @@ position = Vector3(0, 7.9, -59)
 mesh = SubResource("r94")
 
 [node name="pinata_0" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-46, 6.6, -8)
 scale = Vector3(1.5, 1.7, 1.5)
 mesh = SubResource("r96")
 
 [node name="pinata_point_0_0" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-45, 6.6, -8)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r98")
 
 [node name="pinata_point_0_1" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-45.3765, 7.38183, -8)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r100")
 
 [node name="pinata_point_0_2" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-46.2225, 7.57493, -8)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r102")
 
 [node name="pinata_point_0_3" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-46.901, 7.03388, -8)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r98")
 
 [node name="pinata_point_0_4" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-46.901, 6.16612, -8)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r100")
 
 [node name="pinata_point_0_5" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-46.2225, 5.62507, -8)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r102")
 
 [node name="pinata_point_0_6" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-45.3765, 5.81817, -8)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r98")
 
 [node name="pinata_1" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(0, 6.6, -35)
 scale = Vector3(1.5, 1.7, 1.5)
 mesh = SubResource("r104")
 
 [node name="pinata_point_1_0" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(1, 6.6, -35)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r98")
 
 [node name="pinata_point_1_1" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(0.62349, 7.38183, -35)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r100")
 
 [node name="pinata_point_1_2" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-0.222521, 7.57493, -35)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r102")
 
 [node name="pinata_point_1_3" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-0.900969, 7.03388, -35)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r98")
 
 [node name="pinata_point_1_4" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-0.900969, 6.16612, -35)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r100")
 
 [node name="pinata_point_1_5" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(-0.222521, 5.62507, -35)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r102")
 
 [node name="pinata_point_1_6" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(0.62349, 5.81817, -35)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r98")
 
 [node name="pinata_2" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(47, 6.6, -58)
 scale = Vector3(1.5, 1.7, 1.5)
 mesh = SubResource("r106")
 
 [node name="pinata_point_2_0" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(48, 6.6, -58)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r98")
 
 [node name="pinata_point_2_1" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(47.6235, 7.38183, -58)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r100")
 
 [node name="pinata_point_2_2" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(46.7775, 7.57493, -58)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r102")
 
 [node name="pinata_point_2_3" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(46.099, 7.03388, -58)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r98")
 
 [node name="pinata_point_2_4" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(46.099, 6.16612, -58)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r100")
 
 [node name="pinata_point_2_5" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(46.7775, 5.62507, -58)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r102")
 
 [node name="pinata_point_2_6" type="MeshInstance3D" parent="architecture"]
+visible = false
 position = Vector3(47.6235, 5.81817, -58)
 scale = Vector3(0.5, 0.65, 0.5)
 mesh = SubResource("r98")
@@ -4387,6 +4671,7 @@ mesh = SubResource("polish_board_cooler_banner")
 cast_shadow = 0
 
 [node name="produce_wall_board" type="Node3D" parent="frutas_granel"]
+visible = false
 position = Vector3(0.0, 6.0, -15.600000000000001)
 
 [node name="panel" type="MeshInstance3D" parent="frutas_granel/produce_wall_board"]
@@ -5008,3 +5293,165 @@ pixel_size = 0.003
 outline_size = 0
 modulate = Color(0.40, 0.15, 0.09, 1)
 visibility_range_end = 12.0
+
+[node name="healing_station" parent="." instance=ExtResource("beta_station")]
+position = Vector3(3, 0, -4)
+
+[node name="respawn_points" type="Node3D" parent="."]
+
+[node name="entrance" type="Marker3D" parent="respawn_points"]
+position = Vector3(0, 0.05, 6)
+
+[node name="checkout_west" type="Marker3D" parent="respawn_points"]
+position = Vector3(-44, 0.05, -3)
+
+[node name="checkout_east" type="Marker3D" parent="respawn_points"]
+position = Vector3(47, 0.05, -3)
+
+[node name="central_south" type="Marker3D" parent="respawn_points"]
+position = Vector3(0, 0.05, -35)
+
+[node name="central_north" type="Marker3D" parent="respawn_points"]
+position = Vector3(0, 0.05, -59)
+
+[node name="coolers" type="Marker3D" parent="respawn_points"]
+position = Vector3(-55, 0.05, -26)
+
+[node name="produce_south" type="Marker3D" parent="respawn_points"]
+position = Vector3(33, 0.05, -65)
+
+[node name="produce_north" type="Marker3D" parent="respawn_points"]
+position = Vector3(69, 0.05, -91)
+
+[node name="bodega_south" type="Marker3D" parent="respawn_points"]
+position = Vector3(0, 0.05, -68)
+
+[node name="bodega_north" type="Marker3D" parent="respawn_points"]
+position = Vector3(0, 0.05, -92)
+
+[node name="patio_south" type="Marker3D" parent="respawn_points"]
+position = Vector3(-28, 0.05, -65)
+
+[node name="patio_north" type="Marker3D" parent="respawn_points"]
+position = Vector3(-28, 0.05, -91)
+
+[node name="paper_star_0" parent="architecture" instance=ExtResource("beta_pinata")]
+position = Vector3(-46, 6.6, -8)
+
+[node name="paper_star_1" parent="architecture" instance=ExtResource("beta_pinata")]
+position = Vector3(0, 6.6, -35)
+
+[node name="paper_star_2" parent="architecture" instance=ExtResource("beta_pinata")]
+position = Vector3(47, 6.6, -58)
+
+[node name="wheel_left_rear" type="MeshInstance3D" parent="patio_carga/cargo_truck"]
+position = Vector3(-2.5, -1.40, -3.4)
+rotation = Vector3(0, 0, 1.5707963)
+mesh = SubResource("beta_truck_wheel")
+
+[node name="wheel_left_front" type="MeshInstance3D" parent="patio_carga/cargo_truck"]
+position = Vector3(-2.5, -1.40, 3.4)
+rotation = Vector3(0, 0, 1.5707963)
+mesh = SubResource("beta_truck_wheel")
+
+[node name="wheel_right_rear" type="MeshInstance3D" parent="patio_carga/cargo_truck"]
+position = Vector3(2.5, -1.40, -3.4)
+rotation = Vector3(0, 0, 1.5707963)
+mesh = SubResource("beta_truck_wheel")
+
+[node name="wheel_right_front" type="MeshInstance3D" parent="patio_carga/cargo_truck"]
+position = Vector3(2.5, -1.40, 3.4)
+rotation = Vector3(0, 0, 1.5707963)
+mesh = SubResource("beta_truck_wheel")
+
+[node name="entry_awning" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 4.7, 1.2)
+rotation = Vector3(0.10, 0, 0)
+mesh = SubResource("beta_awning")
+[node name="awning_valance" type="MeshInstance3D" parent="architecture"]
+position = Vector3(0, 4.40, 2.60)
+mesh = SubResource("beta_awning_valance")
+
+[node name="awning_stripe_0" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(-7.15, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_1" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(-5.85, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_2" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(-4.55, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_3" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(-3.25, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_4" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(-1.95, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_5" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(-0.65, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_6" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(0.65, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_7" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(1.95, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_8" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(3.25, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_9" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(4.55, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_10" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(5.85, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_11" type="MeshInstance3D" parent="architecture/entry_awning"]
+position = Vector3(7.15, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="produce_fill" type="OmniLight3D" parent="lighting"]
+position = Vector3(50, 7, -78)
+light_color = Color(1.0, 0.82, 0.58, 1)
+light_energy = 0.65
+omni_range = 28.0
+shadow_enabled = false
+[node name="patio_fill" type="OmniLight3D" parent="lighting"]
+position = Vector3(-49, 8, -80)
+light_color = Color(0.72, 0.85, 0.93, 1)
+light_energy = 0.55
+omni_range = 28.0
+shadow_enabled = false
+
+[node name="market_mural" parent="frutas_granel" instance=ExtResource("beta_mural")]
+position = Vector3(0, 4.2, -15.62)
+
+[node name="truck_cab_collision" type="StaticBody3D" parent="patio_carga" groups=["navigation_obstacle"]]
+position = Vector3(-12, 1.6, 2.8)
+collision_layer = 1
+collision_mask = 7
+
+[node name="collision" type="CollisionShape3D" parent="patio_carga/truck_cab_collision"]
+shape = SubResource("beta_truck_cab_shape")
+
+[node name="rear_wall_upper" type="MeshInstance3D" parent="architecture"]
+position = Vector3(25, 12.5, -94.6)
+mesh = SubResource("beta_rear_closure")
+
+[node name="bodega_wall_upper_west" type="MeshInstance3D" parent="architecture"]
+position = Vector3(-25, 12, -78.5)
+mesh = SubResource("beta_partition_closure")
+
+[node name="bodega_wall_upper_east" type="MeshInstance3D" parent="architecture"]
+position = Vector3(25, 12, -78.5)
+mesh = SubResource("beta_partition_closure")

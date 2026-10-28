@@ -3,10 +3,10 @@ extends CanvasLayer
 const CameraController = preload("res://scripts/characters/mango/camera_controller.gd")
 
 @export var camera_rig_path: NodePath
-@onready var mode_label: Label = $Screen/ModeLabel
-@onready var health_bar: ProgressBar = $Screen/health_bar
-@onready var health_label: Label = $Screen/health_label
-@onready var weapon_label: Label = $Screen/weapon_label
+@onready var mode_label: Label = $Screen/health_panel/layout/mode
+@onready var health_bar: ProgressBar = $Screen/health_panel/layout/health_bar
+@onready var health_label: Label = $Screen/health_panel/layout/health_label
+@onready var weapon_label: Label = $Screen/weapon_panel/layout/weapon_label
 
 func _ready() -> void:
 	var camera_rig: CameraController = get_node(camera_rig_path) as CameraController

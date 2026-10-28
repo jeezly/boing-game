@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/shelf_stock.gd" id="e1"]
 
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/fixture_details.gd" id="beta_details"]
+
 [sub_resource type="StandardMaterial3D" id="r1"]
 albedo_color = Color(0.16078,0.30196,0.34510,1)
 roughness = 0.8
@@ -14,7 +16,9 @@ material = SubResource("r1")
 size = Vector3(2, 4, 16)
 
 [sub_resource type="StandardMaterial3D" id="r4"]
-albedo_color = Color(0.63922,0.86275,0.89412,1)
+transparency = 1
+albedo_color = Color(0.42, 0.69, 0.75, 0.15)
+metallic = 0.1
 roughness = 0.8
 emission_enabled = true
 emission = Color(0.63922,0.86275,0.89412,1)
@@ -48,67 +52,67 @@ mesh = SubResource("r2")
 shape = SubResource("r3")
 
 [node name="bright_door_0" type="MeshInstance3D" parent="."]
-position = Vector3(1.01, 2, -7)
+position = Vector3(1.25, 2, -7)
 mesh = SubResource("r5")
 
 [node name="handle_0" type="MeshInstance3D" parent="."]
-position = Vector3(1.08, 1.8, -6.35)
+position = Vector3(1.33, 1.8, -6.35)
 mesh = SubResource("r7")
 
 [node name="bright_door_1" type="MeshInstance3D" parent="."]
-position = Vector3(1.01, 2, -5)
+position = Vector3(1.25, 2, -5)
 mesh = SubResource("r5")
 
 [node name="handle_1" type="MeshInstance3D" parent="."]
-position = Vector3(1.08, 1.8, -4.35)
+position = Vector3(1.33, 1.8, -4.35)
 mesh = SubResource("r7")
 
 [node name="bright_door_2" type="MeshInstance3D" parent="."]
-position = Vector3(1.01, 2, -3)
+position = Vector3(1.25, 2, -3)
 mesh = SubResource("r5")
 
 [node name="handle_2" type="MeshInstance3D" parent="."]
-position = Vector3(1.08, 1.8, -2.35)
+position = Vector3(1.33, 1.8, -2.35)
 mesh = SubResource("r7")
 
 [node name="bright_door_3" type="MeshInstance3D" parent="."]
-position = Vector3(1.01, 2, -1)
+position = Vector3(1.25, 2, -1)
 mesh = SubResource("r5")
 
 [node name="handle_3" type="MeshInstance3D" parent="."]
-position = Vector3(1.08, 1.8, -0.35)
+position = Vector3(1.33, 1.8, -0.35)
 mesh = SubResource("r7")
 
 [node name="bright_door_4" type="MeshInstance3D" parent="."]
-position = Vector3(1.01, 2, 1)
+position = Vector3(1.25, 2, 1)
 mesh = SubResource("r5")
 
 [node name="handle_4" type="MeshInstance3D" parent="."]
-position = Vector3(1.08, 1.8, 1.65)
+position = Vector3(1.33, 1.8, 1.65)
 mesh = SubResource("r7")
 
 [node name="bright_door_5" type="MeshInstance3D" parent="."]
-position = Vector3(1.01, 2, 3)
+position = Vector3(1.25, 2, 3)
 mesh = SubResource("r5")
 
 [node name="handle_5" type="MeshInstance3D" parent="."]
-position = Vector3(1.08, 1.8, 3.65)
+position = Vector3(1.33, 1.8, 3.65)
 mesh = SubResource("r7")
 
 [node name="bright_door_6" type="MeshInstance3D" parent="."]
-position = Vector3(1.01, 2, 5)
+position = Vector3(1.25, 2, 5)
 mesh = SubResource("r5")
 
 [node name="handle_6" type="MeshInstance3D" parent="."]
-position = Vector3(1.08, 1.8, 5.65)
+position = Vector3(1.33, 1.8, 5.65)
 mesh = SubResource("r7")
 
 [node name="bright_door_7" type="MeshInstance3D" parent="."]
-position = Vector3(1.01, 2, 7)
+position = Vector3(1.25, 2, 7)
 mesh = SubResource("r5")
 
 [node name="handle_7" type="MeshInstance3D" parent="."]
-position = Vector3(1.08, 1.8, 7.65)
+position = Vector3(1.33, 1.8, 7.65)
 mesh = SubResource("r7")
 
 [node name="cold_sign" type="Label3D" parent="."]
@@ -123,3 +127,7 @@ rotation = Vector3(0, 1.5708, 0)
 [node name="stock" type="Node3D" parent="."]
 script = ExtResource("e1")
 style = "fridge"
+
+[node name="beta_details" type="Node3D" parent="."]
+script = ExtResource("beta_details")
+kind = "fridge"

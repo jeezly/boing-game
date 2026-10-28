@@ -1,6 +1,7 @@
 extends RefCounted
 ## Shared native-mesh construction. Small decorations deliberately have no collision.
 static var material_cache: Dictionary = {}
+static var product_mesh_cache: Dictionary = {}
 
 static func mat(hex: String, glow: float = 0.0) -> StandardMaterial3D:
 	var key := hex + ":" + str(glow)
@@ -58,9 +59,13 @@ static func label(parent: Node3D, text: String, at: Vector3, size: int = 64, col
 static func products(parent: Node3D, positions: Array[Vector3], color: String, size: Vector3) -> void:
 	if positions.is_empty():
 		return
-	var mesh := BoxMesh.new()
-	mesh.size = size
-	mesh.material = mat(color)
+	var key := color + str(size)
+	if not product_mesh_cache.has(key):
+		var product_mesh := BoxMesh.new()
+		product_mesh.size = size
+		product_mesh.material = mat(color)
+		product_mesh_cache[key] = product_mesh
+	var mesh: Mesh = product_mesh_cache[key]
 	var batch := MultiMesh.new()
 	batch.transform_format = MultiMesh.TRANSFORM_3D
 	batch.mesh = mesh

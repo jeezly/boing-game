@@ -1,4 +1,5 @@
 extends Node
+## Archived unused prototype; production Mango uses projectile_weapon.gd.
 
 const CameraController = preload("res://scripts/characters/mango/camera_controller.gd")
 
