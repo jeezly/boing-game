@@ -16,8 +16,7 @@ static func build(body: Node3D, face: Node3D, helmet: Node3D) -> void:
 	var glass := B.material(Color("6b8076"), 0.18)
 	glass.metallic = 0.25
 	# A single surface avoids the old intersecting 'face egg' seam.
-	var shader := Shader.new()
-	shader.code = "shader_type spatial; varying vec3 local_position; void vertex(){local_position=VERTEX;} void fragment(){float warmth=smoothstep(-0.5,0.5,local_position.y); vec3 orange=vec3(0.95,0.34,0.035); vec3 yellow=vec3(1.0,0.67,0.09); float face=(1.0-smoothstep(-0.3,0.05,local_position.z)); ALBEDO=mix(orange,yellow,clamp(warmth*0.72+face*0.22,0.0,1.0)); ROUGHNESS=0.72;}"
+	var shader := preload("res://resources/characters/mango_skin.gdshader")
 	var skin := ShaderMaterial.new()
 	skin.shader = shader
 	B.mesh_part(body, "mango_skin", Vector3(0, 1.05, 0), Vector3.ONE, fruit_mesh(), skin)

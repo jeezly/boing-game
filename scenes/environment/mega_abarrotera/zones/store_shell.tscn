@@ -1,0 +1,1466 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/sign.tscn" id="e11"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/store_fan.tscn" id="e14"]
+
+[ext_resource type="Shader" path="res://resources/environment/papel_picado.gdshader" id="beta_paper"]
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/star_pinata.tscn" id="beta_pinata"]
+[ext_resource type="Shader" path="res://resources/environment/store_floor.gdshader" id="beta_floor"]
+[sub_resource type="ShaderMaterial" id="r1"]
+shader = ExtResource("beta_floor")
+
+[sub_resource type="BoxMesh" id="r2"]
+size = Vector3(150, 0.4, 110)
+material = SubResource("r1")
+
+[sub_resource type="BoxShape3D" id="r3"]
+size = Vector3(150, 0.4, 110)
+
+[sub_resource type="StandardMaterial3D" id="r4"]
+albedo_color = Color(0.91,0.86,0.73,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r5"]
+size = Vector3(0.8, 16, 110)
+material = SubResource("r4")
+
+[sub_resource type="BoxShape3D" id="r6"]
+size = Vector3(0.8, 16, 110)
+
+[sub_resource type="StandardMaterial3D" id="r7"]
+albedo_color = Color(0.65490,0.66667,0.62745,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r8"]
+size = Vector3(150, 9, 0.8)
+material = SubResource("r7")
+
+[sub_resource type="BoxShape3D" id="r9"]
+size = Vector3(150, 9, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="r10"]
+albedo_color = Color(0.68235,0.58431,0.43529,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r11"]
+size = Vector3(150, 3, 0.8)
+material = SubResource("r10")
+
+[sub_resource type="BoxShape3D" id="r12"]
+size = Vector3(150, 3, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="r13"]
+albedo_color = Color(0.89412,0.79216,0.62745,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r14"]
+size = Vector3(68, 12, 0.7)
+material = SubResource("r13")
+
+[sub_resource type="BoxShape3D" id="r15"]
+size = Vector3(68, 12, 0.7)
+
+[sub_resource type="StandardMaterial3D" id="r16"]
+albedo_color = Color(0.87059,0.39608,0.25490,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r17"]
+size = Vector3(150, 2, 0.7)
+material = SubResource("r16")
+
+[sub_resource type="BoxShape3D" id="r18"]
+size = Vector3(150, 2, 0.7)
+
+[sub_resource type="StandardMaterial3D" id="r19"]
+albedo_color = Color(0.87,0.86,0.77,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r20"]
+size = Vector3(150, 0.35, 62)
+material = SubResource("r19")
+
+[sub_resource type="StandardMaterial3D" id="r21"]
+albedo_color = Color(0.49412,0.53725,0.52157,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r22"]
+size = Vector3(100, 0.35, 33)
+material = SubResource("r21")
+
+[sub_resource type="StandardMaterial3D" id="r23"]
+albedo_color = Color(0.49412,0.54118,0.51373,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r24"]
+size = Vector3(148, 0.5, 0.45)
+material = SubResource("r23")
+
+[sub_resource type="StandardMaterial3D" id="r25"]
+albedo_color = Color(0.55294,0.61961,0.59216,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r26"]
+size = Vector3(0.4, 8, 8)
+material = SubResource("r25")
+
+[sub_resource type="BoxShape3D" id="r27"]
+size = Vector3(0.4, 8, 8)
+
+[sub_resource type="BoxMesh" id="r28"]
+size = Vector3(0.4, 8, 10)
+material = SubResource("r25")
+
+[sub_resource type="BoxShape3D" id="r29"]
+size = Vector3(0.4, 8, 10)
+
+[sub_resource type="StandardMaterial3D" id="r81"]
+albedo_color = Color(0.85098,0.32941,0.26667,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r82"]
+size = Vector3(2.4, 0.95, 0.025)
+material = SubResource("r81")
+
+[sub_resource type="StandardMaterial3D" id="r85"]
+albedo_color = Color(0.91765,0.75686,0.29020,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r86"]
+size = Vector3(2.4, 0.95, 0.025)
+material = SubResource("r85")
+
+[sub_resource type="StandardMaterial3D" id="r87"]
+albedo_color = Color(0.15686,0.60784,0.68627,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r88"]
+size = Vector3(2.4, 0.95, 0.025)
+material = SubResource("r87")
+
+[sub_resource type="StandardMaterial3D" id="r89"]
+albedo_color = Color(0.72941,0.32941,0.51765,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r90"]
+size = Vector3(2.4, 0.95, 0.025)
+material = SubResource("r89")
+
+[sub_resource type="StandardMaterial3D" id="r91"]
+albedo_color = Color(0.33333,0.61961,0.38039,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r92"]
+size = Vector3(2.4, 0.95, 0.025)
+material = SubResource("r91")
+
+[sub_resource type="StandardMaterial3D" id="r93"]
+albedo_color = Color(0.46275,0.40000,0.30588,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r94"]
+size = Vector3(140, 0.025, 0.025)
+material = SubResource("r93")
+
+[sub_resource type="StandardMaterial3D" id="r95"]
+albedo_color = Color(0.85882,0.40784,0.27843,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r96"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r95")
+
+[sub_resource type="StandardMaterial3D" id="r97"]
+albedo_color = Color(0.83137,0.68627,0.26275,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r98"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r97")
+
+[sub_resource type="StandardMaterial3D" id="r99"]
+albedo_color = Color(0.79608,0.34902,0.46275,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r100"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r99")
+
+[sub_resource type="StandardMaterial3D" id="r101"]
+albedo_color = Color(0.29412,0.65882,0.50196,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r102"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r101")
+
+[sub_resource type="StandardMaterial3D" id="r103"]
+albedo_color = Color(0.15686,0.61569,0.69020,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r104"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r103")
+
+[sub_resource type="StandardMaterial3D" id="r105"]
+albedo_color = Color(0.83137,0.66667,0.23137,1)
+roughness = 0.8
+
+[sub_resource type="SphereMesh" id="r106"]
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+material = SubResource("r105")
+
+[sub_resource type="StandardMaterial3D" id="r111"]
+albedo_color = Color(0.70980,0.64706,0.43529,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r112"]
+size = Vector3(3.8, 0.012, 3.8)
+material = SubResource("r111")
+
+[sub_resource type="StandardMaterial3D" id="r113"]
+albedo_color = Color(0.64314,0.70980,0.62745,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r114"]
+size = Vector3(3.8, 0.012, 3.8)
+material = SubResource("r113")
+
+[sub_resource type="StandardMaterial3D" id="r115"]
+albedo_color = Color(0.78824,0.63922,0.43922,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r116"]
+size = Vector3(3.8, 0.012, 3.8)
+material = SubResource("r115")
+
+[sub_resource type="ShaderMaterial" id="beta_paper_0"]
+shader = ExtResource("beta_paper")
+shader_parameter/paper_color = Color(0.85, 0.25, 0.22, 1)
+
+[sub_resource type="ShaderMaterial" id="beta_paper_1"]
+shader = ExtResource("beta_paper")
+shader_parameter/paper_color = Color(0.95, 0.68, 0.16, 1)
+
+[sub_resource type="ShaderMaterial" id="beta_paper_2"]
+shader = ExtResource("beta_paper")
+shader_parameter/paper_color = Color(0.12, 0.56, 0.63, 1)
+
+[sub_resource type="ShaderMaterial" id="beta_paper_3"]
+shader = ExtResource("beta_paper")
+shader_parameter/paper_color = Color(0.7, 0.24, 0.49, 1)
+
+[sub_resource type="ShaderMaterial" id="beta_paper_4"]
+shader = ExtResource("beta_paper")
+shader_parameter/paper_color = Color(0.22, 0.61, 0.32, 1)
+
+[sub_resource type="BoxMesh" id="beta_rear_closure"]
+size = Vector3(100, 7, 0.8)
+material = SubResource("r7")
+
+[sub_resource type="BoxMesh" id="beta_partition_closure"]
+size = Vector3(0.4, 8, 33)
+material = SubResource("r25")
+[sub_resource type="StandardMaterial3D" id="beta_awning_mat"]
+albedo_color = Color(0.73, 0.19, 0.13, 1)
+roughness = 0.95
+[sub_resource type="StandardMaterial3D" id="beta_awning_cream"]
+albedo_color = Color(0.95, 0.82, 0.55, 1)
+roughness = 0.95
+[sub_resource type="BoxMesh" id="beta_awning"]
+size = Vector3(16, 0.14, 2.8)
+material = SubResource("beta_awning_mat")
+[sub_resource type="BoxMesh" id="beta_awning_stripe"]
+size = Vector3(0.45, 0.15, 2.81)
+material = SubResource("beta_awning_cream")
+[sub_resource type="BoxMesh" id="beta_awning_valance"]
+size = Vector3(16, 0.42, 0.06)
+material = SubResource("beta_awning_mat")
+
+
+
+[node name="architecture" type="Node3D"]
+
+[node name="hanging_decor" type="Node3D" parent="."]
+
+
+[node name="continuous_floor" type="StaticBody3D" parent="."]
+position = Vector3(0, -0.2, -40)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="continuous_floor"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r2")
+
+[node name="collision" type="CollisionShape3D" parent="continuous_floor"]
+shape = SubResource("r3")
+
+[node name="side_wall_-74_6" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-74.6, 8, -40)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="side_wall_-74_6"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r5")
+
+[node name="collision" type="CollisionShape3D" parent="side_wall_-74_6"]
+shape = SubResource("r6")
+
+[node name="side_wall_74_6" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(74.6, 8, -40)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="side_wall_74_6"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r5")
+
+[node name="collision" type="CollisionShape3D" parent="side_wall_74_6"]
+shape = SubResource("r6")
+
+[node name="rear_wall" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(0, 4.5, -94.6)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="rear_wall"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r8")
+
+[node name="collision" type="CollisionShape3D" parent="rear_wall"]
+shape = SubResource("r9")
+
+[node name="approach_boundary" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(0, 1.5, 14.6)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="approach_boundary"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r11")
+
+[node name="collision" type="CollisionShape3D" parent="approach_boundary"]
+shape = SubResource("r12")
+
+[node name="storefront_-41" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-41, 6, 0)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="storefront_-41"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r14")
+
+[node name="collision" type="CollisionShape3D" parent="storefront_-41"]
+shape = SubResource("r15")
+
+[node name="storefront_41" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(41, 6, 0)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="storefront_41"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r14")
+
+[node name="collision" type="CollisionShape3D" parent="storefront_41"]
+shape = SubResource("r15")
+
+[node name="facade_header" type="StaticBody3D" parent="."]
+position = Vector3(0, 13, 0)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="facade_header"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r17")
+
+[node name="collision" type="CollisionShape3D" parent="facade_header"]
+shape = SubResource("r18")
+
+[node name="store_roof" type="MeshInstance3D" parent="."]
+position = Vector3(0, 16, -31)
+mesh = SubResource("r20")
+
+[node name="rear_industrial_roof" type="MeshInstance3D" parent="."]
+position = Vector3(25, 16, -78.5)
+mesh = SubResource("r22")
+
+[node name="roof_truss_12" type="MeshInstance3D" parent="."]
+position = Vector3(0, 15, -12)
+mesh = SubResource("r24")
+
+[node name="roof_truss_36" type="MeshInstance3D" parent="."]
+position = Vector3(0, 15, -36)
+mesh = SubResource("r24")
+
+[node name="roof_truss_60" type="MeshInstance3D" parent="."]
+position = Vector3(0, 15, -60)
+mesh = SubResource("r24")
+
+[node name="industrial_partition_-25_67" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-25, 4, -67)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="industrial_partition_-25_67"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r26")
+
+[node name="collision" type="CollisionShape3D" parent="industrial_partition_-25_67"]
+shape = SubResource("r27")
+
+[node name="industrial_partition_-25_90" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-25, 4, -90)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="industrial_partition_-25_90"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r28")
+
+[node name="collision" type="CollisionShape3D" parent="industrial_partition_-25_90"]
+shape = SubResource("r29")
+
+[node name="industrial_partition_25_67" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(25, 4, -67)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="industrial_partition_25_67"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r26")
+
+[node name="collision" type="CollisionShape3D" parent="industrial_partition_25_67"]
+shape = SubResource("r27")
+
+[node name="industrial_partition_25_90" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(25, 4, -90)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="industrial_partition_25_90"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r28")
+
+[node name="collision" type="CollisionShape3D" parent="industrial_partition_25_90"]
+shape = SubResource("r29")
+
+[node name="papel_picado_0_0" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-68, 6.888, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_0_1" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-64, 6.924, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_0_2" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-60, 6.96, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_0_3" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-56, 6.996, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_0_4" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-52, 7.032, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_0_5" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-48, 7.068, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_0_6" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-44, 7.104, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_0_7" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-40, 7.14, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_0_8" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-36, 7.176, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_0_9" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-32, 7.212, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_0_10" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-28, 7.248, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_0_11" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-24, 7.284, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_0_12" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-20, 7.32, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_0_13" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-16, 7.356, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_0_14" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-12, 7.392, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_0_15" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-8, 7.428, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_0_16" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-4, 7.464, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_0_17" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(0, 7.5, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_0_18" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(4, 7.464, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_0_19" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(8, 7.428, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_0_20" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(12, 7.392, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_0_21" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(16, 7.356, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_0_22" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(20, 7.32, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_0_23" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(24, 7.284, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_0_24" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(28, 7.248, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_0_25" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(32, 7.212, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_0_26" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(36, 7.176, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_0_27" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(40, 7.14, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_0_28" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(44, 7.104, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_0_29" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(48, 7.068, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_0_30" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(52, 7.032, -7)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_0_31" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(56, 6.996, -7)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_0_32" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(60, 6.96, -7)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_0_33" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(64, 6.924, -7)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_0_34" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(68, 6.888, -7)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="decoration_line_0" type="MeshInstance3D" parent="."]
+position = Vector3(0, 7.9, -7)
+mesh = SubResource("r94")
+
+[node name="papel_picado_1_0" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-68, 6.888, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_1_1" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-64, 6.924, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_1_2" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-60, 6.96, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_1_3" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-56, 6.996, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_1_4" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-52, 7.032, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_1_5" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-48, 7.068, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_1_6" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-44, 7.104, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_1_7" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-40, 7.14, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_1_8" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-36, 7.176, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_1_9" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-32, 7.212, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_1_10" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-28, 7.248, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_1_11" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-24, 7.284, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_1_12" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-20, 7.32, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_1_13" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-16, 7.356, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_1_14" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-12, 7.392, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_1_15" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-8, 7.428, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_1_16" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-4, 7.464, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_1_17" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(0, 7.5, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_1_18" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(4, 7.464, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_1_19" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(8, 7.428, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_1_20" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(12, 7.392, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_1_21" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(16, 7.356, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_1_22" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(20, 7.32, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_1_23" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(24, 7.284, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_1_24" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(28, 7.248, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_1_25" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(32, 7.212, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_1_26" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(36, 7.176, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_1_27" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(40, 7.14, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_1_28" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(44, 7.104, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_1_29" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(48, 7.068, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_1_30" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(52, 7.032, -35)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_1_31" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(56, 6.996, -35)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_1_32" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(60, 6.96, -35)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_1_33" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(64, 6.924, -35)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_1_34" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(68, 6.888, -35)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="decoration_line_1" type="MeshInstance3D" parent="."]
+position = Vector3(0, 7.9, -35)
+mesh = SubResource("r94")
+
+[node name="papel_picado_2_0" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-68, 6.888, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_2_1" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-64, 6.924, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_2_2" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-60, 6.96, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_2_3" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-56, 6.996, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_2_4" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-52, 7.032, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_2_5" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-48, 7.068, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_2_6" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-44, 7.104, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_2_7" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-40, 7.14, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_2_8" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-36, 7.176, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_2_9" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-32, 7.212, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_2_10" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-28, 7.248, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_2_11" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-24, 7.284, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_2_12" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-20, 7.32, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_2_13" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-16, 7.356, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_2_14" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-12, 7.392, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_2_15" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-8, 7.428, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_2_16" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(-4, 7.464, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_2_17" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(0, 7.5, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_2_18" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(4, 7.464, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_2_19" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(8, 7.428, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_2_20" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(12, 7.392, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_2_21" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(16, 7.356, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_2_22" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(20, 7.32, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_2_23" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(24, 7.284, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_2_24" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(28, 7.248, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_2_25" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(32, 7.212, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_2_26" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(36, 7.176, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_2_27" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(40, 7.14, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_2_28" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(44, 7.104, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_2_29" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(48, 7.068, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="papel_picado_2_30" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(52, 7.032, -59)
+material_override = SubResource("beta_paper_0")
+cast_shadow = 0
+mesh = SubResource("r82")
+
+[node name="papel_picado_2_31" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(56, 6.996, -59)
+material_override = SubResource("beta_paper_1")
+cast_shadow = 0
+mesh = SubResource("r86")
+
+[node name="papel_picado_2_32" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(60, 6.96, -59)
+material_override = SubResource("beta_paper_2")
+cast_shadow = 0
+mesh = SubResource("r88")
+
+[node name="papel_picado_2_33" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(64, 6.924, -59)
+material_override = SubResource("beta_paper_3")
+cast_shadow = 0
+mesh = SubResource("r90")
+
+[node name="papel_picado_2_34" type="MeshInstance3D" parent="hanging_decor"]
+position = Vector3(68, 6.888, -59)
+material_override = SubResource("beta_paper_4")
+cast_shadow = 0
+mesh = SubResource("r92")
+
+[node name="decoration_line_2" type="MeshInstance3D" parent="."]
+position = Vector3(0, 7.9, -59)
+mesh = SubResource("r94")
+
+[node name="pinata_0" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-46, 6.6, -8)
+scale = Vector3(1.5, 1.7, 1.5)
+mesh = SubResource("r96")
+
+[node name="pinata_point_0_0" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-45, 6.6, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_0_1" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-45.3765, 7.38183, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_0_2" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-46.2225, 7.57493, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_0_3" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-46.901, 7.03388, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_0_4" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-46.901, 6.16612, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_0_5" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-46.2225, 5.62507, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_0_6" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-45.3765, 5.81817, -8)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_1" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(0, 6.6, -35)
+scale = Vector3(1.5, 1.7, 1.5)
+mesh = SubResource("r104")
+
+[node name="pinata_point_1_0" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(1, 6.6, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_1_1" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(0.62349, 7.38183, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_1_2" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-0.222521, 7.57493, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_1_3" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-0.900969, 7.03388, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_1_4" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-0.900969, 6.16612, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_1_5" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(-0.222521, 5.62507, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_1_6" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(0.62349, 5.81817, -35)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_2" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(47, 6.6, -58)
+scale = Vector3(1.5, 1.7, 1.5)
+mesh = SubResource("r106")
+
+[node name="pinata_point_2_0" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(48, 6.6, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_2_1" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(47.6235, 7.38183, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_2_2" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(46.7775, 7.57493, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_2_3" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(46.099, 7.03388, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="pinata_point_2_4" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(46.099, 6.16612, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r100")
+
+[node name="pinata_point_2_5" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(46.7775, 5.62507, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r102")
+
+[node name="pinata_point_2_6" type="MeshInstance3D" parent="."]
+visible = false
+position = Vector3(47.6235, 5.81817, -58)
+scale = Vector3(0.5, 0.65, 0.5)
+mesh = SubResource("r98")
+
+[node name="price_sign_0" parent="." instance=ExtResource("e11")]
+position = Vector3(-48, 4.7, -17)
+scale = Vector3(1, 1, 1)
+text = "OFERTA DEL DÍA"
+
+[node name="price_sign_1" parent="." instance=ExtResource("e11")]
+position = Vector3(47, 4.7, -58)
+scale = Vector3(1, 1, 1)
+text = "SI NO LO ENCUENTRA, PREGUNTE"
+
+[node name="price_sign_2" parent="." instance=ExtResource("e11")]
+position = Vector3(0, 4.7, -64)
+scale = Vector3(1, 1, 1)
+text = "AQUÍ HAY DE TODO"
+
+[node name="decorative_tile_0_0" type="MeshInstance3D" parent="."]
+position = Vector3(-12, 0.008, -14)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_0_1" type="MeshInstance3D" parent="."]
+position = Vector3(-12, 0.008, -10)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_0_2" type="MeshInstance3D" parent="."]
+position = Vector3(-12, 0.008, -6)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_0_3" type="MeshInstance3D" parent="."]
+position = Vector3(-12, 0.008, -2)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_1_0" type="MeshInstance3D" parent="."]
+position = Vector3(-8, 0.008, -14)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_1_1" type="MeshInstance3D" parent="."]
+position = Vector3(-8, 0.008, -10)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_1_2" type="MeshInstance3D" parent="."]
+position = Vector3(-8, 0.008, -6)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_1_3" type="MeshInstance3D" parent="."]
+position = Vector3(-8, 0.008, -2)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_2_0" type="MeshInstance3D" parent="."]
+position = Vector3(-4, 0.008, -14)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_2_1" type="MeshInstance3D" parent="."]
+position = Vector3(-4, 0.008, -10)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_2_2" type="MeshInstance3D" parent="."]
+position = Vector3(-4, 0.008, -6)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_2_3" type="MeshInstance3D" parent="."]
+position = Vector3(-4, 0.008, -2)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_3_0" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.008, -14)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_3_1" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.008, -10)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_3_2" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.008, -6)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_3_3" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0.008, -2)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_4_0" type="MeshInstance3D" parent="."]
+position = Vector3(4, 0.008, -14)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_4_1" type="MeshInstance3D" parent="."]
+position = Vector3(4, 0.008, -10)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_4_2" type="MeshInstance3D" parent="."]
+position = Vector3(4, 0.008, -6)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_4_3" type="MeshInstance3D" parent="."]
+position = Vector3(4, 0.008, -2)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_5_0" type="MeshInstance3D" parent="."]
+position = Vector3(8, 0.008, -14)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_5_1" type="MeshInstance3D" parent="."]
+position = Vector3(8, 0.008, -10)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_5_2" type="MeshInstance3D" parent="."]
+position = Vector3(8, 0.008, -6)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_5_3" type="MeshInstance3D" parent="."]
+position = Vector3(8, 0.008, -2)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_6_0" type="MeshInstance3D" parent="."]
+position = Vector3(12, 0.008, -14)
+mesh = SubResource("r112")
+
+[node name="decorative_tile_6_1" type="MeshInstance3D" parent="."]
+position = Vector3(12, 0.008, -10)
+mesh = SubResource("r114")
+
+[node name="decorative_tile_6_2" type="MeshInstance3D" parent="."]
+position = Vector3(12, 0.008, -6)
+mesh = SubResource("r116")
+
+[node name="decorative_tile_6_3" type="MeshInstance3D" parent="."]
+position = Vector3(12, 0.008, -2)
+mesh = SubResource("r112")
+
+[node name="wall_fan_left" parent="." instance=ExtResource("e14")]
+position = Vector3(-74, 6, -35)
+rotation = Vector3(0, -1.5708, 0)
+
+[node name="wall_fan_right" parent="." instance=ExtResource("e14")]
+position = Vector3(74, 6, -35)
+rotation = Vector3(0, 1.5708, 0)
+
+[node name="paper_star_0" parent="hanging_decor" instance=ExtResource("beta_pinata")]
+position = Vector3(-46, 6.6, -8)
+
+[node name="paper_star_1" parent="hanging_decor" instance=ExtResource("beta_pinata")]
+position = Vector3(0, 6.6, -35)
+
+[node name="paper_star_2" parent="hanging_decor" instance=ExtResource("beta_pinata")]
+position = Vector3(47, 6.6, -58)
+
+[node name="entry_awning" type="MeshInstance3D" parent="."]
+position = Vector3(0, 4.7, 1.2)
+rotation = Vector3(0.10, 0, 0)
+mesh = SubResource("beta_awning")
+[node name="awning_valance" type="MeshInstance3D" parent="."]
+position = Vector3(0, 4.40, 2.60)
+mesh = SubResource("beta_awning_valance")
+
+[node name="awning_stripe_0" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(-7.15, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_1" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(-5.85, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_2" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(-4.55, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_3" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(-3.25, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_4" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(-1.95, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_5" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(-0.65, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_6" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(0.65, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_7" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(1.95, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_8" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(3.25, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_9" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(4.55, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_10" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(5.85, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="awning_stripe_11" type="MeshInstance3D" parent="entry_awning"]
+position = Vector3(7.15, 0, 0)
+mesh = SubResource("beta_awning_stripe")
+
+[node name="rear_wall_upper" type="MeshInstance3D" parent="."]
+position = Vector3(25, 12.5, -94.6)
+mesh = SubResource("beta_rear_closure")
+
+[node name="bodega_wall_upper_west" type="MeshInstance3D" parent="."]
+position = Vector3(-25, 12, -78.5)
+mesh = SubResource("beta_partition_closure")
+
+[node name="bodega_wall_upper_east" type="MeshInstance3D" parent="."]
+position = Vector3(25, 12, -78.5)
+mesh = SubResource("beta_partition_closure")
+

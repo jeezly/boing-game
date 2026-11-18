@@ -1,0 +1,68 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/combat_zone.gd" id="e2"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/huacal.tscn" id="e3"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/fridge_bank.tscn" id="e8"]
+
+[sub_resource type="StandardMaterial3D" id="r38"]
+albedo_color = Color(0.37255,0.58824,0.61176,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r39"]
+size = Vector3(4, 1.4, 14)
+material = SubResource("r38")
+
+[sub_resource type="BoxShape3D" id="r40"]
+size = Vector3(4, 1.4, 14)
+
+[sub_resource type="StandardMaterial3D" id="r41"]
+albedo_color = Color(0.66275,0.87843,0.89412,1)
+roughness = 0.8
+emission_enabled = true
+emission = Color(0.66275,0.87843,0.89412,1)
+emission_energy_multiplier = 0.07
+
+[sub_resource type="BoxMesh" id="r42"]
+size = Vector3(4.1, 0.08, 14.1)
+material = SubResource("r41")
+
+[node name="refrigeradores" type="Node3D"]
+position = Vector3(-63, 0, -39.5)
+script = ExtResource("e2")
+zone_id = &"refrigeradores"
+bounds = Vector2(24,45)
+
+[node name="cooler_bank_0" parent="." instance=ExtResource("e8")]
+position = Vector3(-6, 0, 14.5)
+scale = Vector3(1, 1, 1.25)
+
+[node name="cooler_bank_1" parent="." instance=ExtResource("e8")]
+position = Vector3(-6, 0, -7.5)
+scale = Vector3(1, 1, 1.25)
+
+[node name="freezer_island" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(3, 0.7, -3.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="freezer_island"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r39")
+
+[node name="collision" type="CollisionShape3D" parent="freezer_island"]
+shape = SubResource("r40")
+
+[node name="freezer_glass" type="MeshInstance3D" parent="."]
+position = Vector3(3, 1.43, -3.5)
+mesh = SubResource("r42")
+
+[node name="returnable_crate_0" parent="." instance=ExtResource("e3")]
+position = Vector3(5, 0, 20.5)
+scale = Vector3(1, 0.7, 1)
+
+[node name="returnable_crate_1" parent="." instance=ExtResource("e3")]
+position = Vector3(5, 0, -19.5)
+scale = Vector3(1, 0.7, 1)
+

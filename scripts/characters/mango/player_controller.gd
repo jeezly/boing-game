@@ -26,9 +26,14 @@ var gravity: float = float(ProjectSettings.get_setting("physics/3d/default_gravi
 func _ready() -> void:
 	add_to_group("player")
 	hp = max_hp
+	var melee := preload("res://scripts/characters/mango/melee_attack.gd").new()
+	melee.name = "melee_attack"
+	add_child(melee)
 
 func take_damage(amount: float) -> void:
 	if hp <= 0.0 or not combat_enabled or invulnerability_left > 0.0 or get_tree().paused: return
+	if $power_state.active(&"happy"): return
+	amount *= $power_state.resistance()
 	var previous_hp := hp
 	hp = clampf(hp - maxf(amount, 0.0), 0.0, max_hp)
 	if hp < previous_hp:
@@ -57,6 +62,7 @@ func _physics_process(delta: float) -> void:
 	var input_vector: Vector2 = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction: Vector3 = camera_rig.basis * Vector3(input_vector.x, 0.0, input_vector.y)
 	var speed: float = sprint_speed if Input.is_action_pressed("sprint") else walk_speed
+	speed *= $power_state.movement_multiplier()
 	var rate: float = acceleration if input_vector.length_squared() > 0.0 else deceleration
 	velocity.x = move_toward(velocity.x, direction.x * speed, rate * delta)
 	velocity.z = move_toward(velocity.z, direction.z * speed, rate * delta)
@@ -65,6 +71,7 @@ func _physics_process(delta: float) -> void:
 	mango.present(delta, Vector2(velocity.x, velocity.z).length(), is_on_floor(), camera_rig.pitch_pivot.rotation.x, aiming)
 
 func respawn_at(point: Vector3) -> void:
+	$power_state.clear()
 	global_position = point
 	velocity = Vector3.ZERO
 	hp = max_hp

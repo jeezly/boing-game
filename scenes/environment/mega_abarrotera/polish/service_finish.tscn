@@ -1,0 +1,599 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/static_fixture_batch.gd" id="finish_batch"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="m0"]
+albedo_color = Color(0.2549019607843137, 0.4117647058823529, 0.403921568627451, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b0"]
+size = Vector3(0.30000, 0.50000, 29.00000)
+material = SubResource("m0")
+
+[sub_resource type="StandardMaterial3D" id="m1"]
+albedo_color = Color(0.8941176470588236, 0.9450980392156862, 0.8509803921568627, 1)
+roughness = 0.78
+emission_enabled = true
+emission = Color(0.8941176470588236, 0.9450980392156862, 0.8509803921568627, 1)
+emission_energy_multiplier = 0.55
+
+[sub_resource type="BoxMesh" id="b1"]
+size = Vector3(0.50000, 0.05000, 8.00000)
+material = SubResource("m1")
+
+[sub_resource type="StandardMaterial3D" id="m2"]
+albedo_color = Color(0.44313725490196076, 0.5568627450980392, 0.5215686274509804, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b2"]
+size = Vector3(12.00000, 7.50000, 0.16000)
+material = SubResource("m2")
+
+[sub_resource type="StandardMaterial3D" id="m3"]
+albedo_color = Color(0.6039215686274509, 0.6862745098039216, 0.6274509803921569, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b3"]
+size = Vector3(11.80000, 0.05500, 0.07000)
+material = SubResource("m3")
+
+[sub_resource type="StandardMaterial3D" id="m4"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b4"]
+size = Vector3(12.18000, 1.28000, 0.16000)
+material = SubResource("m4")
+
+[sub_resource type="StandardMaterial3D" id="m5"]
+albedo_color = Color(0.19215686274509805, 0.3686274509803922, 0.3764705882352941, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b5"]
+size = Vector3(12.00000, 1.10000, 0.06000)
+material = SubResource("m5")
+
+[sub_resource type="StandardMaterial3D" id="m6"]
+albedo_color = Color(0.8313725490196079, 0.6392156862745098, 0.26666666666666666, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b6"]
+size = Vector3(0.45000, 3.00000, 0.30000)
+material = SubResource("m6")
+
+[sub_resource type="StandardMaterial3D" id="m7"]
+albedo_color = Color(0.20784313725490197, 0.2980392156862745, 0.28627450980392155, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b7"]
+size = Vector3(0.46000, 0.19000, 0.02500)
+material = SubResource("m7")
+
+[sub_resource type="StandardMaterial3D" id="m8"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b8"]
+size = Vector3(20.18000, 2.78000, 0.16000)
+material = SubResource("m8")
+
+[sub_resource type="StandardMaterial3D" id="m9"]
+albedo_color = Color(0.2980392156862745, 0.4117647058823529, 0.3803921568627451, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b9"]
+size = Vector3(20.00000, 2.60000, 0.06000)
+material = SubResource("m9")
+
+[sub_resource type="StandardMaterial3D" id="m10"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b10"]
+size = Vector3(15.18000, 2.18000, 0.16000)
+material = SubResource("m10")
+
+[sub_resource type="StandardMaterial3D" id="m11"]
+albedo_color = Color(0.19607843137254902, 0.40784313725490196, 0.4196078431372549, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b11"]
+size = Vector3(15.00000, 2.00000, 0.06000)
+material = SubResource("m11")
+
+[sub_resource type="StandardMaterial3D" id="m12"]
+albedo_color = Color(0.8313725490196079, 0.6392156862745098, 0.30196078431372547, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b12"]
+size = Vector3(0.14000, 0.02000, 1.60000)
+material = SubResource("m12")
+
+[node name="service_finish" type="Node3D"]
+script = ExtResource("finish_batch")
+
+[node name="service_beam_-68" type="MeshInstance3D" parent="."]
+position = Vector3(-68.00000, 12.70000, -79.00000)
+mesh = SubResource("b0")
+
+[node name="service_strip_-68" type="MeshInstance3D" parent="."]
+position = Vector3(-68.00000, 12.41000, -79.00000)
+mesh = SubResource("b1")
+
+[node name="service_beam_-48" type="MeshInstance3D" parent="."]
+position = Vector3(-48.00000, 12.70000, -79.00000)
+mesh = SubResource("b0")
+
+[node name="service_strip_-48" type="MeshInstance3D" parent="."]
+position = Vector3(-48.00000, 12.41000, -79.00000)
+mesh = SubResource("b1")
+
+[node name="service_beam_-29" type="MeshInstance3D" parent="."]
+position = Vector3(-29.00000, 12.70000, -79.00000)
+mesh = SubResource("b0")
+
+[node name="service_strip_-29" type="MeshInstance3D" parent="."]
+position = Vector3(-29.00000, 12.41000, -79.00000)
+mesh = SubResource("b1")
+
+[node name="loading_shutter_-55" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 4.20000, -94.08000)
+mesh = SubResource("b2")
+
+[node name="shutter_rib_-55_0" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 0.70000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_1" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 1.06000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_2" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 1.42000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_3" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 1.78000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_4" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 2.14000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_5" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 2.50000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_6" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 2.86000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_7" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 3.22000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_8" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 3.58000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_9" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 3.94000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_10" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 4.30000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_11" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 4.66000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_12" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 5.02000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_13" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 5.38000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_14" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 5.74000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_15" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 6.10000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_16" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 6.46000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_17" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 6.82000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_18" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 7.18000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-55_19" type="MeshInstance3D" parent="."]
+position = Vector3(-55.00000, 7.54000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="dock_-55" type="Node3D" parent="."]
+position = Vector3(-55.00000, 8.60000, -93.85000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="dock_-55"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b4")
+
+[node name="paint" type="MeshInstance3D" parent="dock_-55"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b5")
+
+[node name="lettering" type="Label3D" parent="dock_-55"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "RECIBO  /  01"
+font_size = 56
+pixel_size = 0.011356
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="dock_guard_-61.3" type="MeshInstance3D" parent="."]
+position = Vector3(-61.30000, 1.50000, -93.80000)
+mesh = SubResource("b6")
+
+[node name="guard_stripe_-61.3_0" type="MeshInstance3D" parent="."]
+position = Vector3(-61.30000, 0.40000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-61.3_1" type="MeshInstance3D" parent="."]
+position = Vector3(-61.30000, 0.92000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-61.3_2" type="MeshInstance3D" parent="."]
+position = Vector3(-61.30000, 1.44000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-61.3_3" type="MeshInstance3D" parent="."]
+position = Vector3(-61.30000, 1.96000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-61.3_4" type="MeshInstance3D" parent="."]
+position = Vector3(-61.30000, 2.48000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="dock_guard_-48.7" type="MeshInstance3D" parent="."]
+position = Vector3(-48.70000, 1.50000, -93.80000)
+mesh = SubResource("b6")
+
+[node name="guard_stripe_-48.7_0" type="MeshInstance3D" parent="."]
+position = Vector3(-48.70000, 0.40000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-48.7_1" type="MeshInstance3D" parent="."]
+position = Vector3(-48.70000, 0.92000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-48.7_2" type="MeshInstance3D" parent="."]
+position = Vector3(-48.70000, 1.44000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-48.7_3" type="MeshInstance3D" parent="."]
+position = Vector3(-48.70000, 1.96000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-48.7_4" type="MeshInstance3D" parent="."]
+position = Vector3(-48.70000, 2.48000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="loading_shutter_-38" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 4.20000, -94.08000)
+mesh = SubResource("b2")
+
+[node name="shutter_rib_-38_0" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 0.70000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_1" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 1.06000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_2" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 1.42000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_3" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 1.78000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_4" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 2.14000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_5" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 2.50000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_6" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 2.86000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_7" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 3.22000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_8" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 3.58000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_9" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 3.94000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_10" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 4.30000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_11" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 4.66000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_12" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 5.02000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_13" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 5.38000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_14" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 5.74000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_15" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 6.10000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_16" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 6.46000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_17" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 6.82000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_18" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 7.18000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="shutter_rib_-38_19" type="MeshInstance3D" parent="."]
+position = Vector3(-38.00000, 7.54000, -93.95000)
+mesh = SubResource("b3")
+
+[node name="dock_-38" type="Node3D" parent="."]
+position = Vector3(-38.00000, 8.60000, -93.85000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="dock_-38"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b4")
+
+[node name="paint" type="MeshInstance3D" parent="dock_-38"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b5")
+
+[node name="lettering" type="Label3D" parent="dock_-38"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "RECIBO  /  02"
+font_size = 56
+pixel_size = 0.011356
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="dock_guard_-44.3" type="MeshInstance3D" parent="."]
+position = Vector3(-44.30000, 1.50000, -93.80000)
+mesh = SubResource("b6")
+
+[node name="guard_stripe_-44.3_0" type="MeshInstance3D" parent="."]
+position = Vector3(-44.30000, 0.40000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-44.3_1" type="MeshInstance3D" parent="."]
+position = Vector3(-44.30000, 0.92000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-44.3_2" type="MeshInstance3D" parent="."]
+position = Vector3(-44.30000, 1.44000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-44.3_3" type="MeshInstance3D" parent="."]
+position = Vector3(-44.30000, 1.96000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-44.3_4" type="MeshInstance3D" parent="."]
+position = Vector3(-44.30000, 2.48000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="dock_guard_-31.7" type="MeshInstance3D" parent="."]
+position = Vector3(-31.70000, 1.50000, -93.80000)
+mesh = SubResource("b6")
+
+[node name="guard_stripe_-31.7_0" type="MeshInstance3D" parent="."]
+position = Vector3(-31.70000, 0.40000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-31.7_1" type="MeshInstance3D" parent="."]
+position = Vector3(-31.70000, 0.92000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-31.7_2" type="MeshInstance3D" parent="."]
+position = Vector3(-31.70000, 1.44000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-31.7_3" type="MeshInstance3D" parent="."]
+position = Vector3(-31.70000, 1.96000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="guard_stripe_-31.7_4" type="MeshInstance3D" parent="."]
+position = Vector3(-31.70000, 2.48000, -93.63000)
+rotation = Vector3(0.00000, 0.00000, -0.35000)
+mesh = SubResource("b7")
+
+[node name="bodega_manifest" type="Node3D" parent="."]
+position = Vector3(0.00000, 9.50000, -94.02000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="bodega_manifest"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b8")
+
+[node name="paint" type="MeshInstance3D" parent="bodega_manifest"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b9")
+
+[node name="lettering" type="Label3D" parent="bodega_manifest"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "BODEGA\nORDEN Y SURTIDO"
+font_size = 56
+pixel_size = 0.013421
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="service_safety" type="Node3D" parent="."]
+position = Vector3(-73.70000, 6.00000, -79.00000)
+rotation = Vector3(0.00000, 1.57080, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="service_safety"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b10")
+
+[node name="paint" type="MeshInstance3D" parent="service_safety"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b11")
+
+[node name="lettering" type="Label3D" parent="service_safety"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "PATIO DE CARGA\nCONSERVA LIBRE EL PASO"
+font_size = 56
+pixel_size = 0.010324
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="service_floor_-24.5_-92" type="MeshInstance3D" parent="."]
+position = Vector3(-24.50000, 0.01800, -92.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_-24.5_-89" type="MeshInstance3D" parent="."]
+position = Vector3(-24.50000, 0.01800, -89.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_-24.5_-86" type="MeshInstance3D" parent="."]
+position = Vector3(-24.50000, 0.01800, -86.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_-24.5_-83" type="MeshInstance3D" parent="."]
+position = Vector3(-24.50000, 0.01800, -83.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_-24.5_-80" type="MeshInstance3D" parent="."]
+position = Vector3(-24.50000, 0.01800, -80.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_-24.5_-77" type="MeshInstance3D" parent="."]
+position = Vector3(-24.50000, 0.01800, -77.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_-24.5_-74" type="MeshInstance3D" parent="."]
+position = Vector3(-24.50000, 0.01800, -74.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_-24.5_-71" type="MeshInstance3D" parent="."]
+position = Vector3(-24.50000, 0.01800, -71.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_-24.5_-68" type="MeshInstance3D" parent="."]
+position = Vector3(-24.50000, 0.01800, -68.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_-24.5_-65" type="MeshInstance3D" parent="."]
+position = Vector3(-24.50000, 0.01800, -65.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_24.5_-92" type="MeshInstance3D" parent="."]
+position = Vector3(24.50000, 0.01800, -92.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_24.5_-89" type="MeshInstance3D" parent="."]
+position = Vector3(24.50000, 0.01800, -89.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_24.5_-86" type="MeshInstance3D" parent="."]
+position = Vector3(24.50000, 0.01800, -86.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_24.5_-83" type="MeshInstance3D" parent="."]
+position = Vector3(24.50000, 0.01800, -83.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_24.5_-80" type="MeshInstance3D" parent="."]
+position = Vector3(24.50000, 0.01800, -80.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_24.5_-77" type="MeshInstance3D" parent="."]
+position = Vector3(24.50000, 0.01800, -77.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_24.5_-74" type="MeshInstance3D" parent="."]
+position = Vector3(24.50000, 0.01800, -74.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_24.5_-71" type="MeshInstance3D" parent="."]
+position = Vector3(24.50000, 0.01800, -71.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_24.5_-68" type="MeshInstance3D" parent="."]
+position = Vector3(24.50000, 0.01800, -68.00000)
+mesh = SubResource("b12")
+
+[node name="service_floor_24.5_-65" type="MeshInstance3D" parent="."]
+position = Vector3(24.50000, 0.01800, -65.00000)
+mesh = SubResource("b12")

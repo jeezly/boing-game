@@ -1,0 +1,41 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/art_direction_finish.tscn" id="art"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/merchandise_finish.tscn" id="merchandise"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/architecture_finish.tscn" id="e0"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/facade_finish.tscn" id="e1"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/retail_finish.tscn" id="e2"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/market_finish.tscn" id="e3"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/service_finish.tscn" id="e4"]
+
+[node name="store_finish" type="Node3D"]
+
+[node name="art_direction_finish" parent="." instance=ExtResource("art")]
+
+[node name="architecture_finish" parent="." instance=ExtResource("e0")]
+position = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="facade_finish" parent="." instance=ExtResource("e1")]
+position = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="retail_finish" parent="." instance=ExtResource("e2")]
+position = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="market_finish" parent="." instance=ExtResource("e3")]
+position = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="service_finish" parent="." instance=ExtResource("e4")]
+position = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="merchandise_finish" parent="." instance=ExtResource("merchandise")]

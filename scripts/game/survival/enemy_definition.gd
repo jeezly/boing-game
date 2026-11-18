@@ -3,3 +3,7 @@ extends Resource
 @export var enemy_scene: PackedScene
 @export_range(1, 10000) var kill_score: int = 100
 @export_range(0.01, 100.0) var selection_weight: float = 1.0
+
+@export var budget_cost: int = 1
+@export var minimum_elapsed: float = 0.0
+@export var maximum_active: int = 22

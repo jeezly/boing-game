@@ -36,7 +36,8 @@ func _physics_process(delta: float) -> void:
 	if float(player.get("hp")) <= 0.0 or not player.get("combat_enabled"): return
 	cooldown = maxf(0.0, cooldown - delta)
 	readiness_left = maxf(0.0, readiness_left - delta)
-	var interval := 1.0 / maxf(shots_per_second, 0.1)
+	if player.has_node("arsenal") and player.get_node("arsenal").selected != 0: return
+	var interval := 1.0 / maxf(shots_per_second * player.get_node("power_state").cadence_multiplier(), 0.1)
 	first_visual.update_presentation(delta, Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and Input.is_action_pressed("fire"))
 	third_visual.update_presentation(delta, Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and Input.is_action_pressed("fire") or mango.firing_time > 0.0)
 	first_visual.set_readiness(readiness_left, interval)
@@ -45,7 +46,7 @@ func _physics_process(delta: float) -> void:
 	if camera_rig.third_person:
 		mango.pose_slingshot(delta, _get_aim_point(), third_visual.get_draw_point(), aiming)
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and Input.is_action_pressed("fire") and cooldown <= 0.0:
-		cooldown = 1.0 / maxf(shots_per_second, 0.1)
+		cooldown = interval
 		_fire()
 
 func _get_aim_point() -> Vector3:
@@ -83,7 +84,8 @@ func _fire() -> void:
 	player.get_tree().current_scene.add_child(projectile)
 	var ammo: Node3D = visual.get_node("pouch/loaded_ammo")
 	projectile.global_transform = Transform3D(ammo.global_basis.orthonormalized(), spawn)
-	projectile.launch(direction, projectile_speed, damage, player)
+	projectile.launch(direction, projectile_speed, damage * player.get_node("power_state").damage_multiplier(), player)
+	player.get_node("arsenal").feedback.emit(&"weapon_fired", weapon_name)
 	readiness_left = cooldown
 	# Synchronize both presentations so switching modes cannot show stale loaded ammo.
 	first_visual.set_readiness(readiness_left, 1.0 / maxf(shots_per_second, 0.1))

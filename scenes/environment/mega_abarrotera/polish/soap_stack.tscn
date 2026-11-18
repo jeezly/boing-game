@@ -1,0 +1,328 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/static_fixture_batch.gd" id="finish_batch"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="m0"]
+albedo_color = Color(0.8745098039215686, 0.5176470588235295, 0.611764705882353, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b0"]
+size = Vector3(0.39000, 0.17000, 0.47000)
+material = SubResource("m0")
+
+[sub_resource type="StandardMaterial3D" id="m1"]
+albedo_color = Color(0.9686274509803922, 0.9137254901960784, 0.796078431372549, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b1"]
+size = Vector3(0.24000, 0.07000, 0.01200)
+material = SubResource("m1")
+
+[sub_resource type="StandardMaterial3D" id="m2"]
+albedo_color = Color(0.9411764705882353, 0.8588235294117647, 0.7725490196078432, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b2"]
+size = Vector3(0.39000, 0.17000, 0.47000)
+material = SubResource("m2")
+
+[sub_resource type="StandardMaterial3D" id="m3"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b3"]
+size = Vector3(2.08000, 0.63000, 0.16000)
+material = SubResource("m3")
+
+[sub_resource type="StandardMaterial3D" id="m4"]
+albedo_color = Color(0.6431372549019608, 0.2784313725490196, 0.4196078431372549, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b4"]
+size = Vector3(1.90000, 0.45000, 0.06000)
+material = SubResource("m4")
+
+[node name="soap_stack" type="Node3D"]
+script = ExtResource("finish_batch")
+
+[node name="bar_0_0_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.10000, -0.60000)
+mesh = SubResource("b0")
+
+[node name="bar_0_0_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.10000, -0.08000)
+mesh = SubResource("b0")
+
+[node name="bar_0_0_2" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.10000, 0.44000)
+mesh = SubResource("b0")
+
+[node name="wrap_0_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.10000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_0_1_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.10000, -0.60000)
+mesh = SubResource("b0")
+
+[node name="bar_0_1_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.10000, -0.08000)
+mesh = SubResource("b0")
+
+[node name="bar_0_1_2" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.10000, 0.44000)
+mesh = SubResource("b0")
+
+[node name="wrap_0_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.10000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_0_2_0" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.10000, -0.60000)
+mesh = SubResource("b0")
+
+[node name="bar_0_2_1" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.10000, -0.08000)
+mesh = SubResource("b0")
+
+[node name="bar_0_2_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.10000, 0.44000)
+mesh = SubResource("b0")
+
+[node name="wrap_0_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.10000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_0_3_0" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.10000, -0.60000)
+mesh = SubResource("b0")
+
+[node name="bar_0_3_1" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.10000, -0.08000)
+mesh = SubResource("b0")
+
+[node name="bar_0_3_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.10000, 0.44000)
+mesh = SubResource("b0")
+
+[node name="wrap_0_3" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.10000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_1_0_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.29000, -0.60000)
+mesh = SubResource("b2")
+
+[node name="bar_1_0_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.29000, -0.08000)
+mesh = SubResource("b2")
+
+[node name="bar_1_0_2" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.29000, 0.44000)
+mesh = SubResource("b2")
+
+[node name="wrap_1_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.29000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_1_1_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.29000, -0.60000)
+mesh = SubResource("b2")
+
+[node name="bar_1_1_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.29000, -0.08000)
+mesh = SubResource("b2")
+
+[node name="bar_1_1_2" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.29000, 0.44000)
+mesh = SubResource("b2")
+
+[node name="wrap_1_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.29000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_1_2_0" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.29000, -0.60000)
+mesh = SubResource("b2")
+
+[node name="bar_1_2_1" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.29000, -0.08000)
+mesh = SubResource("b2")
+
+[node name="bar_1_2_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.29000, 0.44000)
+mesh = SubResource("b2")
+
+[node name="wrap_1_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.29000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_1_3_0" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.29000, -0.60000)
+mesh = SubResource("b2")
+
+[node name="bar_1_3_1" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.29000, -0.08000)
+mesh = SubResource("b2")
+
+[node name="bar_1_3_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.29000, 0.44000)
+mesh = SubResource("b2")
+
+[node name="wrap_1_3" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.29000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_2_0_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.48000, -0.60000)
+mesh = SubResource("b0")
+
+[node name="bar_2_0_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.48000, -0.08000)
+mesh = SubResource("b0")
+
+[node name="bar_2_0_2" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.48000, 0.44000)
+mesh = SubResource("b0")
+
+[node name="wrap_2_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.48000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_2_1_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.48000, -0.60000)
+mesh = SubResource("b0")
+
+[node name="bar_2_1_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.48000, -0.08000)
+mesh = SubResource("b0")
+
+[node name="bar_2_1_2" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.48000, 0.44000)
+mesh = SubResource("b0")
+
+[node name="wrap_2_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.48000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_2_2_0" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.48000, -0.60000)
+mesh = SubResource("b0")
+
+[node name="bar_2_2_1" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.48000, -0.08000)
+mesh = SubResource("b0")
+
+[node name="bar_2_2_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.48000, 0.44000)
+mesh = SubResource("b0")
+
+[node name="wrap_2_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.48000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_2_3_0" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.48000, -0.60000)
+mesh = SubResource("b0")
+
+[node name="bar_2_3_1" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.48000, -0.08000)
+mesh = SubResource("b0")
+
+[node name="bar_2_3_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.48000, 0.44000)
+mesh = SubResource("b0")
+
+[node name="wrap_2_3" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.48000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_3_0_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.67000, -0.60000)
+mesh = SubResource("b2")
+
+[node name="bar_3_0_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.67000, -0.08000)
+mesh = SubResource("b2")
+
+[node name="bar_3_0_2" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.67000, 0.44000)
+mesh = SubResource("b2")
+
+[node name="wrap_3_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.65000, 1.67000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_3_1_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.67000, -0.60000)
+mesh = SubResource("b2")
+
+[node name="bar_3_1_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.67000, -0.08000)
+mesh = SubResource("b2")
+
+[node name="bar_3_1_2" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.67000, 0.44000)
+mesh = SubResource("b2")
+
+[node name="wrap_3_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.22000, 1.67000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_3_2_0" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.67000, -0.60000)
+mesh = SubResource("b2")
+
+[node name="bar_3_2_1" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.67000, -0.08000)
+mesh = SubResource("b2")
+
+[node name="bar_3_2_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.67000, 0.44000)
+mesh = SubResource("b2")
+
+[node name="wrap_3_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.21000, 1.67000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="bar_3_3_0" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.67000, -0.60000)
+mesh = SubResource("b2")
+
+[node name="bar_3_3_1" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.67000, -0.08000)
+mesh = SubResource("b2")
+
+[node name="bar_3_3_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.67000, 0.44000)
+mesh = SubResource("b2")
+
+[node name="wrap_3_3" type="MeshInstance3D" parent="."]
+position = Vector3(0.64000, 1.67000, 0.68000)
+mesh = SubResource("b1")
+
+[node name="soap_offer" type="Node3D" parent="."]
+position = Vector3(0.00000, 1.98000, 0.65000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="soap_offer"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b3")
+
+[node name="paint" type="MeshInstance3D" parent="soap_offer"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b4")
+
+[node name="lettering" type="Label3D" parent="soap_offer"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "LA ROSITA\nJABÓN DE LAVANDERÍA"
+font_size = 56
+pixel_size = 0.002757
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = true

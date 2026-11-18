@@ -1,0 +1,703 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/maintenance_broom.tscn" id="broom"]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/combat_zone.gd" id="e2"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/huacal.tscn" id="e3"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/shelf_module.tscn" id="e6"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/pallet_stack.tscn" id="e7"]
+
+[sub_resource type="StandardMaterial3D" id="r107"]
+albedo_color = Color(0.54118,0.43922,0.27059,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r108"]
+size = Vector3(0.045, 2, 0.045)
+material = SubResource("r107")
+
+[sub_resource type="StandardMaterial3D" id="r109"]
+albedo_color = Color(0.79608,0.69804,0.29804,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r110"]
+size = Vector3(0.5, 0.2, 0.18)
+material = SubResource("r109")
+
+[sub_resource type="StandardMaterial3D" id="polish_price_material"]
+albedo_color = Color(0.95, 0.86, 0.64, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="polish_price_mesh"]
+size = Vector3(0.42, 0.17, 0.012)
+material = SubResource("polish_price_material")
+
+[node name="pasillos_centrales" type="Node3D"]
+position = Vector3(0, 0, -39.5)
+script = ExtResource("e2")
+zone_id = &"pasillos"
+bounds = Vector2(102,45)
+
+[node name="aisle_1_section_1" parent="." instance=ExtResource("e6")]
+position = Vector3(-38, 0, 15.5)
+scale = Vector3(1, 1, 1)
+
+[node name="aisle_1_section_2" parent="." instance=ExtResource("e6")]
+position = Vector3(-38, 0, -9.5)
+scale = Vector3(1, 1, 0.875)
+
+[node name="endcap_1" parent="." instance=ExtResource("e3")]
+position = Vector3(-34.5, 0, 10.5)
+scale = Vector3(1, 0.7, 1)
+
+[node name="stock_pallet_0" parent="." instance=ExtResource("e7")]
+position = Vector3(-34, 0, -14.5)
+scale = Vector3(0.8, 0.75, 0.8)
+
+[node name="aisle_2_section_1" parent="." instance=ExtResource("e6")]
+position = Vector3(-27, 0, 15.5)
+scale = Vector3(1, 1.08, 1.0625)
+
+[node name="aisle_2_section_2" parent="." instance=ExtResource("e6")]
+position = Vector3(-27, 0, -9.5)
+scale = Vector3(1, 1.08, 0.9375)
+
+[node name="endcap_2" parent="." instance=ExtResource("e3")]
+position = Vector3(-23.5, 0, 10.5)
+scale = Vector3(1, 0.9, 1)
+
+[node name="aisle_3_section_1" parent="." instance=ExtResource("e6")]
+position = Vector3(-16, 0, 15.5)
+scale = Vector3(1, 1, 1.125)
+
+[node name="aisle_3_section_2" parent="." instance=ExtResource("e6")]
+position = Vector3(-16, 0, -9.5)
+scale = Vector3(1, 1, 1)
+
+[node name="endcap_3" parent="." instance=ExtResource("e3")]
+position = Vector3(-12.5, 0, 10.5)
+scale = Vector3(1, 1.1, 1)
+
+[node name="stock_pallet_2" parent="." instance=ExtResource("e7")]
+position = Vector3(-12, 0, -14.5)
+scale = Vector3(0.8, 0.75, 0.8)
+
+[node name="aisle_4_section_1" parent="." instance=ExtResource("e6")]
+position = Vector3(-5, 0, 15.5)
+scale = Vector3(1, 1.08, 1)
+
+[node name="aisle_4_section_2" parent="." instance=ExtResource("e6")]
+position = Vector3(-5, 0, -9.5)
+scale = Vector3(1, 1.08, 1.0625)
+
+[node name="endcap_4" parent="." instance=ExtResource("e3")]
+position = Vector3(-1.5, 0, 10.5)
+scale = Vector3(1, 0.7, 1)
+
+[node name="aisle_5_section_1" parent="." instance=ExtResource("e6")]
+position = Vector3(6, 0, 15.5)
+scale = Vector3(1, 1, 1.0625)
+
+[node name="aisle_5_section_2" parent="." instance=ExtResource("e6")]
+position = Vector3(6, 0, -9.5)
+scale = Vector3(1, 1, 0.875)
+
+[node name="endcap_5" parent="." instance=ExtResource("e3")]
+position = Vector3(9.5, 0, 10.5)
+scale = Vector3(1, 0.9, 1)
+
+[node name="stock_pallet_4" parent="." instance=ExtResource("e7")]
+position = Vector3(10, 0, -14.5)
+scale = Vector3(0.8, 0.75, 0.8)
+
+[node name="aisle_6_section_1" parent="." instance=ExtResource("e6")]
+position = Vector3(17, 0, 15.5)
+scale = Vector3(1, 1.08, 1.125)
+
+[node name="aisle_6_section_2" parent="." instance=ExtResource("e6")]
+position = Vector3(17, 0, -9.5)
+scale = Vector3(1, 1.08, 0.9375)
+
+[node name="endcap_6" parent="." instance=ExtResource("e3")]
+position = Vector3(20.5, 0, 10.5)
+scale = Vector3(1, 1.1, 1)
+
+[node name="aisle_7_section_1" parent="." instance=ExtResource("e6")]
+position = Vector3(28, 0, 15.5)
+scale = Vector3(1, 1, 1)
+
+[node name="aisle_7_section_2" parent="." instance=ExtResource("e6")]
+position = Vector3(28, 0, -9.5)
+scale = Vector3(1, 1, 1)
+
+[node name="endcap_7" parent="." instance=ExtResource("e3")]
+position = Vector3(31.5, 0, 10.5)
+scale = Vector3(1, 0.7, 1)
+
+[node name="stock_pallet_6" parent="." instance=ExtResource("e7")]
+position = Vector3(32, 0, -14.5)
+scale = Vector3(0.8, 0.75, 0.8)
+
+[node name="aisle_8_section_1" parent="." instance=ExtResource("e6")]
+position = Vector3(39, 0, 15.5)
+scale = Vector3(1, 1.08, 1.0625)
+
+[node name="aisle_8_section_2" parent="." instance=ExtResource("e6")]
+position = Vector3(39, 0, -9.5)
+scale = Vector3(1, 1.08, 1.0625)
+
+[node name="endcap_8" parent="." instance=ExtResource("e3")]
+position = Vector3(42.5, 0, 10.5)
+scale = Vector3(1, 0.9, 1)
+
+
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_1_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_1_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_1_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_1_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_1_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_1_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_1_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_1_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_1_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_1_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_1_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_1_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_2_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_2_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_2_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_2_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_2_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_2_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_2_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_2_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_2_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_2_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_2_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_2_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_3_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_3_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_3_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_3_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_3_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_3_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_3_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_3_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_3_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_3_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_3_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_3_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_4_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_4_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_4_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_4_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_4_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_4_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_4_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_4_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_4_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_4_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_4_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_4_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_5_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_5_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_5_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_5_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_5_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_5_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_5_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_5_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_5_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_5_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_5_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_5_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_6_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_6_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_6_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_6_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_6_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_6_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_6_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_6_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_6_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_6_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_6_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_6_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_7_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_7_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_7_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_7_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_7_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_7_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_7_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_7_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_7_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_7_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_7_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_7_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_8_section_1"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_8_section_1/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_8_section_1/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_8_section_1"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_8_section_1/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_8_section_1/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_left" type="Node3D" parent="aisle_8_section_2"]
+position = Vector3(-1.475, 1.23, 0)
+rotation = Vector3(0, -1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_8_section_2/price_ticket_left"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_8_section_2/price_ticket_left"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+[node name="price_ticket_right" type="Node3D" parent="aisle_8_section_2"]
+position = Vector3(1.475, 1.23, 0)
+rotation = Vector3(0, 1.5707963267948966, 0)
+
+[node name="card" type="MeshInstance3D" parent="aisle_8_section_2/price_ticket_right"]
+mesh = SubResource("polish_price_mesh")
+cast_shadow = 0
+
+[node name="price" type="Label3D" parent="aisle_8_section_2/price_ticket_right"]
+position = Vector3(0, 0, 0.012)
+text = "PRECIO $24"
+font_size = 20
+pixel_size = 0.003
+outline_size = 0
+modulate = Color(0.40, 0.15, 0.09, 1)
+visibility_range_end = 12.0
+
+
+[node name="maintenance_broom" parent="." instance=ExtResource("broom")]
+position = Vector3(-38.7, 0, 23.4)

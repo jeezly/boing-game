@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="" format=3]
+[ext_resource type="Script" path="res://scripts/weapons/weapon_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"nopal"
+display_name = "Nopal (Trampa)"
+pro_name = "Nopal (Trampa)"
+description = "Trampa de proximidad. Próximamente."
+damage = 0.0
+pro_damage = 0.0
+cooldown = 1
+speed = 0.0
+reach = 0.0
+radius = 0
+max_ammo = 0
+price = 0
+upgrade_price = 0
+available = false
+
+behavior = &"proximity_locked"
+presentation_key = &"nopal"

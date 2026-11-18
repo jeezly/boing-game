@@ -1,0 +1,130 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/maintenance_broom.tscn" id="broom"]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/combat_zone.gd" id="e2"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/huacal.tscn" id="e3"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/shopping_cart.tscn" id="e4"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/checkout_module.tscn" id="e5"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/offer_display.tscn" id="polish_offer"]
+
+[sub_resource type="StandardMaterial3D" id="r107"]
+albedo_color = Color(0.54118,0.43922,0.27059,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r108"]
+size = Vector3(0.045, 2, 0.045)
+material = SubResource("r107")
+
+[sub_resource type="StandardMaterial3D" id="r109"]
+albedo_color = Color(0.79608,0.69804,0.29804,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r110"]
+size = Vector3(0.5, 0.2, 0.18)
+material = SubResource("r109")
+
+[node name="cajas" type="Node3D"]
+position = Vector3(0, 0, -8.5)
+script = ExtResource("e2")
+zone_id = &"cajas"
+bounds = Vector2(150,17)
+
+[node name="checkout_1" parent="." instance=ExtResource("e5")]
+position = Vector3(-32, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="impulse_1" parent="." instance=ExtResource("e3")]
+position = Vector3(-28, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="checkout_2" parent="." instance=ExtResource("e5")]
+position = Vector3(-20, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="impulse_2" parent="." instance=ExtResource("e3")]
+position = Vector3(-16, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="checkout_3" parent="." instance=ExtResource("e5")]
+position = Vector3(-8, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="impulse_3" parent="." instance=ExtResource("e3")]
+position = Vector3(-4, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="checkout_4" parent="." instance=ExtResource("e5")]
+position = Vector3(8, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="impulse_4" parent="." instance=ExtResource("e3")]
+position = Vector3(12, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="checkout_5" parent="." instance=ExtResource("e5")]
+position = Vector3(20, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="impulse_5" parent="." instance=ExtResource("e3")]
+position = Vector3(24, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="checkout_6" parent="." instance=ExtResource("e5")]
+position = Vector3(32, 0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="impulse_6" parent="." instance=ExtResource("e3")]
+position = Vector3(36, 0, -3.5)
+scale = Vector3(1, 0.75, 1)
+
+[node name="cart_0" parent="." instance=ExtResource("e4")]
+position = Vector3(-56, 0, -2.5)
+scale = Vector3(1, 1, 1)
+rotation = Vector3(0, 0.22, 0)
+
+[node name="cart_1" parent="." instance=ExtResource("e4")]
+position = Vector3(-44, 0, -2.5)
+scale = Vector3(1, 1, 1)
+rotation = Vector3(0, -0.22, 0)
+
+[node name="cart_2" parent="." instance=ExtResource("e4")]
+position = Vector3(44, 0, -2.5)
+scale = Vector3(1, 1, 1)
+rotation = Vector3(0, 0.22, 0)
+
+[node name="cart_3" parent="." instance=ExtResource("e4")]
+position = Vector3(56, 0, -2.5)
+scale = Vector3(1, 1, 1)
+rotation = Vector3(0, -0.22, 0)
+
+
+
+[node name="offer_checkout_1" parent="." instance=ExtResource("polish_offer")]
+position = Vector3(-30.85, 1.16, -0.3)
+
+[node name="offer_checkout_2" parent="." instance=ExtResource("polish_offer")]
+position = Vector3(-18.85, 1.16, -0.3)
+
+[node name="offer_checkout_3" parent="." instance=ExtResource("polish_offer")]
+position = Vector3(-6.85, 1.16, -0.3)
+
+[node name="offer_checkout_4" parent="." instance=ExtResource("polish_offer")]
+position = Vector3(9.15, 1.16, -0.3)
+
+[node name="offer_checkout_5" parent="." instance=ExtResource("polish_offer")]
+position = Vector3(21.15, 1.16, -0.3)
+
+[node name="offer_checkout_6" parent="." instance=ExtResource("polish_offer")]
+position = Vector3(33.15, 1.16, -0.3)
+
+
+
+
+
+[node name="maintenance_broom" parent="." instance=ExtResource("broom")]
+position = Vector3(-73.4, 0, -4.5)

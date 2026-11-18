@@ -18,6 +18,8 @@ const CAPS: Array[int] = [8, 10, 14, 18, 20, 22]
 const INTERVALS: Array[float] = [3.4, 2.8, 2.3, 1.7, 1.25, 0.95]
 const BATCHES: Array[int] = [1, 1, 2, 2, 2, 3]
 var living: Dictionary = {}
+var enemy_costs: Dictionary = {}
+var enemy_types: Dictionary = {}
 var running: bool = false
 var elapsed: float = 0.0
 var spawn_left: float = 0.6
@@ -54,9 +56,13 @@ func _physics_process(delta: float) -> void:
 			var enemy = living[id]
 			if not is_instance_valid(enemy):
 				living.erase(id)
+				enemy_costs.erase(id)
+				enemy_types.erase(id)
 			elif enemy.global_position.distance_to(player.global_position) > 78.0:
 				# Recycle distant pressure without awarding kills or score.
 				living.erase(id)
+				enemy_costs.erase(id)
+				enemy_types.erase(id)
 				enemy.queue_free()
 	spawn_left -= delta
 	if spawn_left > 0.0: return
@@ -72,6 +78,7 @@ func _physics_process(delta: float) -> void:
 		if marker == null: break
 		var definition := _select_definition()
 		if definition == null: break
+		if _budget() + definition.budget_cost > CAPS[stage]: break
 		_spawn(definition, marker.global_position)
 		spawned += 1
 	spawn_left = INTERVALS[stage] if spawned > 0 else 0.35
@@ -80,12 +87,12 @@ func _select_definition() -> Definition:
 	var total: float = 0.0
 	for resource in enemy_definitions:
 		var definition := resource as Definition
-		if definition != null and definition.enemy_scene != null: total += definition.selection_weight
+		if _eligible(definition): total += definition.selection_weight
 	if total <= 0.0: return null
 	var roll := rng.randf() * total
 	for resource in enemy_definitions:
 		var definition := resource as Definition
-		if definition == null or definition.enemy_scene == null: continue
+		if not _eligible(definition): continue
 		roll -= definition.selection_weight
 		if roll <= 0.0: return definition
 	return null
@@ -99,6 +106,8 @@ func _spawn(definition: Definition, point: Vector3) -> void:
 	enemy.position = enemy_root.to_local(point)
 	var id: int = enemy.get_instance_id()
 	living[id] = enemy
+	enemy_costs[id] = definition.budget_cost
+	enemy_types[id] = definition
 	enemy.defeated.connect(_on_defeated.bind(id, definition.kill_score))
 	enemy.tree_exited.connect(_on_removed.bind(id))
 	enemy_root.add_child(enemy)
@@ -108,7 +117,23 @@ func _spawn(definition: Definition, point: Vector3) -> void:
 func _on_defeated(_enemy: CharacterBody3D, id: int, points: int) -> void:
 	if not living.has(id): return
 	living.erase(id)
+	enemy_costs.erase(id)
+	enemy_types.erase(id)
 	if running: enemy_defeated.emit(points)
 
 func _on_removed(id: int) -> void:
 	living.erase(id)
+	enemy_costs.erase(id)
+	enemy_types.erase(id)
+
+func _budget() -> int:
+	var total := 0
+	for id in living: total += int(enemy_costs.get(id, 1))
+	return total
+
+func _eligible(definition: Definition) -> bool:
+	if definition == null or definition.enemy_scene == null or elapsed < definition.minimum_elapsed: return false
+	var count := 0
+	for id in living:
+		if enemy_types.get(id) == definition: count += 1
+	return count < definition.maximum_active

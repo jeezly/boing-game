@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="" format=3]
+[ext_resource type="Script" path="res://scripts/weapons/weapon_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"molcajete"
+display_name = "Molcajete con Habanero"
+pro_name = "Molcajete Infernal"
+description = "Arco de salsa contra grupos. PRO deja salsa ardiente."
+damage = 90.0
+pro_damage = 150.0
+cooldown = 1.45
+speed = 12.0
+reach = 22.0
+radius = 3
+max_ammo = 4
+price = 600
+upgrade_price = 1200
+available = true
+
+behavior = &"ballistic_area"
+presentation_key = &"molcajete"

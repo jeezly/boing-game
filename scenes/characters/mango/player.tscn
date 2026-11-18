@@ -7,6 +7,9 @@
 
 [ext_resource type="PackedScene" path="res://scenes/ui/combat_feedback.tscn" id="5"]
 
+[ext_resource type="Script" path="res://scripts/weapons/arsenal.gd" id="arsenal"]
+[ext_resource type="Script" path="res://scripts/game/production/power_state.gd" id="power"]
+
 [sub_resource type="CapsuleShape3D" id="player_shape"]
 radius = 0.4
 height = 1.8
@@ -51,3 +54,9 @@ near = 0.05
 [node name="mango_slingshot" parent="." instance=ExtResource("3")]
 
 [node name="combat_feedback" parent="." instance=ExtResource("5")]
+
+[node name="power_state" type="Node" parent="."]
+script = ExtResource("power")
+
+[node name="arsenal" type="Node" parent="."]
+script = ExtResource("arsenal")

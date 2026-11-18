@@ -1,0 +1,267 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/combat_zone.gd" id="e2"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/pallet_stack.tscn" id="e7"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/bottle_crate.tscn" id="e15"]
+
+[sub_resource type="StandardMaterial3D" id="r63"]
+albedo_color = Color(0.87059,0.84706,0.73725,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r64"]
+size = Vector3(5, 4.2, 10)
+material = SubResource("r63")
+
+[sub_resource type="BoxShape3D" id="r65"]
+size = Vector3(5, 4.2, 10)
+
+[sub_resource type="StandardMaterial3D" id="r66"]
+albedo_color = Color(0.21176,0.54510,0.58039,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r67"]
+size = Vector3(4.3, 3.2, 2.4)
+material = SubResource("r66")
+
+[sub_resource type="StandardMaterial3D" id="r68"]
+albedo_color = Color(0.28627,0.46667,0.50196,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r69"]
+size = Vector3(3.6, 1.25, 0.045)
+material = SubResource("r68")
+
+[sub_resource type="StandardMaterial3D" id="r70"]
+albedo_color = Color(0.60000,0.63922,0.59608,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r71"]
+size = Vector3(6, 1.1, 5)
+material = SubResource("r70")
+
+[sub_resource type="BoxShape3D" id="r72"]
+size = Vector3(6, 1.1, 5)
+
+[sub_resource type="StandardMaterial3D" id="r73"]
+albedo_color = Color(0.52157,0.60784,0.58431,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r74"]
+size = Vector3(4, 0.25, 6.1)
+material = SubResource("r73")
+
+[sub_resource type="BoxShape3D" id="r75"]
+size = Vector3(4, 0.25, 6.1)
+
+[sub_resource type="StandardMaterial3D" id="r76"]
+albedo_color = Color(0.84314,0.67843,0.23529,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r77"]
+size = Vector3(5, 1.2, 0.65)
+material = SubResource("r76")
+
+[sub_resource type="BoxShape3D" id="r78"]
+size = Vector3(5, 1.2, 0.65)
+
+[sub_resource type="StandardMaterial3D" id="polish_sign_mat"]
+albedo_color = Color(0.13, 0.24, 0.23, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="polish_board_truck_brand"]
+size = Vector3(3.8, 0.6, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="BoxMesh" id="polish_board_patio_wall"]
+size = Vector3(7, 0.8, 0.08)
+material = SubResource("polish_sign_mat")
+
+[sub_resource type="StandardMaterial3D" id="beta_rubber"]
+albedo_color = Color(0.10, 0.13, 0.12, 1)
+roughness = 0.95
+[sub_resource type="CylinderMesh" id="beta_truck_wheel"]
+top_radius = 0.65
+bottom_radius = 0.65
+height = 0.30
+radial_segments = 16
+material = SubResource("beta_rubber")
+
+[sub_resource type="BoxShape3D" id="beta_truck_cab_shape"]
+size = Vector3(4.3, 3.2, 2.4)
+
+[node name="patio_carga" type="Node3D"]
+position = Vector3(-50, 0, -78.5)
+script = ExtResource("e2")
+zone_id = &"patio"
+bounds = Vector2(50,33)
+
+[node name="cargo_truck" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-12, 2.1, -3.5)
+collision_layer = 1
+collision_mask = 7
+rotation = Vector3(0, -0.12, 0)
+
+[node name="mesh" type="MeshInstance3D" parent="cargo_truck"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r64")
+
+[node name="collision" type="CollisionShape3D" parent="cargo_truck"]
+shape = SubResource("r65")
+
+[node name="truck_cab" type="MeshInstance3D" parent="."]
+position = Vector3(-12, 1.6, 2.8)
+mesh = SubResource("r67")
+
+[node name="truck_windshield" type="MeshInstance3D" parent="."]
+position = Vector3(-12, 2.1, 4.04)
+mesh = SubResource("r69")
+
+[node name="truck_brand" type="Label3D" parent="."]
+position = Vector3(-12, 2.3, 1.57)
+text = "RUTA DEL SOL\nABASTO LOCAL"
+font_size = 32
+pixel_size = 0.006
+outline_size = 2
+modulate = Color(1.0, 0.94, 0.78, 1)
+
+[node name="cargo_pallet_0" parent="." instance=ExtResource("e7")]
+position = Vector3(18, 0, 10.5)
+scale = Vector3(1, 1, 1)
+
+[node name="cargo_pallet_1" parent="." instance=ExtResource("e7")]
+position = Vector3(7, 0, -8.5)
+scale = Vector3(1, 1, 1)
+
+[node name="cargo_pallet_2" parent="." instance=ExtResource("e7")]
+position = Vector3(-5, 0, -13.5)
+scale = Vector3(1, 1, 1)
+
+[node name="cargo_pallet_3" parent="." instance=ExtResource("e7")]
+position = Vector3(-21, 0, 5.5)
+scale = Vector3(1, 1, 1)
+
+[node name="cargo_pallet_4" parent="." instance=ExtResource("e7")]
+position = Vector3(17, 0, -6.5)
+scale = Vector3(1, 1, 1)
+
+[node name="loading_platform" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-3, 0.55, -0.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="loading_platform"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r71")
+
+[node name="collision" type="CollisionShape3D" parent="loading_platform"]
+shape = SubResource("r72")
+
+[node name="loading_ramp" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-3, 0.45, 5)
+collision_layer = 1
+collision_mask = 7
+rotation = Vector3(0.18132, 0, 0)
+
+[node name="mesh" type="MeshInstance3D" parent="loading_ramp"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r74")
+
+[node name="collision" type="CollisionShape3D" parent="loading_ramp"]
+shape = SubResource("r75")
+
+[node name="traffic_barrier_0" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-19, 0.6, 16.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="traffic_barrier_0"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r77")
+
+[node name="collision" type="CollisionShape3D" parent="traffic_barrier_0"]
+shape = SubResource("r78")
+
+[node name="traffic_barrier_1" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(0, 0.6, 16.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="traffic_barrier_1"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r77")
+
+[node name="collision" type="CollisionShape3D" parent="traffic_barrier_1"]
+shape = SubResource("r78")
+
+[node name="traffic_barrier_2" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(19, 0.6, 16.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="traffic_barrier_2"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r77")
+
+[node name="collision" type="CollisionShape3D" parent="traffic_barrier_2"]
+shape = SubResource("r78")
+
+[node name="patio_wall" type="Label3D" parent="."]
+position = Vector3(0, 5, -15.6)
+text = "PATIO DE CARGA · AQUÍ TAMBIÉN SE MUEVE MÉXICO"
+font_size = 38
+pixel_size = 0.007
+outline_size = 2
+modulate = Color(0.8705882352941177,0.4588235294117647,0.27058823529411763,1)
+
+[node name="bottle_crate_patio_01" parent="." instance=ExtResource("e15")]
+position = Vector3(5, 0, 11.5)
+
+[node name="bottle_crate_patio_02" parent="." instance=ExtResource("e15")]
+position = Vector3(20, 0, -12.5)
+
+[node name="truck_brand_board" type="Node3D" parent="."]
+position = Vector3(-12, 2.3, 1.57)
+
+[node name="panel" type="MeshInstance3D" parent="truck_brand_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_truck_brand")
+cast_shadow = 0
+
+[node name="patio_wall_board" type="Node3D" parent="."]
+position = Vector3(0, 5, -15.6)
+
+[node name="panel" type="MeshInstance3D" parent="patio_wall_board"]
+position = Vector3(0, 0, -0.075)
+mesh = SubResource("polish_board_patio_wall")
+cast_shadow = 0
+
+[node name="wheel_left_rear" type="MeshInstance3D" parent="cargo_truck"]
+position = Vector3(-2.5, -1.40, -3.4)
+rotation = Vector3(0, 0, 1.5707963)
+mesh = SubResource("beta_truck_wheel")
+
+[node name="wheel_left_front" type="MeshInstance3D" parent="cargo_truck"]
+position = Vector3(-2.5, -1.40, 3.4)
+rotation = Vector3(0, 0, 1.5707963)
+mesh = SubResource("beta_truck_wheel")
+
+[node name="wheel_right_rear" type="MeshInstance3D" parent="cargo_truck"]
+position = Vector3(2.5, -1.40, -3.4)
+rotation = Vector3(0, 0, 1.5707963)
+mesh = SubResource("beta_truck_wheel")
+
+[node name="wheel_right_front" type="MeshInstance3D" parent="cargo_truck"]
+position = Vector3(2.5, -1.40, 3.4)
+rotation = Vector3(0, 0, 1.5707963)
+mesh = SubResource("beta_truck_wheel")
+
+[node name="truck_cab_collision" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-12, 1.6, 2.8)
+collision_layer = 1
+collision_mask = 7
+
+[node name="collision" type="CollisionShape3D" parent="truck_cab_collision"]
+shape = SubResource("beta_truck_cab_shape")
+

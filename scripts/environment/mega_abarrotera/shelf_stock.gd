@@ -17,53 +17,45 @@ const PALETTES: Array = [
 ]
 
 func _ready() -> void:
+	var goods = preload("res://scripts/environment/mega_abarrotera/retail_goods.gd")
 	var fixture_name := String(get_parent().name)
 	var category := 5 if style == "fridge" else 7
 	if fixture_name.begins_with("aisle_"): category = clampi(int(fixture_name.split("_")[1]) - 1, 0, 7)
 	elif fixture_name.begins_with("industrial_"): category = 8
-	var colors: Array = PALETTES[category]
-	var round_goods := category == 1 or category == 2 or category == 5
-	var size := Vector3(0.38, 0.48, 0.32)
-	if category == 4: size = Vector3(0.44, 0.57, 0.34)
-	elif category == 6: size = Vector3(0.32, 0.36, 0.29)
-	elif category == 8: size = Vector3(0.62, 0.53, 0.43)
-	var labels: Array[Vector3] = []
-	var caps: Array[Vector3] = []
-	for color_index in range(colors.size()):
-		var points: Array[Vector3] = []
+	if category == 8:
+		_warehouse(goods)
+		return
+	for brand in range(3):
+		var transforms: Array[Transform3D] = []
+		var caps: Array[Vector3] = []
 		for row in range(4):
-			for column in range(30):
-				if (row + column) % colors.size() != color_index: continue
-				var z := -7.5 + column * 0.51
-				var sides: Array = [1.0] if style == "fridge" else [-1.0, 1.0]
-				for side in sides:
-					var point := Vector3(side * (1.06 if style == "fridge" else 0.86), 0.55 + row * 0.76, z)
-					points.append(point)
-					labels.append(point + Vector3(side * (0.14 if round_goods else size.x * 0.51), 0, 0))
-					if round_goods and category != 2: caps.append(point + Vector3.UP * 0.26)
-		if round_goods:
-			var key: String = str(category) + str(color_index) + style
-			if not mesh_cache.has(key):
-				var cylinder := CylinderMesh.new()
-				cylinder.top_radius = 0.09 if category != 2 else 0.16
-				cylinder.bottom_radius = 0.13 if category != 2 else 0.16
-				cylinder.height = 0.43
-				cylinder.radial_segments = 8
-				cylinder.material = Build.mat(colors[color_index])
-				mesh_cache[key] = cylinder
-			batch(points, mesh_cache[key])
-		else:
-			Build.products(self, points, colors[color_index], size)
-	Build.products(self, labels, "f4e5bd", Vector3(0.018, 0.13, 0.19))
-	Build.products(self, caps, "e8e2d1", Vector3(0.12, 0.09, 0.12))
+			for col in range(30):
+				if (col / 5 + row / 2) % 3 != brand: continue
+				if (col + row*3) % 17 == 11: continue
+				for side in ([1.0] if style == "fridge" else [-1.0,1.0]):
+					var bottom := Vector3(side * (1.06 if style == "fridge" else 0.86), 0.31 + row * 0.76, -7.5 + col * 0.51)
+					var angle: float = side * PI * 0.5 + sin(col * 7 + row) * 0.035
+					var origin := bottom + (Vector3.UP * 0.28 if category in [3,4,8] else Vector3.ZERO)
+					var shape_scale := Vector3.ONE * (0.94 + 0.06 * sin(col * 1.8 + row))
+					transforms.append(Transform3D(Basis(Vector3.UP,angle).scaled(shape_scale),origin))
+					if category in [1,5]: caps.append(bottom + Vector3.UP * 0.645)
+		goods.batch(self, goods.mesh(category, PALETTES[category][brand], brand % 2), transforms, "stock_brand_%d" % brand)
+		Build.products(self,caps,["d83230","efe1b8","2a7759"][brand],Vector3(0.115,0.045,0.115))
 
-func batch(points: Array[Vector3], mesh: Mesh) -> void:
-	var multi := MultiMesh.new()
-	multi.transform_format = MultiMesh.TRANSFORM_3D
-	multi.mesh = mesh
-	multi.instance_count = points.size()
-	for index in range(points.size()): multi.set_instance_transform(index, Transform3D(Basis.IDENTITY, points[index]))
-	var display := MultiMeshInstance3D.new()
-	display.multimesh = multi
-	display.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	add_child(display)
+func _warehouse(goods) -> void:
+	var carton := BoxMesh.new()
+	carton.size = Vector3(0.64,0.50,0.86)
+	carton.material = goods.material(8,"ac8254",false)
+	var straps: Array[Vector3] = []
+	for shipment in range(3):
+		var transforms: Array[Transform3D] = []
+		for row in range(4):
+			for col in range(15):
+				if col / 5 != shipment or (row+col)%13 == 7: continue
+				for side in [-1,1]:
+					var at := Vector3(side*0.86,0.56+row*0.76,-7.15+col*1.02)
+					var scale_y := 0.85 if (row+col)%3 == 0 else 1.0
+					transforms.append(Transform3D(Basis.IDENTITY.scaled(Vector3(1,scale_y,1)),at))
+					straps.append(at+Vector3.UP*0.255*scale_y)
+		goods.batch(self,carton,transforms,"warehouse_shipment_%d" % shipment)
+	Build.products(self,straps,"ddc297",Vector3(0.65,0.018,0.10))

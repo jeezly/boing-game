@@ -1,0 +1,225 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/static_fixture_batch.gd" id="finish_batch"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="m0"]
+albedo_color = Color(0.8509803921568627, 0.7058823529411765, 0.41568627450980394, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b0"]
+size = Vector3(1.80000, 0.09000, 1.70000)
+material = SubResource("m0")
+
+[sub_resource type="StandardMaterial3D" id="m1"]
+albedo_color = Color(0.807843137254902, 0.3568627450980392, 0.23529411764705882, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b1"]
+size = Vector3(0.25000, 0.16000, 0.21000)
+material = SubResource("m1")
+
+[sub_resource type="StandardMaterial3D" id="m2"]
+albedo_color = Color(0.8235294117647058, 0.6392156862745098, 0.19607843137254902, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b2"]
+size = Vector3(0.25000, 0.16000, 0.21000)
+material = SubResource("m2")
+
+[sub_resource type="StandardMaterial3D" id="m3"]
+albedo_color = Color(0.3411764705882353, 0.6039215686274509, 0.5686274509803921, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b3"]
+size = Vector3(0.25000, 0.16000, 0.21000)
+material = SubResource("m3")
+
+[sub_resource type="StandardMaterial3D" id="m4"]
+albedo_color = Color(0.7176470588235294, 0.3803921568627451, 0.5294117647058824, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b4"]
+size = Vector3(0.25000, 0.16000, 0.21000)
+material = SubResource("m4")
+
+[sub_resource type="StandardMaterial3D" id="m5"]
+albedo_color = Color(0.9215686274509803, 0.8352941176470589, 0.6039215686274509, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b5"]
+size = Vector3(0.25000, 0.16000, 0.21000)
+material = SubResource("m5")
+
+[sub_resource type="StandardMaterial3D" id="m6"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b6"]
+size = Vector3(2.08000, 0.66000, 0.16000)
+material = SubResource("m6")
+
+[sub_resource type="StandardMaterial3D" id="m7"]
+albedo_color = Color(0.6509803921568628, 0.3137254901960784, 0.2196078431372549, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b7"]
+size = Vector3(1.90000, 0.48000, 0.06000)
+material = SubResource("m7")
+
+[node name="dulces_display" type="Node3D"]
+script = ExtResource("finish_batch")
+
+[node name="tray" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 1.04000, 0.00000)
+mesh = SubResource("b0")
+
+[node name="sweet_0_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.68000, 1.14000, -0.65000)
+rotation = Vector3(0.00000, -0.15000, 0.00000)
+mesh = SubResource("b1")
+
+[node name="sweet_0_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.34000, 1.14000, -0.65000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="sweet_0_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 1.14000, -0.65000)
+rotation = Vector3(0.00000, 0.15000, 0.00000)
+mesh = SubResource("b3")
+
+[node name="sweet_0_3" type="MeshInstance3D" parent="."]
+position = Vector3(0.34000, 1.14000, -0.65000)
+rotation = Vector3(0.00000, -0.15000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="sweet_0_4" type="MeshInstance3D" parent="."]
+position = Vector3(0.68000, 1.14000, -0.65000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("b5")
+
+[node name="sweet_1_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.68000, 1.22000, -0.34000)
+rotation = Vector3(0.00000, -0.15000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="sweet_1_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.34000, 1.22000, -0.34000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("b3")
+
+[node name="sweet_1_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 1.22000, -0.34000)
+rotation = Vector3(0.00000, 0.15000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="sweet_1_3" type="MeshInstance3D" parent="."]
+position = Vector3(0.34000, 1.22000, -0.34000)
+rotation = Vector3(0.00000, -0.15000, 0.00000)
+mesh = SubResource("b5")
+
+[node name="sweet_1_4" type="MeshInstance3D" parent="."]
+position = Vector3(0.68000, 1.22000, -0.34000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("b1")
+
+[node name="sweet_2_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.68000, 1.14000, -0.03000)
+rotation = Vector3(0.00000, -0.15000, 0.00000)
+mesh = SubResource("b3")
+
+[node name="sweet_2_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.34000, 1.14000, -0.03000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="sweet_2_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 1.14000, -0.03000)
+rotation = Vector3(0.00000, 0.15000, 0.00000)
+mesh = SubResource("b5")
+
+[node name="sweet_2_3" type="MeshInstance3D" parent="."]
+position = Vector3(0.34000, 1.14000, -0.03000)
+rotation = Vector3(0.00000, -0.15000, 0.00000)
+mesh = SubResource("b1")
+
+[node name="sweet_2_4" type="MeshInstance3D" parent="."]
+position = Vector3(0.68000, 1.14000, -0.03000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="sweet_3_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.68000, 1.22000, 0.28000)
+rotation = Vector3(0.00000, -0.15000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="sweet_3_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.34000, 1.22000, 0.28000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("b5")
+
+[node name="sweet_3_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 1.22000, 0.28000)
+rotation = Vector3(0.00000, 0.15000, 0.00000)
+mesh = SubResource("b1")
+
+[node name="sweet_3_3" type="MeshInstance3D" parent="."]
+position = Vector3(0.34000, 1.22000, 0.28000)
+rotation = Vector3(0.00000, -0.15000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="sweet_3_4" type="MeshInstance3D" parent="."]
+position = Vector3(0.68000, 1.22000, 0.28000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("b3")
+
+[node name="sweet_4_0" type="MeshInstance3D" parent="."]
+position = Vector3(-0.68000, 1.14000, 0.59000)
+rotation = Vector3(0.00000, -0.15000, 0.00000)
+mesh = SubResource("b5")
+
+[node name="sweet_4_1" type="MeshInstance3D" parent="."]
+position = Vector3(-0.34000, 1.14000, 0.59000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("b1")
+
+[node name="sweet_4_2" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 1.14000, 0.59000)
+rotation = Vector3(0.00000, 0.15000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="sweet_4_3" type="MeshInstance3D" parent="."]
+position = Vector3(0.34000, 1.14000, 0.59000)
+rotation = Vector3(0.00000, -0.15000, 0.00000)
+mesh = SubResource("b3")
+
+[node name="sweet_4_4" type="MeshInstance3D" parent="."]
+position = Vector3(0.68000, 1.14000, 0.59000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="sweet_offer" type="Node3D" parent="."]
+position = Vector3(0.00000, 1.62000, 0.72000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="sweet_offer"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b6")
+
+[node name="paint" type="MeshInstance3D" parent="sweet_offer"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b7")
+
+[node name="lettering" type="Label3D" parent="sweet_offer"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "DULCES DE BARRIO\nUN GUSTITO MÁS"
+font_size = 56
+pixel_size = 0.003274
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = true

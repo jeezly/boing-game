@@ -1,0 +1,122 @@
+[
+  {
+    "archivo": "01_gameplay_general.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "b186b825ac5b2c1ed7832590cfd8fb85b08ec8e286c28a6a8f4f5c30cdcd72e8"
+  },
+  {
+    "archivo": "02_evento_zona_caliente.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "f0eb304d80f7b0e64d868aeec56d4423673b7647078a9b235d3cf5311e41265b"
+  },
+  {
+    "archivo": "03a_comportamiento_pepsin.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "b5496148cfa9f87e3e438939d90ab5471ff6ab00823a973143598fd2db9ee2b1"
+  },
+  {
+    "archivo": "03b_comportamiento_polar.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "c64ffeded8c30270dedbb4ad50e564c45bf41293174fc294706b8ff30730ff0a"
+  },
+  {
+    "archivo": "04a_transaccion_tienda.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "bf700591f5755f679fc7531f5c99165b4f081343b47808aeee55fe4e65245ce4"
+  },
+  {
+    "archivo": "04b_transaccion_compra.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "28203d085b1478dd994420ce33531321a501b56fec25331e6f11686386037e37"
+  },
+  {
+    "archivo": "05a_accion_disparo.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "d8556909313198517d87695f2b0220b55af260cb74c1029ce313897d7c783ded"
+  },
+  {
+    "archivo": "05b_accion_melee.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "20f6295fe73e4dd25573ac69a801494e631b1c0a6ccb91c8028000d459800f6a"
+  },
+  {
+    "archivo": "06_colisiones.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "bbd37e9e50816e24e5f8de1bd0daba41bfd4947ee148d639467dc3cf52a79b7b"
+  },
+  {
+    "archivo": "07_puntaje_creditos_bajas.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "118aeb32054e8c15a1584bee4e22d1c3e33203f128bd3bf857d4d25c9943f3ca"
+  },
+  {
+    "archivo": "08_vidas_respawn.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "ed414589739691484c3b3848721bb01703e8991029c6b4fe8094ff2f2820adbd"
+  },
+  {
+    "archivo": "09_objetos_especiales.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "789d878b47fb5540d00ed005cfee398fd14a1d19986dc6ae74818bf51980f790"
+  },
+  {
+    "archivo": "09b_powerup_activo.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "391a5bd8c909db6b1f1a90afd548ed776e687b781cd2fb6c77262501be6d4bed"
+  },
+  {
+    "archivo": "10_resultado_victoria.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "800cdc6e151316683271714a3cec48177b9092df41994703b81df7e9935c728f"
+  },
+  {
+    "archivo": "10b_resultado_derrota.png",
+    "resolucion": [
+      1280,
+      720
+    ],
+    "sha256": "d09dc7258d75c9e8b58252fd58f3e497ca8501f353c0faf935133e63666f721a"
+  }
+]

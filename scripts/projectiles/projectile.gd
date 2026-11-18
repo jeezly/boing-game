@@ -30,6 +30,7 @@ func _physics_process(delta: float) -> void:
 		var target := hit.get_collider()
 		if target != shooter and is_instance_valid(target) and target.has_method("take_damage"):
 			target.call("take_damage", damage)
+			if is_instance_valid(shooter) and shooter.has_node("arsenal"): shooter.get_node("arsenal").feedback.emit(&"hit", "")
 		if impact_scene != null:
 			var impact := impact_scene.instantiate() as Node3D
 			get_tree().current_scene.add_child(impact)

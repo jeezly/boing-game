@@ -1,0 +1,327 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/static_fixture_batch.gd" id="finish_batch"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/produce_canopy.tscn" id="e0"]
+
+[sub_resource type="StandardMaterial3D" id="m0"]
+albedo_color = Color(0.9372549019607843, 0.8784313725490196, 0.7333333333333333, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b0"]
+size = Vector3(46.00000, 6.40000, 0.14000)
+material = SubResource("m0")
+
+[sub_resource type="StandardMaterial3D" id="m1"]
+albedo_color = Color(0.7176470588235294, 0.3568627450980392, 0.23529411764705882, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b1"]
+size = Vector3(46.00000, 0.25000, 0.15000)
+material = SubResource("m1")
+
+[sub_resource type="StandardMaterial3D" id="m2"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b2"]
+size = Vector3(33.18000, 1.98000, 0.16000)
+material = SubResource("m2")
+
+[sub_resource type="StandardMaterial3D" id="m3"]
+albedo_color = Color(0.3215686274509804, 0.45098039215686275, 0.2823529411764706, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b3"]
+size = Vector3(33.00000, 1.80000, 0.06000)
+material = SubResource("m3")
+
+[sub_resource type="StandardMaterial3D" id="m4"]
+albedo_color = Color(0.8784313725490196, 0.6666666666666666, 0.28627450980392155, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b4"]
+size = Vector3(1.25000, 0.45000, 0.08000)
+material = SubResource("m4")
+
+[sub_resource type="StandardMaterial3D" id="m5"]
+albedo_color = Color(0.19215686274509805, 0.41568627450980394, 0.40784313725490196, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b5"]
+size = Vector3(1.25000, 0.45000, 0.08000)
+material = SubResource("m5")
+
+[sub_resource type="StandardMaterial3D" id="m6"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b6"]
+size = Vector3(8.18000, 1.88000, 0.16000)
+material = SubResource("m6")
+
+[sub_resource type="StandardMaterial3D" id="m7"]
+albedo_color = Color(0.596078431372549, 0.3607843137254902, 0.20784313725490197, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b7"]
+size = Vector3(8.00000, 1.70000, 0.06000)
+material = SubResource("m7")
+
+[sub_resource type="StandardMaterial3D" id="m8"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b8"]
+size = Vector3(3.88000, 0.98000, 0.16000)
+material = SubResource("m8")
+
+[sub_resource type="StandardMaterial3D" id="m9"]
+albedo_color = Color(0.25882352941176473, 0.4117647058823529, 0.2980392156862745, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b9"]
+size = Vector3(3.70000, 0.80000, 0.06000)
+material = SubResource("m9")
+
+[node name="market_finish" type="Node3D"]
+script = ExtResource("finish_batch")
+
+[node name="canopy_35_-73" parent="." instance=ExtResource("e0")]
+position = Vector3(35.00000, 0.00000, -73.00000)
+caption = "FRESCO DEL DÍA"
+
+[node name="canopy_35_-86" parent="." instance=ExtResource("e0")]
+position = Vector3(35.00000, 0.00000, -86.00000)
+caption = "DE TEMPORADA"
+
+[node name="canopy_49_-73" parent="." instance=ExtResource("e0")]
+position = Vector3(49.00000, 0.00000, -73.00000)
+caption = "FRUTA DE LA TIERRA"
+
+[node name="canopy_49_-86" parent="." instance=ExtResource("e0")]
+position = Vector3(49.00000, 0.00000, -86.00000)
+caption = "DEL CAMPO A TU MESA"
+
+[node name="canopy_64_-73" parent="." instance=ExtResource("e0")]
+position = Vector3(64.00000, 0.00000, -73.00000)
+caption = "SABOR DE MI BARRIO"
+
+[node name="canopy_64_-86" parent="." instance=ExtResource("e0")]
+position = Vector3(64.00000, 0.00000, -86.00000)
+caption = "COSECHA LOCAL"
+
+[node name="market_wall_panel" type="MeshInstance3D" parent="."]
+position = Vector3(50.00000, 5.80000, -94.05000)
+mesh = SubResource("b0")
+
+[node name="market_top_rule" type="MeshInstance3D" parent="."]
+position = Vector3(50.00000, 9.10000, -93.90000)
+mesh = SubResource("b1")
+
+[node name="market_title" type="Node3D" parent="."]
+position = Vector3(50.00000, 7.70000, -93.80000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="market_title"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b2")
+
+[node name="paint" type="MeshInstance3D" parent="market_title"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b3")
+
+[node name="lettering" type="Label3D" parent="market_title"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "FRUTAS DE NUESTRA TIERRA"
+font_size = 56
+pixel_size = 0.018583
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="market_subtitle" type="Label3D" parent="."]
+position = Vector3(50.00000, 6.20000, -93.65000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "FRESCO · LOCAL · DE TEMPORADA"
+font_size = 56
+pixel_size = 0.019445
+outline_size = 0
+modulate = Color(0.5490196078431373, 0.32941176470588235, 0.19607843137254902, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="talavera_0" type="MeshInstance3D" parent="."]
+position = Vector3(27.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_1" type="MeshInstance3D" parent="."]
+position = Vector3(29.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_2" type="MeshInstance3D" parent="."]
+position = Vector3(30.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_3" type="MeshInstance3D" parent="."]
+position = Vector3(32.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_4" type="MeshInstance3D" parent="."]
+position = Vector3(33.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_5" type="MeshInstance3D" parent="."]
+position = Vector3(35.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_6" type="MeshInstance3D" parent="."]
+position = Vector3(36.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_7" type="MeshInstance3D" parent="."]
+position = Vector3(38.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_8" type="MeshInstance3D" parent="."]
+position = Vector3(39.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_9" type="MeshInstance3D" parent="."]
+position = Vector3(41.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_10" type="MeshInstance3D" parent="."]
+position = Vector3(42.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_11" type="MeshInstance3D" parent="."]
+position = Vector3(44.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_12" type="MeshInstance3D" parent="."]
+position = Vector3(45.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_13" type="MeshInstance3D" parent="."]
+position = Vector3(47.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_14" type="MeshInstance3D" parent="."]
+position = Vector3(48.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_15" type="MeshInstance3D" parent="."]
+position = Vector3(50.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_16" type="MeshInstance3D" parent="."]
+position = Vector3(51.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_17" type="MeshInstance3D" parent="."]
+position = Vector3(53.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_18" type="MeshInstance3D" parent="."]
+position = Vector3(54.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_19" type="MeshInstance3D" parent="."]
+position = Vector3(56.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_20" type="MeshInstance3D" parent="."]
+position = Vector3(57.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_21" type="MeshInstance3D" parent="."]
+position = Vector3(59.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_22" type="MeshInstance3D" parent="."]
+position = Vector3(60.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_23" type="MeshInstance3D" parent="."]
+position = Vector3(62.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_24" type="MeshInstance3D" parent="."]
+position = Vector3(63.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_25" type="MeshInstance3D" parent="."]
+position = Vector3(65.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_26" type="MeshInstance3D" parent="."]
+position = Vector3(66.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_27" type="MeshInstance3D" parent="."]
+position = Vector3(68.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_28" type="MeshInstance3D" parent="."]
+position = Vector3(69.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="talavera_29" type="MeshInstance3D" parent="."]
+position = Vector3(71.00000, 2.55000, -93.90000)
+mesh = SubResource("b5")
+
+[node name="talavera_30" type="MeshInstance3D" parent="."]
+position = Vector3(72.50000, 2.55000, -93.90000)
+mesh = SubResource("b4")
+
+[node name="granel_marker" type="Node3D" parent="."]
+position = Vector3(69.00000, 5.00000, -66.50000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="granel_marker"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b6")
+
+[node name="paint" type="MeshInstance3D" parent="granel_marker"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b7")
+
+[node name="lettering" type="Label3D" parent="granel_marker"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "A GRANEL\nFRIJOL · MAÍZ · CHILES"
+font_size = 56
+pixel_size = 0.008775
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="scale_prices" type="Node3D" parent="."]
+position = Vector3(46.00000, 2.60000, -65.90000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="scale_prices"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b8")
+
+[node name="paint" type="MeshInstance3D" parent="scale_prices"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b9")
+
+[node name="lettering" type="Label3D" parent="scale_prices"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "EL KILO BIEN PESADO\nBUEN PRECIO, SIN REGATEO"
+font_size = 56
+pixel_size = 0.003960
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false

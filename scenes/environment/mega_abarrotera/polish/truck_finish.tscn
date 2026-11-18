@@ -1,0 +1,200 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/static_fixture_batch.gd" id="finish_batch"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="m0"]
+albedo_color = Color(0.19215686274509805, 0.3176470588235294, 0.30980392156862746, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b0"]
+size = Vector3(4.80000, 0.30000, 9.50000)
+material = SubResource("m0")
+
+[sub_resource type="StandardMaterial3D" id="m1"]
+albedo_color = Color(0.8784313725490196, 0.7803921568627451, 0.596078431372549, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b1"]
+size = Vector3(5.10000, 0.12000, 10.10000)
+material = SubResource("m1")
+
+[sub_resource type="StandardMaterial3D" id="m2"]
+albedo_color = Color(0.7137254901960784, 0.7411764705882353, 0.6509803921568628, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b2"]
+size = Vector3(0.07000, 3.90000, 0.07000)
+material = SubResource("m2")
+
+[sub_resource type="StandardMaterial3D" id="m3"]
+albedo_color = Color(0.7333333333333333, 0.403921568627451, 0.2823529411764706, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b3"]
+size = Vector3(0.03000, 0.42000, 9.60000)
+material = SubResource("m3")
+
+[sub_resource type="StandardMaterial3D" id="m4"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b4"]
+size = Vector3(6.28000, 1.43000, 0.16000)
+material = SubResource("m4")
+
+[sub_resource type="StandardMaterial3D" id="m5"]
+albedo_color = Color(0.19607843137254902, 0.39215686274509803, 0.3607843137254902, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b5"]
+size = Vector3(6.10000, 1.25000, 0.06000)
+material = SubResource("m5")
+
+[sub_resource type="StandardMaterial3D" id="m6"]
+albedo_color = Color(0.6, 0.6666666666666666, 0.6313725490196078, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b6"]
+size = Vector3(0.05000, 0.40000, 0.40000)
+material = SubResource("m6")
+
+[sub_resource type="StandardMaterial3D" id="m7"]
+albedo_color = Color(0.7450980392156863, 0.3058823529411765, 0.2196078431372549, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b7"]
+size = Vector3(0.45000, 0.30000, 0.06000)
+material = SubResource("m7")
+
+[node name="truck_finish" type="Node3D"]
+script = ExtResource("finish_batch")
+
+[node name="lower_chassis" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, -1.45000, 0.00000)
+mesh = SubResource("b0")
+
+[node name="cargo_roof_trim" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 2.13000, 0.00000)
+mesh = SubResource("b1")
+
+[node name="cargo_rib_-1_-4.7" type="MeshInstance3D" parent="."]
+position = Vector3(-2.52000, 0.00000, -4.70000)
+mesh = SubResource("b2")
+
+[node name="cargo_rib_-1_-2.5" type="MeshInstance3D" parent="."]
+position = Vector3(-2.52000, 0.00000, -2.50000)
+mesh = SubResource("b2")
+
+[node name="cargo_rib_-1_0" type="MeshInstance3D" parent="."]
+position = Vector3(-2.52000, 0.00000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="cargo_rib_-1_2.5" type="MeshInstance3D" parent="."]
+position = Vector3(-2.52000, 0.00000, 2.50000)
+mesh = SubResource("b2")
+
+[node name="cargo_rib_-1_4.7" type="MeshInstance3D" parent="."]
+position = Vector3(-2.52000, 0.00000, 4.70000)
+mesh = SubResource("b2")
+
+[node name="brand_stripe_-1" type="MeshInstance3D" parent="."]
+position = Vector3(-2.56000, -0.15000, 0.00000)
+mesh = SubResource("b3")
+
+[node name="truck_roundel_-1" type="Node3D" parent="."]
+position = Vector3(-2.58000, 0.70000, 0.00000)
+rotation = Vector3(0.00000, -1.57080, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="truck_roundel_-1"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b4")
+
+[node name="paint" type="MeshInstance3D" parent="truck_roundel_-1"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b5")
+
+[node name="lettering" type="Label3D" parent="truck_roundel_-1"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "RUTA DEL SOL\nABASTO DE BARRIO"
+font_size = 56
+pixel_size = 0.010511
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = true
+
+[node name="hub_-1_-3.4" type="MeshInstance3D" parent="."]
+position = Vector3(-2.67000, -1.40000, -3.40000)
+mesh = SubResource("b6")
+
+[node name="hub_-1_3.4" type="MeshInstance3D" parent="."]
+position = Vector3(-2.67000, -1.40000, 3.40000)
+mesh = SubResource("b6")
+
+[node name="cargo_rib_1_-4.7" type="MeshInstance3D" parent="."]
+position = Vector3(2.52000, 0.00000, -4.70000)
+mesh = SubResource("b2")
+
+[node name="cargo_rib_1_-2.5" type="MeshInstance3D" parent="."]
+position = Vector3(2.52000, 0.00000, -2.50000)
+mesh = SubResource("b2")
+
+[node name="cargo_rib_1_0" type="MeshInstance3D" parent="."]
+position = Vector3(2.52000, 0.00000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="cargo_rib_1_2.5" type="MeshInstance3D" parent="."]
+position = Vector3(2.52000, 0.00000, 2.50000)
+mesh = SubResource("b2")
+
+[node name="cargo_rib_1_4.7" type="MeshInstance3D" parent="."]
+position = Vector3(2.52000, 0.00000, 4.70000)
+mesh = SubResource("b2")
+
+[node name="brand_stripe_1" type="MeshInstance3D" parent="."]
+position = Vector3(2.56000, -0.15000, 0.00000)
+mesh = SubResource("b3")
+
+[node name="truck_roundel_1" type="Node3D" parent="."]
+position = Vector3(2.58000, 0.70000, 0.00000)
+rotation = Vector3(0.00000, 1.57080, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="truck_roundel_1"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b4")
+
+[node name="paint" type="MeshInstance3D" parent="truck_roundel_1"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b5")
+
+[node name="lettering" type="Label3D" parent="truck_roundel_1"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "RUTA DEL SOL\nABASTO DE BARRIO"
+font_size = 56
+pixel_size = 0.010511
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = true
+
+[node name="hub_1_-3.4" type="MeshInstance3D" parent="."]
+position = Vector3(2.67000, -1.40000, -3.40000)
+mesh = SubResource("b6")
+
+[node name="hub_1_3.4" type="MeshInstance3D" parent="."]
+position = Vector3(2.67000, -1.40000, 3.40000)
+mesh = SubResource("b6")
+
+[node name="rear_lamp_-1.8" type="MeshInstance3D" parent="."]
+position = Vector3(-1.80000, -1.10000, -5.04000)
+mesh = SubResource("b7")
+
+[node name="rear_lamp_1.8" type="MeshInstance3D" parent="."]
+position = Vector3(1.80000, -1.10000, -5.04000)
+mesh = SubResource("b7")

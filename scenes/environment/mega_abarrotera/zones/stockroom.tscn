@@ -1,0 +1,309 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/combat_zone.gd" id="e2"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/shelf_module.tscn" id="e6"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/pallet_stack.tscn" id="e7"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/hand_truck.tscn" id="e13"]
+
+[sub_resource type="StandardMaterial3D" id="r48"]
+albedo_color = Color(0.43137,0.54510,0.52157,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r49"]
+size = Vector3(38, 0.25, 4)
+material = SubResource("r48")
+
+[sub_resource type="BoxShape3D" id="r50"]
+size = Vector3(38, 0.25, 4)
+
+[sub_resource type="StandardMaterial3D" id="r51"]
+albedo_color = Color(0.34118,0.42745,0.40784,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r52"]
+size = Vector3(0.5, 2.8, 0.5)
+material = SubResource("r51")
+
+[sub_resource type="BoxShape3D" id="r53"]
+size = Vector3(0.5, 2.8, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="r54"]
+albedo_color = Color(0.86667,0.65882,0.27451,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r55"]
+size = Vector3(37, 0.11, 0.11)
+material = SubResource("r54")
+
+[sub_resource type="BoxShape3D" id="r56"]
+size = Vector3(37, 0.11, 0.11)
+
+[sub_resource type="BoxMesh" id="r57"]
+size = Vector3(0.09, 0.65, 0.09)
+material = SubResource("r54")
+
+[sub_resource type="StandardMaterial3D" id="r58"]
+albedo_color = Color(0.53725,0.59608,0.56471,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r59"]
+size = Vector3(4, 0.3, 12.3693)
+material = SubResource("r58")
+
+[sub_resource type="BoxShape3D" id="r60"]
+size = Vector3(4, 0.3, 12.3693)
+
+[sub_resource type="StandardMaterial3D" id="r61"]
+albedo_color = Color(0.77255,0.66667,0.29804,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r62"]
+size = Vector3(3.7, 0.035, 0.1)
+material = SubResource("r61")
+
+[node name="bodega" type="Node3D"]
+position = Vector3(0, 0, -78.5)
+script = ExtResource("e2")
+zone_id = &"bodega"
+bounds = Vector2(50,33)
+
+[node name="industrial_rack_0_0" parent="." instance=ExtResource("e6")]
+position = Vector3(-8, 0, 3.5)
+scale = Vector3(1, 2, 0.625)
+
+[node name="industrial_rack_0_1" parent="." instance=ExtResource("e6")]
+position = Vector3(-8, 0, -10.5)
+scale = Vector3(1, 2, 0.625)
+
+[node name="industrial_rack_1_0" parent="." instance=ExtResource("e6")]
+position = Vector3(6, 0, 3.5)
+scale = Vector3(1, 2, 0.625)
+
+[node name="industrial_rack_1_1" parent="." instance=ExtResource("e6")]
+position = Vector3(6, 0, -10.5)
+scale = Vector3(1, 2, 0.625)
+
+[node name="stock_0" parent="." instance=ExtResource("e7")]
+position = Vector3(-20, 0, 8.5)
+scale = Vector3(1, 1, 1)
+
+[node name="stock_1" parent="." instance=ExtResource("e7")]
+position = Vector3(20, 0, -8.5)
+scale = Vector3(1, 1, 1)
+
+[node name="stock_2" parent="." instance=ExtResource("e7")]
+position = Vector3(1, 0, 13.5)
+scale = Vector3(1, 1, 1)
+
+[node name="maintenance_walkway" type="StaticBody3D" parent="."]
+position = Vector3(0, 2.875, -6.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="maintenance_walkway"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r49")
+
+[node name="collision" type="CollisionShape3D" parent="maintenance_walkway"]
+shape = SubResource("r50")
+
+[node name="walkway_support_-18" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-18, 1.4, -6.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="walkway_support_-18"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r52")
+
+[node name="collision" type="CollisionShape3D" parent="walkway_support_-18"]
+shape = SubResource("r53")
+
+[node name="walkway_support_18" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(18, 1.4, -6.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="walkway_support_18"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r52")
+
+[node name="collision" type="CollisionShape3D" parent="walkway_support_18"]
+shape = SubResource("r53")
+
+[node name="handrail_-83_05" type="StaticBody3D" parent="."]
+position = Vector3(0, 3.65, -4.55)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="handrail_-83_05"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r55")
+
+[node name="collision" type="CollisionShape3D" parent="handrail_-83_05"]
+shape = SubResource("r56")
+
+[node name="rail_post_-83.05_-12" type="MeshInstance3D" parent="."]
+position = Vector3(-12, 3.3, -4.55)
+mesh = SubResource("r57")
+
+[node name="rail_post_-83.05_0" type="MeshInstance3D" parent="."]
+position = Vector3(0, 3.3, -4.55)
+mesh = SubResource("r57")
+
+[node name="rail_post_-83.05_12" type="MeshInstance3D" parent="."]
+position = Vector3(12, 3.3, -4.55)
+mesh = SubResource("r57")
+
+[node name="handrail_-86_95" type="StaticBody3D" parent="."]
+position = Vector3(0, 3.65, -8.45)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="handrail_-86_95"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r55")
+
+[node name="collision" type="CollisionShape3D" parent="handrail_-86_95"]
+shape = SubResource("r56")
+
+[node name="rail_post_-86.95_-12" type="MeshInstance3D" parent="."]
+position = Vector3(-12, 3.3, -8.45)
+mesh = SubResource("r57")
+
+[node name="rail_post_-86.95_0" type="MeshInstance3D" parent="."]
+position = Vector3(0, 3.3, -8.45)
+mesh = SubResource("r57")
+
+[node name="rail_post_-86.95_12" type="MeshInstance3D" parent="."]
+position = Vector3(12, 3.3, -8.45)
+mesh = SubResource("r57")
+
+[node name="industrial_ramp_-16" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-16, 1.35, 0.5)
+collision_layer = 1
+collision_mask = 7
+rotation = Vector3(0.244979, 0, 0)
+
+[node name="mesh" type="MeshInstance3D" parent="industrial_ramp_-16"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r59")
+
+[node name="collision" type="CollisionShape3D" parent="industrial_ramp_-16"]
+shape = SubResource("r60")
+
+[node name="ramp_grip_-16_0" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 0.1, 6.1)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_1" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 0.35, 5.13)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_2" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 0.6, 4.16)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_3" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 0.85, 3.19)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_4" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 1.1, 2.22)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_5" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 1.35, 1.25)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_6" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 1.6, 0.28)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_7" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 1.85, -0.69)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_8" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 2.1, -1.66)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_9" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 2.35, -2.63)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_10" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 2.6, -3.6)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_-16_11" type="MeshInstance3D" parent="."]
+position = Vector3(-16, 2.85, -4.57)
+mesh = SubResource("r62")
+
+[node name="industrial_ramp_16" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(16, 1.35, 0.5)
+collision_layer = 1
+collision_mask = 7
+rotation = Vector3(0.244979, 0, 0)
+
+[node name="mesh" type="MeshInstance3D" parent="industrial_ramp_16"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r59")
+
+[node name="collision" type="CollisionShape3D" parent="industrial_ramp_16"]
+shape = SubResource("r60")
+
+[node name="ramp_grip_16_0" type="MeshInstance3D" parent="."]
+position = Vector3(16, 0.1, 6.1)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_1" type="MeshInstance3D" parent="."]
+position = Vector3(16, 0.35, 5.13)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_2" type="MeshInstance3D" parent="."]
+position = Vector3(16, 0.6, 4.16)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_3" type="MeshInstance3D" parent="."]
+position = Vector3(16, 0.85, 3.19)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_4" type="MeshInstance3D" parent="."]
+position = Vector3(16, 1.1, 2.22)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_5" type="MeshInstance3D" parent="."]
+position = Vector3(16, 1.35, 1.25)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_6" type="MeshInstance3D" parent="."]
+position = Vector3(16, 1.6, 0.28)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_7" type="MeshInstance3D" parent="."]
+position = Vector3(16, 1.85, -0.69)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_8" type="MeshInstance3D" parent="."]
+position = Vector3(16, 2.1, -1.66)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_9" type="MeshInstance3D" parent="."]
+position = Vector3(16, 2.35, -2.63)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_10" type="MeshInstance3D" parent="."]
+position = Vector3(16, 2.6, -3.6)
+mesh = SubResource("r62")
+
+[node name="ramp_grip_16_11" type="MeshInstance3D" parent="."]
+position = Vector3(16, 2.85, -4.57)
+mesh = SubResource("r62")
+
+[node name="diablito_01" parent="." instance=ExtResource("e13")]
+position = Vector3(-21,0,-1.5)
+

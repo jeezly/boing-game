@@ -1,0 +1,133 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/static_fixture_batch.gd" id="finish_batch"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/soap_stack.tscn" id="e0"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/dulces_display.tscn" id="e1"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/truck_finish.tscn" id="e2"]
+
+[sub_resource type="StandardMaterial3D" id="m0"]
+albedo_color = Color(0.8470588235294118, 0.8235294117647058, 0.7215686274509804, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b0"]
+size = Vector3(4.45000, 0.24000, 0.16000)
+material = SubResource("m0")
+
+[sub_resource type="StandardMaterial3D" id="m1"]
+albedo_color = Color(0.19215686274509805, 0.3176470588235294, 0.30980392156862746, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b1"]
+size = Vector3(1.70000, 0.55000, 0.05000)
+material = SubResource("m1")
+
+[sub_resource type="StandardMaterial3D" id="m2"]
+albedo_color = Color(0.9647058823529412, 0.8509803921568627, 0.5568627450980392, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b2"]
+size = Vector3(0.55000, 0.40000, 0.08000)
+material = SubResource("m2")
+
+[sub_resource type="StandardMaterial3D" id="m3"]
+albedo_color = Color(0.36470588235294116, 0.5686274509803921, 0.596078431372549, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b3"]
+size = Vector3(0.03500, 1.10000, 1.70000)
+material = SubResource("m3")
+
+[sub_resource type="StandardMaterial3D" id="m4"]
+albedo_color = Color(0.9333333333333333, 0.8784313725490196, 0.7490196078431373, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b4"]
+size = Vector3(0.04000, 0.08000, 0.35000)
+material = SubResource("m4")
+
+[sub_resource type="StandardMaterial3D" id="m5"]
+albedo_color = Color(0.3176470588235294, 0.4235294117647059, 0.396078431372549, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b5"]
+size = Vector3(0.32000, 0.10000, 1.65000)
+material = SubResource("m5")
+
+[node name="merchandise_finish" type="Node3D"]
+script = ExtResource("finish_batch")
+
+[node name="laundry_endcap" parent="." instance=ExtResource("e0")]
+position = Vector3(-23.50000, 0.00000, -29.00000)
+
+
+[node name="impulse_0" parent="." instance=ExtResource("e1")]
+position = Vector3(-28.00000, 0.00000, -12.00000)
+
+
+[node name="impulse_1" parent="." instance=ExtResource("e1")]
+position = Vector3(-16.00000, 0.00000, -12.00000)
+
+
+[node name="impulse_2" parent="." instance=ExtResource("e1")]
+position = Vector3(-4.00000, 0.00000, -12.00000)
+
+
+[node name="impulse_3" parent="." instance=ExtResource("e1")]
+position = Vector3(12.00000, 0.00000, -12.00000)
+
+
+[node name="impulse_4" parent="." instance=ExtResource("e1")]
+position = Vector3(24.00000, 0.00000, -12.00000)
+
+
+[node name="impulse_5" parent="." instance=ExtResource("e1")]
+position = Vector3(36.00000, 0.00000, -12.00000)
+
+
+[node name="delivery_vehicle" parent="." instance=ExtResource("e2")]
+position = Vector3(-62.00000, 2.10000, -82.00000)
+rotation = Vector3(0.00000, -0.12000, 0.00000)
+
+
+[node name="truck_bumper" type="MeshInstance3D" parent="."]
+position = Vector3(-62.00000, 0.52000, -74.40000)
+mesh = SubResource("b0")
+
+[node name="truck_grille" type="MeshInstance3D" parent="."]
+position = Vector3(-62.00000, 1.10000, -74.47000)
+mesh = SubResource("b1")
+
+[node name="headlamp_-63.5" type="MeshInstance3D" parent="."]
+position = Vector3(-63.50000, 1.15000, -74.44000)
+mesh = SubResource("b2")
+
+[node name="headlamp_-60.5" type="MeshInstance3D" parent="."]
+position = Vector3(-60.50000, 1.15000, -74.44000)
+mesh = SubResource("b2")
+
+[node name="cab_window_-1" type="MeshInstance3D" parent="."]
+position = Vector3(-64.17000, 2.15000, -75.70000)
+mesh = SubResource("b3")
+
+[node name="door_handle_-1" type="MeshInstance3D" parent="."]
+position = Vector3(-64.19000, 1.50000, -75.45000)
+mesh = SubResource("b4")
+
+[node name="cab_step_-1" type="MeshInstance3D" parent="."]
+position = Vector3(-64.17000, 0.43000, -75.70000)
+mesh = SubResource("b5")
+
+[node name="cab_window_1" type="MeshInstance3D" parent="."]
+position = Vector3(-59.83000, 2.15000, -75.70000)
+mesh = SubResource("b3")
+
+[node name="door_handle_1" type="MeshInstance3D" parent="."]
+position = Vector3(-59.81000, 1.50000, -75.45000)
+mesh = SubResource("b4")
+
+[node name="cab_step_1" type="MeshInstance3D" parent="."]
+position = Vector3(-59.83000, 0.43000, -75.70000)
+mesh = SubResource("b5")

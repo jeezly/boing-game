@@ -1,0 +1,4 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/maintenance_broom.gd" id="broom"]
+[node name="maintenance_broom" type="Node3D"]
+script = ExtResource("broom")

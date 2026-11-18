@@ -5,12 +5,14 @@
 [ext_resource type="PackedScene" path="res://scenes/game/survival/match_controller.tscn" id="3"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="4"]
 
+[ext_resource type="Script" path="res://scripts/game/production/audio_hooks.gd" id="audio"]
+
 [sub_resource type="Environment" id="environment"]
 background_mode = 1
 background_color = Color(0.40, 0.68, 0.80, 1)
 ambient_light_source = 3
-ambient_light_color = Color(1, 0.94, 0.84, 1)
-ambient_light_energy = 0.48
+ambient_light_color = Color(0.83, 0.9, 1, 1)
+ambient_light_energy = 0.30
 
 [node name="main" type="Node3D"]
 
@@ -33,3 +35,12 @@ environment = SubResource("environment")
 
 [node name="HUD" parent="." instance=ExtResource("4")]
 camera_rig_path = NodePath("../Player/CameraRig")
+
+[node name="audio_hooks" type="Node" parent="."]
+script = ExtResource("audio")
+
+[node name="interior_form_light" type="DirectionalLight3D" parent="lighting"]
+rotation_degrees = Vector3(-38, 38, 0)
+light_color = Color(1, 0.94, 0.83, 1)
+light_energy = 0.72
+shadow_enabled = false

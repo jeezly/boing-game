@@ -186,6 +186,11 @@ func _finish(victory: bool) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
+		var combat_hud = get_node("../HUD")
+		if combat_hud.modal_kind != "":
+			combat_hud.close_modal()
+			get_viewport().set_input_as_handled()
+			return
 		if state == State.READY or state == State.PLAYING: pause()
 		elif state == State.PAUSED: resume()
 		get_viewport().set_input_as_handled()

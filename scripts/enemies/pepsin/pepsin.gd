@@ -31,6 +31,9 @@ var gravity: float = 9.8
 
 func _ready() -> void:
 	add_to_group("enemies")
+	var feedback = load("res://scripts/components/hit_tint.gd").new()
+	feedback.name = "hit_tint"
+	add_child(feedback)
 	hp = max_hp
 	tell.hide()
 	gravity = float(ProjectSettings.get_setting("physics/3d/default_gravity"))
@@ -45,6 +48,7 @@ func activate(player: Player, environment: Node3D, index: int) -> void:
 
 func take_damage(amount: float) -> void:
 	if dead or not combat_enabled or get_tree().paused: return
+	get_node("hit_tint").flash(visual)
 	hp = maxf(0.0, hp - maxf(amount, 0.0))
 	visual.hit_flash()
 	hit_stun = 0.14
@@ -66,6 +70,14 @@ func _physics_process(delta: float) -> void:
 	if target.hp <= 0.0: return
 	cooldown = maxf(0.0, cooldown - delta)
 	hit_stun = maxf(0.0, hit_stun - delta)
+	if global_position.distance_to(target.global_position) > target.get_node("power_state").detection_range():
+		windup = -1.0
+		velocity.x = move_toward(velocity.x, 0.0, delta * 20.0)
+		velocity.z = move_toward(velocity.z, 0.0, delta * 20.0)
+		velocity.y = velocity.y - 9.8 * delta if not is_on_floor() else 0.0
+		move_and_slide()
+		tell.hide()
+		return
 	var target_point := target.global_position + Vector3.UP * 1.0
 	var flat := target.global_position - global_position
 	flat.y = 0.0

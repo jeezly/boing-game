@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="" format=3]
+[ext_resource type="Script" path="res://scripts/weapons/weapon_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"resortera"
+display_name = "Resortera de Mango"
+pro_name = "Resortera de Mango"
+description = "Precisa y confiable. Siempre lista."
+damage = 25.0
+pro_damage = 25.0
+cooldown = 0.333333
+speed = 24.0
+reach = 100.0
+radius = 0
+max_ammo = -1
+price = 0
+upgrade_price = 0
+available = true
+
+behavior = &"projectile"
+presentation_key = &"resortera"

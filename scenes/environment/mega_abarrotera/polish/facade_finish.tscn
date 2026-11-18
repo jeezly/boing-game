@@ -1,0 +1,574 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/static_fixture_batch.gd" id="finish_batch"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/polish/storefront_window.tscn" id="e0"]
+
+[sub_resource type="StandardMaterial3D" id="m0"]
+albedo_color = Color(0.1411764705882353, 0.3686274509803922, 0.34901960784313724, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b0"]
+size = Vector3(46.00000, 4.40000, 0.35000)
+material = SubResource("m0")
+
+[sub_resource type="StandardMaterial3D" id="m1"]
+albedo_color = Color(0.9568627450980393, 0.8745098039215686, 0.7098039215686275, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b1"]
+size = Vector3(149.00000, 0.30000, 1.20000)
+material = SubResource("m1")
+
+[sub_resource type="StandardMaterial3D" id="m2"]
+albedo_color = Color(0.9176470588235294, 0.7019607843137254, 0.3137254901960784, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b2"]
+size = Vector3(46.00000, 0.10000, 0.08000)
+material = SubResource("m2")
+
+[sub_resource type="StandardMaterial3D" id="m3"]
+albedo_color = Color(0.9098039215686274, 0.8352941176470589, 0.6745098039215687, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b3"]
+size = Vector3(0.90000, 8.60000, 0.65000)
+material = SubResource("m3")
+
+[sub_resource type="StandardMaterial3D" id="m4"]
+albedo_color = Color(0.7294117647058823, 0.3764705882352941, 0.2549019607843137, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b4"]
+size = Vector3(1.10000, 1.30000, 0.80000)
+material = SubResource("m4")
+
+[sub_resource type="StandardMaterial3D" id="m5"]
+albedo_color = Color(0.7019607843137254, 0.3607843137254902, 0.2627450980392157, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b5"]
+size = Vector3(53.00000, 1.00000, 0.20000)
+material = SubResource("m5")
+
+[sub_resource type="StandardMaterial3D" id="m6"]
+albedo_color = Color(0.9372549019607843, 0.8745098039215686, 0.7254901960784313, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b6"]
+size = Vector3(0.65000, 0.30000, 0.02500)
+material = SubResource("m6")
+
+[sub_resource type="StandardMaterial3D" id="m7"]
+albedo_color = Color(0.8901960784313725, 0.7725490196078432, 0.5019607843137255, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b7"]
+size = Vector3(0.65000, 0.30000, 0.02500)
+material = SubResource("m7")
+
+[sub_resource type="StandardMaterial3D" id="m8"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b8"]
+size = Vector3(22.18000, 1.33000, 0.16000)
+material = SubResource("m8")
+
+[sub_resource type="StandardMaterial3D" id="m9"]
+albedo_color = Color(0.6980392156862745, 0.3333333333333333, 0.23137254901960785, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b9"]
+size = Vector3(22.00000, 1.15000, 0.06000)
+material = SubResource("m9")
+
+[sub_resource type="StandardMaterial3D" id="m10"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b10"]
+size = Vector3(12.18000, 1.68000, 0.16000)
+material = SubResource("m10")
+
+[sub_resource type="StandardMaterial3D" id="m11"]
+albedo_color = Color(0.1411764705882353, 0.3607843137254902, 0.3411764705882353, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b11"]
+size = Vector3(12.00000, 1.50000, 0.06000)
+material = SubResource("m11")
+
+[sub_resource type="StandardMaterial3D" id="m12"]
+albedo_color = Color(0.1411764705882353, 0.3686274509803922, 0.34901960784313724, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b12"]
+size = Vector3(0.36000, 4.60000, 0.60000)
+material = SubResource("m12")
+
+[sub_resource type="StandardMaterial3D" id="m13"]
+albedo_color = Color(0.7490196078431373, 0.4745098039215686, 0.30196078431372547, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b13"]
+size = Vector3(13.80000, 0.02500, 2.00000)
+material = SubResource("m13")
+
+[node name="facade_finish" type="Node3D"]
+script = ExtResource("finish_batch")
+
+[node name="sign_fascia" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 10.45000, 0.53000)
+mesh = SubResource("b0")
+
+[node name="top_coping" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 14.15000, 0.30000)
+mesh = SubResource("b1")
+
+[node name="sign_lower_rule" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 8.70000, 0.75000)
+mesh = SubResource("b2")
+
+[node name="store_name" type="Label3D" parent="."]
+position = Vector3(0.00000, 11.15000, 0.75000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "MEGA ABARROTERA\nMEXICANA"
+font_size = 56
+pixel_size = 0.022000
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="store_motto" type="Label3D" parent="."]
+position = Vector3(0.00000, 8.90000, 0.76000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "TU TIENDA DE BARRIO, EN GRANDE"
+font_size = 56
+pixel_size = 0.010000
+outline_size = 0
+modulate = Color(0.9176470588235294, 0.7019607843137254, 0.3137254901960784, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="glazing_-53" parent="." instance=ExtResource("e0")]
+position = Vector3(-53.00000, 0.00000, 0.50000)
+
+
+[node name="glazing_-29" parent="." instance=ExtResource("e0")]
+position = Vector3(-29.00000, 0.00000, 0.50000)
+
+
+[node name="glazing_29" parent="." instance=ExtResource("e0")]
+position = Vector3(29.00000, 0.00000, 0.50000)
+
+
+[node name="glazing_53" parent="." instance=ExtResource("e0")]
+position = Vector3(53.00000, 0.00000, 0.50000)
+
+
+[node name="facade_pier_-73" type="MeshInstance3D" parent="."]
+position = Vector3(-73.00000, 4.30000, 0.55000)
+mesh = SubResource("b3")
+
+[node name="pier_base_-73" type="MeshInstance3D" parent="."]
+position = Vector3(-73.00000, 0.65000, 0.75000)
+mesh = SubResource("b4")
+
+[node name="facade_pier_-17" type="MeshInstance3D" parent="."]
+position = Vector3(-17.00000, 4.30000, 0.55000)
+mesh = SubResource("b3")
+
+[node name="pier_base_-17" type="MeshInstance3D" parent="."]
+position = Vector3(-17.00000, 0.65000, 0.75000)
+mesh = SubResource("b4")
+
+[node name="facade_pier_17" type="MeshInstance3D" parent="."]
+position = Vector3(17.00000, 4.30000, 0.55000)
+mesh = SubResource("b3")
+
+[node name="pier_base_17" type="MeshInstance3D" parent="."]
+position = Vector3(17.00000, 0.65000, 0.75000)
+mesh = SubResource("b4")
+
+[node name="facade_pier_73" type="MeshInstance3D" parent="."]
+position = Vector3(73.00000, 4.30000, 0.55000)
+mesh = SubResource("b3")
+
+[node name="pier_base_73" type="MeshInstance3D" parent="."]
+position = Vector3(73.00000, 0.65000, 0.75000)
+mesh = SubResource("b4")
+
+[node name="tile_plinth_-45" type="MeshInstance3D" parent="."]
+position = Vector3(-45.00000, 0.50000, 0.66000)
+mesh = SubResource("b5")
+
+[node name="tile_-45_0" type="MeshInstance3D" parent="."]
+position = Vector3(-70.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_1" type="MeshInstance3D" parent="."]
+position = Vector3(-69.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_2" type="MeshInstance3D" parent="."]
+position = Vector3(-67.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_3" type="MeshInstance3D" parent="."]
+position = Vector3(-66.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_4" type="MeshInstance3D" parent="."]
+position = Vector3(-64.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_5" type="MeshInstance3D" parent="."]
+position = Vector3(-63.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_6" type="MeshInstance3D" parent="."]
+position = Vector3(-61.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_7" type="MeshInstance3D" parent="."]
+position = Vector3(-60.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_8" type="MeshInstance3D" parent="."]
+position = Vector3(-58.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_9" type="MeshInstance3D" parent="."]
+position = Vector3(-57.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_10" type="MeshInstance3D" parent="."]
+position = Vector3(-55.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_11" type="MeshInstance3D" parent="."]
+position = Vector3(-54.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_12" type="MeshInstance3D" parent="."]
+position = Vector3(-52.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_13" type="MeshInstance3D" parent="."]
+position = Vector3(-51.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_14" type="MeshInstance3D" parent="."]
+position = Vector3(-49.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_15" type="MeshInstance3D" parent="."]
+position = Vector3(-48.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_16" type="MeshInstance3D" parent="."]
+position = Vector3(-46.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_17" type="MeshInstance3D" parent="."]
+position = Vector3(-45.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_18" type="MeshInstance3D" parent="."]
+position = Vector3(-43.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_19" type="MeshInstance3D" parent="."]
+position = Vector3(-42.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_20" type="MeshInstance3D" parent="."]
+position = Vector3(-40.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_21" type="MeshInstance3D" parent="."]
+position = Vector3(-39.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_22" type="MeshInstance3D" parent="."]
+position = Vector3(-37.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_23" type="MeshInstance3D" parent="."]
+position = Vector3(-36.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_24" type="MeshInstance3D" parent="."]
+position = Vector3(-34.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_25" type="MeshInstance3D" parent="."]
+position = Vector3(-33.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_26" type="MeshInstance3D" parent="."]
+position = Vector3(-31.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_27" type="MeshInstance3D" parent="."]
+position = Vector3(-30.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_28" type="MeshInstance3D" parent="."]
+position = Vector3(-28.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_29" type="MeshInstance3D" parent="."]
+position = Vector3(-27.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_30" type="MeshInstance3D" parent="."]
+position = Vector3(-25.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_31" type="MeshInstance3D" parent="."]
+position = Vector3(-24.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_32" type="MeshInstance3D" parent="."]
+position = Vector3(-22.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_-45_33" type="MeshInstance3D" parent="."]
+position = Vector3(-21.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_-45_34" type="MeshInstance3D" parent="."]
+position = Vector3(-19.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_plinth_45" type="MeshInstance3D" parent="."]
+position = Vector3(45.00000, 0.50000, 0.66000)
+mesh = SubResource("b5")
+
+[node name="tile_45_0" type="MeshInstance3D" parent="."]
+position = Vector3(19.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_1" type="MeshInstance3D" parent="."]
+position = Vector3(21.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_2" type="MeshInstance3D" parent="."]
+position = Vector3(22.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_3" type="MeshInstance3D" parent="."]
+position = Vector3(24.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_4" type="MeshInstance3D" parent="."]
+position = Vector3(25.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_5" type="MeshInstance3D" parent="."]
+position = Vector3(27.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_6" type="MeshInstance3D" parent="."]
+position = Vector3(28.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_7" type="MeshInstance3D" parent="."]
+position = Vector3(30.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_8" type="MeshInstance3D" parent="."]
+position = Vector3(31.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_9" type="MeshInstance3D" parent="."]
+position = Vector3(33.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_10" type="MeshInstance3D" parent="."]
+position = Vector3(34.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_11" type="MeshInstance3D" parent="."]
+position = Vector3(36.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_12" type="MeshInstance3D" parent="."]
+position = Vector3(37.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_13" type="MeshInstance3D" parent="."]
+position = Vector3(39.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_14" type="MeshInstance3D" parent="."]
+position = Vector3(40.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_15" type="MeshInstance3D" parent="."]
+position = Vector3(42.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_16" type="MeshInstance3D" parent="."]
+position = Vector3(43.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_17" type="MeshInstance3D" parent="."]
+position = Vector3(45.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_18" type="MeshInstance3D" parent="."]
+position = Vector3(46.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_19" type="MeshInstance3D" parent="."]
+position = Vector3(48.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_20" type="MeshInstance3D" parent="."]
+position = Vector3(49.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_21" type="MeshInstance3D" parent="."]
+position = Vector3(51.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_22" type="MeshInstance3D" parent="."]
+position = Vector3(52.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_23" type="MeshInstance3D" parent="."]
+position = Vector3(54.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_24" type="MeshInstance3D" parent="."]
+position = Vector3(55.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_25" type="MeshInstance3D" parent="."]
+position = Vector3(57.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_26" type="MeshInstance3D" parent="."]
+position = Vector3(58.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_27" type="MeshInstance3D" parent="."]
+position = Vector3(60.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_28" type="MeshInstance3D" parent="."]
+position = Vector3(61.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_29" type="MeshInstance3D" parent="."]
+position = Vector3(63.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_30" type="MeshInstance3D" parent="."]
+position = Vector3(64.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_31" type="MeshInstance3D" parent="."]
+position = Vector3(66.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_32" type="MeshInstance3D" parent="."]
+position = Vector3(67.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="tile_45_33" type="MeshInstance3D" parent="."]
+position = Vector3(69.00000, 0.75000, 0.78000)
+mesh = SubResource("b7")
+
+[node name="tile_45_34" type="MeshInstance3D" parent="."]
+position = Vector3(70.50000, 0.75000, 0.78000)
+mesh = SubResource("b6")
+
+[node name="welcome" type="Node3D" parent="."]
+position = Vector3(0.00000, 6.50000, 0.65000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="welcome"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b8")
+
+[node name="paint" type="MeshInstance3D" parent="welcome"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b9")
+
+[node name="lettering" type="Label3D" parent="welcome"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "PÁSELE, AQUÍ HAY DE TODO"
+font_size = 56
+pixel_size = 0.011872
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="hours" type="Node3D" parent="."]
+position = Vector3(-66.00000, 6.90000, 0.80000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="hours"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b10")
+
+[node name="paint" type="MeshInstance3D" parent="hours"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b11")
+
+[node name="lettering" type="Label3D" parent="hours"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "BUEN PRECIO\nBUENA GENTE"
+font_size = 56
+pixel_size = 0.007743
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="change" type="Node3D" parent="."]
+position = Vector3(66.00000, 6.90000, 0.80000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="change"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b10")
+
+[node name="paint" type="MeshInstance3D" parent="change"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b11")
+
+[node name="lettering" type="Label3D" parent="change"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "HOY SÍ\nHAY CAMBIO"
+font_size = 56
+pixel_size = 0.007743
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false
+
+[node name="entry_jamb_-7.35" type="MeshInstance3D" parent="."]
+position = Vector3(-7.35000, 2.30000, 0.35000)
+mesh = SubResource("b12")
+
+[node name="entry_jamb_7.35" type="MeshInstance3D" parent="."]
+position = Vector3(7.35000, 2.30000, 0.35000)
+mesh = SubResource("b12")
+
+[node name="threshold" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 0.01800, 0.20000)
+mesh = SubResource("b13")

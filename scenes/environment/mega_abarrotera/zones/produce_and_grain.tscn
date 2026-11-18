@@ -1,0 +1,139 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/maintenance_broom.tscn" id="broom"]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/combat_zone.gd" id="e2"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/huacal.tscn" id="e3"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/produce_display.tscn" id="e9"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/costales.tscn" id="e10"]
+
+[ext_resource type="PackedScene" path="res://scenes/environment/mega_abarrotera/modules/hand_truck.tscn" id="e13"]
+
+[sub_resource type="StandardMaterial3D" id="r43"]
+albedo_color = Color(0.73333,0.52941,0.30588,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r44"]
+size = Vector3(3, 1.2, 2)
+material = SubResource("r43")
+
+[sub_resource type="BoxShape3D" id="r45"]
+size = Vector3(3, 1.2, 2)
+
+[sub_resource type="StandardMaterial3D" id="r46"]
+albedo_color = Color(0.52941,0.58039,0.54118,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r47"]
+size = Vector3(0.7, 0.5, 0.6)
+material = SubResource("r46")
+
+[sub_resource type="StandardMaterial3D" id="r107"]
+albedo_color = Color(0.54118,0.43922,0.27059,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r108"]
+size = Vector3(0.045, 2, 0.045)
+material = SubResource("r107")
+
+[sub_resource type="StandardMaterial3D" id="r109"]
+albedo_color = Color(0.79608,0.69804,0.29804,1)
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="r110"]
+size = Vector3(0.5, 0.2, 0.18)
+material = SubResource("r109")
+
+[node name="frutas_granel" type="Node3D"]
+position = Vector3(50, 0, -78.5)
+script = ExtResource("e2")
+zone_id = &"frutas"
+bounds = Vector2(50,33)
+
+[node name="produce_0_0" parent="." instance=ExtResource("e9")]
+position = Vector3(-15.0, 0.0, 5.5)
+scale = Vector3(1, 1, 1)
+
+[node name="produce_0_1" parent="." instance=ExtResource("e9")]
+position = Vector3(-15.0, 0.0, -7.5)
+scale = Vector3(1, 1, 1)
+
+[node name="produce_1_0" parent="." instance=ExtResource("e9")]
+position = Vector3(-1.0, 0.0, 5.5)
+scale = Vector3(1, 1, 1)
+
+[node name="produce_1_1" parent="." instance=ExtResource("e9")]
+position = Vector3(-1.0, 0.0, -7.5)
+scale = Vector3(1, 1, 1)
+
+[node name="produce_2_0" parent="." instance=ExtResource("e9")]
+position = Vector3(14.0, 0.0, 5.5)
+scale = Vector3(1, 1, 1)
+
+[node name="produce_2_1" parent="." instance=ExtResource("e9")]
+position = Vector3(14.0, 0.0, -7.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_0" parent="." instance=ExtResource("e10")]
+position = Vector3(9.0, 0.0, 12.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_1" parent="." instance=ExtResource("e10")]
+position = Vector3(-10.0, 0.0, -14.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_2" parent="." instance=ExtResource("e10")]
+position = Vector3(11.0, 0.0, -13.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_3" parent="." instance=ExtResource("e10")]
+position = Vector3(19.0, 0.0, 0.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_4" parent="." instance=ExtResource("e10")]
+position = Vector3(7.0, 0.0, 45.5)
+scale = Vector3(1, 1, 1)
+
+[node name="grain_5" parent="." instance=ExtResource("e10")]
+position = Vector3(13.0, 0.0, 25.5)
+scale = Vector3(1, 1, 1)
+
+[node name="plastic_crates_0" parent="." instance=ExtResource("e3")]
+position = Vector3(17.0, 0.0, 55.5)
+scale = Vector3(1, 1.3, 1)
+
+[node name="plastic_crates_1" parent="." instance=ExtResource("e3")]
+position = Vector3(17.0, 0.0, 35.5)
+scale = Vector3(1, 1.3, 1)
+
+[node name="plastic_crates_2" parent="." instance=ExtResource("e3")]
+position = Vector3(17.0, 0.0, 19.5)
+scale = Vector3(1, 1.3, 1)
+
+[node name="scale_counter" type="StaticBody3D" parent="." groups=["navigation_obstacle"]]
+position = Vector3(-4.0, 0.6, 12.5)
+collision_layer = 1
+collision_mask = 7
+
+[node name="mesh" type="MeshInstance3D" parent="scale_counter"]
+position = Vector3(0, 0, 0)
+mesh = SubResource("r44")
+
+[node name="collision" type="CollisionShape3D" parent="scale_counter"]
+shape = SubResource("r45")
+
+[node name="market_scale" type="MeshInstance3D" parent="."]
+position = Vector3(-4.0, 1.5, 12.5)
+mesh = SubResource("r47")
+
+
+
+[node name="diablito_02" parent="." instance=ExtResource("e13")]
+position = Vector3(19.0, 0.0, -9.5)
+
+
+[node name="maintenance_broom" parent="." instance=ExtResource("broom")]
+position = Vector3(23.3, 0, 12.5)

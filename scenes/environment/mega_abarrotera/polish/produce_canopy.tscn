@@ -1,0 +1,204 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/market_canopy.gd" id="caption"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="m0"]
+albedo_color = Color(0.396078431372549, 0.48627450980392156, 0.4, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b0"]
+size = Vector3(0.03500, 5.50000, 0.03500)
+material = SubResource("m0")
+
+[sub_resource type="StandardMaterial3D" id="m1"]
+albedo_color = Color(0.5098039215686274, 0.32941176470588235, 0.19607843137254902, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b1"]
+size = Vector3(6.40000, 0.28000, 4.90000)
+material = SubResource("m1")
+
+[sub_resource type="StandardMaterial3D" id="m2"]
+albedo_color = Color(1.0, 0.9411764705882353, 0.807843137254902, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b2"]
+size = Vector3(0.53000, 0.10000, 5.10000)
+material = SubResource("m2")
+
+[sub_resource type="StandardMaterial3D" id="m3"]
+albedo_color = Color(1.0, 0.9411764705882353, 0.807843137254902, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b3"]
+size = Vector3(0.53000, 0.48000, 0.08000)
+material = SubResource("m3")
+
+[sub_resource type="StandardMaterial3D" id="m4"]
+albedo_color = Color(0.9058823529411765, 0.7137254901960784, 0.30980392156862746, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b4"]
+size = Vector3(0.53000, 0.10000, 5.10000)
+material = SubResource("m4")
+
+[sub_resource type="StandardMaterial3D" id="m5"]
+albedo_color = Color(0.9058823529411765, 0.7137254901960784, 0.30980392156862746, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b5"]
+size = Vector3(0.53000, 0.48000, 0.08000)
+material = SubResource("m5")
+
+[sub_resource type="StandardMaterial3D" id="m6"]
+albedo_color = Color(0.7254901960784313, 0.5529411764705883, 0.3058823529411765, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b6"]
+size = Vector3(4.98000, 0.80000, 0.16000)
+material = SubResource("m6")
+
+[sub_resource type="StandardMaterial3D" id="m7"]
+albedo_color = Color(0.25882352941176473, 0.41568627450980394, 0.27450980392156865, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b7"]
+size = Vector3(4.80000, 0.62000, 0.06000)
+material = SubResource("m7")
+
+[node name="produce_canopy" type="Node3D"]
+script = ExtResource("caption")
+
+[node name="cable_-2.7" type="MeshInstance3D" parent="."]
+position = Vector3(-2.70000, 7.20000, 0.00000)
+mesh = SubResource("b0")
+
+[node name="cable_2.7" type="MeshInstance3D" parent="."]
+position = Vector3(2.70000, 7.20000, 0.00000)
+mesh = SubResource("b0")
+
+[node name="timber_header" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 4.45000, 0.00000)
+mesh = SubResource("b1")
+
+[node name="canvas_0" type="MeshInstance3D" parent="."]
+position = Vector3(-2.93000, 4.64000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="valance_0" type="MeshInstance3D" parent="."]
+position = Vector3(-2.93000, 4.35000, 2.54000)
+mesh = SubResource("b3")
+
+[node name="canvas_1" type="MeshInstance3D" parent="."]
+position = Vector3(-2.39700, 4.64000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="valance_1" type="MeshInstance3D" parent="."]
+position = Vector3(-2.39700, 4.35000, 2.54000)
+mesh = SubResource("b5")
+
+[node name="canvas_2" type="MeshInstance3D" parent="."]
+position = Vector3(-1.86400, 4.64000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="valance_2" type="MeshInstance3D" parent="."]
+position = Vector3(-1.86400, 4.35000, 2.54000)
+mesh = SubResource("b3")
+
+[node name="canvas_3" type="MeshInstance3D" parent="."]
+position = Vector3(-1.33100, 4.64000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="valance_3" type="MeshInstance3D" parent="."]
+position = Vector3(-1.33100, 4.35000, 2.54000)
+mesh = SubResource("b5")
+
+[node name="canvas_4" type="MeshInstance3D" parent="."]
+position = Vector3(-0.79800, 4.64000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="valance_4" type="MeshInstance3D" parent="."]
+position = Vector3(-0.79800, 4.35000, 2.54000)
+mesh = SubResource("b3")
+
+[node name="canvas_5" type="MeshInstance3D" parent="."]
+position = Vector3(-0.26500, 4.64000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="valance_5" type="MeshInstance3D" parent="."]
+position = Vector3(-0.26500, 4.35000, 2.54000)
+mesh = SubResource("b5")
+
+[node name="canvas_6" type="MeshInstance3D" parent="."]
+position = Vector3(0.26800, 4.64000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="valance_6" type="MeshInstance3D" parent="."]
+position = Vector3(0.26800, 4.35000, 2.54000)
+mesh = SubResource("b3")
+
+[node name="canvas_7" type="MeshInstance3D" parent="."]
+position = Vector3(0.80100, 4.64000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="valance_7" type="MeshInstance3D" parent="."]
+position = Vector3(0.80100, 4.35000, 2.54000)
+mesh = SubResource("b5")
+
+[node name="canvas_8" type="MeshInstance3D" parent="."]
+position = Vector3(1.33400, 4.64000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="valance_8" type="MeshInstance3D" parent="."]
+position = Vector3(1.33400, 4.35000, 2.54000)
+mesh = SubResource("b3")
+
+[node name="canvas_9" type="MeshInstance3D" parent="."]
+position = Vector3(1.86700, 4.64000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="valance_9" type="MeshInstance3D" parent="."]
+position = Vector3(1.86700, 4.35000, 2.54000)
+mesh = SubResource("b5")
+
+[node name="canvas_10" type="MeshInstance3D" parent="."]
+position = Vector3(2.40000, 4.64000, 0.00000)
+mesh = SubResource("b2")
+
+[node name="valance_10" type="MeshInstance3D" parent="."]
+position = Vector3(2.40000, 4.35000, 2.54000)
+mesh = SubResource("b3")
+
+[node name="canvas_11" type="MeshInstance3D" parent="."]
+position = Vector3(2.93300, 4.64000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="valance_11" type="MeshInstance3D" parent="."]
+position = Vector3(2.93300, 4.35000, 2.54000)
+mesh = SubResource("b5")
+
+[node name="market_card" type="Node3D" parent="."]
+position = Vector3(0.00000, 4.10000, 2.62000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+
+
+[node name="frame" type="MeshInstance3D" parent="market_card"]
+position = Vector3(0.00000, 0.00000, -0.06000)
+mesh = SubResource("b6")
+
+[node name="paint" type="MeshInstance3D" parent="market_card"]
+position = Vector3(0.00000, 0.00000, 0.03500)
+mesh = SubResource("b7")
+
+[node name="lettering" type="Label3D" parent="market_card"]
+position = Vector3(0.00000, 0.00000, 0.08000)
+rotation = Vector3(0.00000, 0.00000, 0.00000)
+text = "DEL CAMPO A TU MESA"
+font_size = 56
+pixel_size = 0.006401
+outline_size = 0
+modulate = Color(1.0, 0.9450980392156862, 0.8196078431372549, 1)
+no_depth_test = false
+double_sided = false

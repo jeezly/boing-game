@@ -1,0 +1,191 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/environment/mega_abarrotera/static_fixture_batch.gd" id="batch"]
+
+
+
+[sub_resource type="StandardMaterial3D" id="m0"]
+albedo_color = Color(0.20784313725490197, 0.37254901960784315, 0.3607843137254902, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b0"]
+size = Vector3(22.00000, 0.24000, 0.24000)
+material = SubResource("m0")
+
+[sub_resource type="StandardMaterial3D" id="m1"]
+albedo_color = Color(0.20784313725490197, 0.37254901960784315, 0.3607843137254902, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b1"]
+size = Vector3(22.00000, 0.16000, 0.16000)
+material = SubResource("m1")
+
+[sub_resource type="StandardMaterial3D" id="m2"]
+albedo_color = Color(0.3843137254901961, 0.5058823529411764, 0.47843137254901963, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b2"]
+size = Vector3(2.90000, 0.09000, 0.09000)
+material = SubResource("m2")
+
+[sub_resource type="StandardMaterial3D" id="m3"]
+albedo_color = Color(0.5058823529411764, 0.596078431372549, 0.5490196078431373, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b3"]
+size = Vector3(0.14000, 0.18000, 11.20000)
+material = SubResource("m3")
+
+[sub_resource type="StandardMaterial3D" id="m4"]
+albedo_color = Color(0.19215686274509805, 0.33725490196078434, 0.3176470588235294, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b4"]
+size = Vector3(6.40000, 0.20000, 0.75000)
+material = SubResource("m4")
+
+[sub_resource type="StandardMaterial3D" id="m5"]
+albedo_color = Color(1.0, 0.9490196078431372, 0.803921568627451, 1)
+roughness = 0.78
+emission_enabled = true
+emission = Color(1.0, 0.9490196078431372, 0.803921568627451, 1)
+emission_energy_multiplier = 0.55
+
+[sub_resource type="BoxMesh" id="b5"]
+size = Vector3(6.00000, 0.05500, 0.58000)
+material = SubResource("m5")
+
+[sub_resource type="StandardMaterial3D" id="m6"]
+albedo_color = Color(0.32941176470588235, 0.44313725490196076, 0.41568627450980394, 1)
+roughness = 0.78
+
+[sub_resource type="BoxMesh" id="b6"]
+size = Vector3(0.03500, 1.80000, 0.03500)
+material = SubResource("m6")
+
+[node name="ceiling_bay" type="Node3D"]
+script = ExtResource("batch")
+
+[node name="steel_chord_-5.5" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 14.55000, -5.50000)
+mesh = SubResource("b0")
+
+[node name="upper_chord_-5.5" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 15.45000, -5.50000)
+mesh = SubResource("b1")
+
+[node name="web_-5.5_0" type="MeshInstance3D" parent="."]
+position = Vector3(-9.62500, 15.00000, -5.50000)
+rotation = Vector3(0.00000, 0.00000, 0.32000)
+mesh = SubResource("b2")
+
+[node name="web_-5.5_1" type="MeshInstance3D" parent="."]
+position = Vector3(-6.87500, 15.00000, -5.50000)
+rotation = Vector3(0.00000, 0.00000, -0.32000)
+mesh = SubResource("b2")
+
+[node name="web_-5.5_2" type="MeshInstance3D" parent="."]
+position = Vector3(-4.12500, 15.00000, -5.50000)
+rotation = Vector3(0.00000, 0.00000, 0.32000)
+mesh = SubResource("b2")
+
+[node name="web_-5.5_3" type="MeshInstance3D" parent="."]
+position = Vector3(-1.37500, 15.00000, -5.50000)
+rotation = Vector3(0.00000, 0.00000, -0.32000)
+mesh = SubResource("b2")
+
+[node name="web_-5.5_4" type="MeshInstance3D" parent="."]
+position = Vector3(1.37500, 15.00000, -5.50000)
+rotation = Vector3(0.00000, 0.00000, 0.32000)
+mesh = SubResource("b2")
+
+[node name="web_-5.5_5" type="MeshInstance3D" parent="."]
+position = Vector3(4.12500, 15.00000, -5.50000)
+rotation = Vector3(0.00000, 0.00000, -0.32000)
+mesh = SubResource("b2")
+
+[node name="web_-5.5_6" type="MeshInstance3D" parent="."]
+position = Vector3(6.87500, 15.00000, -5.50000)
+rotation = Vector3(0.00000, 0.00000, 0.32000)
+mesh = SubResource("b2")
+
+[node name="web_-5.5_7" type="MeshInstance3D" parent="."]
+position = Vector3(9.62500, 15.00000, -5.50000)
+rotation = Vector3(0.00000, 0.00000, -0.32000)
+mesh = SubResource("b2")
+
+[node name="steel_chord_5.5" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 14.55000, 5.50000)
+mesh = SubResource("b0")
+
+[node name="upper_chord_5.5" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 15.45000, 5.50000)
+mesh = SubResource("b1")
+
+[node name="web_5.5_0" type="MeshInstance3D" parent="."]
+position = Vector3(-9.62500, 15.00000, 5.50000)
+rotation = Vector3(0.00000, 0.00000, 0.32000)
+mesh = SubResource("b2")
+
+[node name="web_5.5_1" type="MeshInstance3D" parent="."]
+position = Vector3(-6.87500, 15.00000, 5.50000)
+rotation = Vector3(0.00000, 0.00000, -0.32000)
+mesh = SubResource("b2")
+
+[node name="web_5.5_2" type="MeshInstance3D" parent="."]
+position = Vector3(-4.12500, 15.00000, 5.50000)
+rotation = Vector3(0.00000, 0.00000, 0.32000)
+mesh = SubResource("b2")
+
+[node name="web_5.5_3" type="MeshInstance3D" parent="."]
+position = Vector3(-1.37500, 15.00000, 5.50000)
+rotation = Vector3(0.00000, 0.00000, -0.32000)
+mesh = SubResource("b2")
+
+[node name="web_5.5_4" type="MeshInstance3D" parent="."]
+position = Vector3(1.37500, 15.00000, 5.50000)
+rotation = Vector3(0.00000, 0.00000, 0.32000)
+mesh = SubResource("b2")
+
+[node name="web_5.5_5" type="MeshInstance3D" parent="."]
+position = Vector3(4.12500, 15.00000, 5.50000)
+rotation = Vector3(0.00000, 0.00000, -0.32000)
+mesh = SubResource("b2")
+
+[node name="web_5.5_6" type="MeshInstance3D" parent="."]
+position = Vector3(6.87500, 15.00000, 5.50000)
+rotation = Vector3(0.00000, 0.00000, 0.32000)
+mesh = SubResource("b2")
+
+[node name="web_5.5_7" type="MeshInstance3D" parent="."]
+position = Vector3(9.62500, 15.00000, 5.50000)
+rotation = Vector3(0.00000, 0.00000, -0.32000)
+mesh = SubResource("b2")
+
+[node name="purlin_-9" type="MeshInstance3D" parent="."]
+position = Vector3(-9.00000, 15.65000, 0.00000)
+mesh = SubResource("b3")
+
+[node name="purlin_0" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 15.65000, 0.00000)
+mesh = SubResource("b3")
+
+[node name="purlin_9" type="MeshInstance3D" parent="."]
+position = Vector3(9.00000, 15.65000, 0.00000)
+mesh = SubResource("b3")
+
+[node name="luminaire" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 13.50000, 0.00000)
+mesh = SubResource("b4")
+
+[node name="diffuser" type="MeshInstance3D" parent="."]
+position = Vector3(0.00000, 13.38000, 0.00000)
+mesh = SubResource("b5")
+
+[node name="suspension_-2.5" type="MeshInstance3D" parent="."]
+position = Vector3(-2.50000, 14.50000, 0.00000)
+mesh = SubResource("b6")
+
+[node name="suspension_2.5" type="MeshInstance3D" parent="."]
+position = Vector3(2.50000, 14.50000, 0.00000)
+mesh = SubResource("b6")

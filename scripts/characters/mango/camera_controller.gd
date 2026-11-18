@@ -9,6 +9,17 @@ signal camera_mode_changed(mode_name: String)
 @onready var third_camera: Camera3D = $PitchPivot/ThirdPersonArm/ThirdPersonCamera
 @onready var mango: Node3D = $"../mango_visual"
 var third_person: bool = false
+var sway_clock: float = 0.0
+
+func _process(delta: float) -> void:
+	if get_tree().paused: return
+	sway_clock += delta
+	var powers := get_parent().get_node_or_null("power_state")
+	var drunk: bool = powers != null and powers.active(&"happy") and get_parent().hp > 0
+	var roll := sin(sway_clock * 1.8) * 0.018 + sin(sway_clock * 3.7) * 0.006 if drunk else 0.0
+	for camera in [first_camera, third_camera]:
+		camera.rotation.z = lerpf(camera.rotation.z, roll, 1.0 - exp(-delta * 5.0))
+		camera.h_offset = lerpf(camera.h_offset, sin(sway_clock * 1.3) * 0.018 if drunk else 0.0, 1.0 - exp(-delta * 5.0))
 
 func _ready() -> void:
 	spring_arm.add_excluded_object((get_parent() as CollisionObject3D).get_rid())

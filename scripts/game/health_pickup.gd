@@ -1,5 +1,5 @@
 extends Area3D
-## Temporary authored survival supply; no inventory or drop system.
+## Authored first-aid supply using production presentation and safe healing rules.
 signal collected(player: Node3D, restored_hp: float)
 @export_range(1.0, 100.0) var healing: float = 30.0
 @onready var visual: Node3D = $visual
@@ -7,6 +7,8 @@ var clock: float = 0.0
 var used: bool = false
 
 func _ready() -> void:
+	for child in visual.get_children(): child.hide()
+	load("res://scripts/game/production/prop_factory.gd").pickup(visual, &"health")
 	body_entered.connect(_on_body_entered)
 
 func _process(delta: float) -> void:
@@ -28,6 +30,8 @@ func _on_body_entered(body: Node3D) -> void:
 	set_deferred("monitoring", false)
 	visual.hide()
 	collected.emit(body, restored)
+	load("res://scripts/game/production/pickup_burst.gd").spawn(get_tree().current_scene, global_position + Vector3.UP * 0.7, Color("ff4564"), true)
+	if body.has_node("power_state"): body.get_node("power_state").feedback.emit(&"pickup", "health")
 	queue_free()
 
 func _physics_process(_delta: float) -> void:

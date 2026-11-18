@@ -1,0 +1,20 @@
+Godot Engine v4.7.2.stable.mono.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 566.36 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce GTX 1650 with Max-Q Design
+
+EVIDENCE 01_gameplay_general
+EVIDENCE 02_evento_zona_caliente
+EVIDENCE 03a_comportamiento_pepsin
+EVIDENCE 03b_comportamiento_polar
+EVIDENCE 04a_transaccion_tienda
+EVIDENCE 04b_transaccion_compra
+EVIDENCE 05a_accion_disparo
+MELEE_SUCCESS true enemy hp 43.0
+EVIDENCE 05b_accion_melee
+EVIDENCE 06_colisiones
+EVIDENCE 07_puntaje_creditos_bajas
+EVIDENCE 08_vidas_respawn
+EVIDENCE 09_objetos_especiales
+EVIDENCE 09b_powerup_activo
+EVIDENCE 10_resultado_victoria
+EVIDENCE 10b_resultado_derrota
+ACADEMIC_EVIDENCE_COMPLETE

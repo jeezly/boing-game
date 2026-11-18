@@ -4,9 +4,11 @@ extends Node3D
 const Build = preload("res://scripts/environment/la_abarrotera/store_builder.gd")
 const B = preload("res://scripts/components/visual_mesh_builder.gd")
 const Batch = preload("res://scripts/components/visual_batcher.gd")
+static var contact_material: ShaderMaterial
 @export_enum("checkout", "produce", "sacks", "fridge", "shelf") var kind: String = "checkout"
 
 func _ready() -> void:
+	_contact_shadow()
 	match kind:
 		"checkout": _checkout()
 		"produce": _produce()
@@ -14,6 +16,20 @@ func _ready() -> void:
 		"fridge": _fridge()
 		"shelf": _shelf()
 	Batch.merge_children(self, "beta_fixture_" + kind + (String(get_parent().name) if kind == "shelf" else ""))
+
+func _contact_shadow() -> void:
+	if contact_material == null:
+		contact_material = ShaderMaterial.new()
+		contact_material.shader = preload("res://resources/environment/contact_shadow.gdshader")
+	var plane := PlaneMesh.new()
+	plane.size = {"checkout":Vector2(4.7,6.6),"produce":Vector2(4.5,5.5),"sacks":Vector2(2.5,2.5),"fridge":Vector2(3.0,16.5),"shelf":Vector2(2.8,16.5)}[kind]
+	var shadow := MeshInstance3D.new()
+	shadow.name = "fixture_contact"
+	shadow.mesh = plane
+	shadow.material_override = contact_material
+	shadow.position.y = 0.018
+	shadow.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	add_child(shadow)
 
 func sign_board(text: String, at: Vector3, size: Vector2, color: String = "28584e", yaw: float = 0.0) -> void:
 	var holder := Node3D.new()
@@ -43,8 +59,7 @@ func _checkout() -> void:
 	Build.box(self, Vector3(-1.2, 1.35, 2.82), Vector3(0.045, 0.40, 0.045), Build.mat("795632"), "offer_stand")
 
 func _produce() -> void:
-	sign_board("FRESCO DEL MERCADO\nLLEVE LO DE TEMPORADA", Vector3(0, 1.65, 2.56), Vector2(2.5, 0.55), "795632")
-	Build.box(self, Vector3(0, 1.35, 2.53), Vector3(0.055, 0.80, 0.055), Build.mat("795632"), "offer_stake")
+	preload("res://scripts/environment/mega_abarrotera/market_goods.gd").produce(self)
 	# Slats and corner hardware make the existing bins read as market huacales.
 	for y in [0.24, 0.52, 0.80]:
 		Build.box(self, Vector3(0, y, 2.53), Vector3(3.95, 0.16, 0.07), Build.mat("b88a4e"), "crate_slat")
@@ -52,6 +67,7 @@ func _produce() -> void:
 		Build.box(self, Vector3(x, 0.55, 2.58), Vector3(0.09, 0.85, 0.045), Build.mat("6e583a"), "crate_corner")
 
 func _sacks() -> void:
+	preload("res://scripts/environment/mega_abarrotera/market_goods.gd").grain(self)
 	for x in [-0.53, 0.53]:
 		Build.box(self, Vector3(x, 0.60, 1.01), Vector3(0.33, 0.28, 0.02), Build.mat("87633e"), "sack_stamp")
 		B.rod(self, "sack_stitch", Vector3(x, 0.20, 0.995), Vector3(x, 0.85, 0.94), 0.008, Build.mat("c9b185"))

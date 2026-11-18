@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="" format=3]
+[ext_resource type="Script" path="res://scripts/weapons/weapon_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"chancla"
+display_name = "Chancla de la Jefa"
+pro_name = "Chancla de la Abuela"
+description = "Búmeran: golpea al salir y al regresar."
+damage = 35.0
+pro_damage = 65.0
+cooldown = 0.78
+speed = 21.0
+reach = 21.0
+radius = 0.6
+max_ammo = -1
+price = 500
+upgrade_price = 1000
+available = true
+
+behavior = &"boomerang"
+presentation_key = &"chancla"

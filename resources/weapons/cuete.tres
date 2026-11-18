@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="" format=3]
+[ext_resource type="Script" path="res://scripts/weapons/weapon_definition.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"cuete"
+display_name = "Cuete de Feria"
+pro_name = "Komodo 3000"
+description = "Pirotecnia de feria de largo alcance."
+damage = 120.0
+pro_damage = 220.0
+cooldown = 1.65
+speed = 24.0
+reach = 80.0
+radius = 4
+max_ammo = 3
+price = 700
+upgrade_price = 1500
+available = true
+
+behavior = &"straight_explosive"
+presentation_key = &"cuete"

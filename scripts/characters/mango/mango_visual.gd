@@ -108,6 +108,10 @@ func on_fired() -> void:
 	firing_time = 0.3
 	reactions.fire()
 
+func pose_melee(progress: float) -> void:
+	var extension := sin(clampf(progress, 0.0, 1.0) * PI)
+	_pose_arm(left_arm, Vector3(-0.35, 1.1, -0.38), Vector3(-0.14, 1.14, -0.45 - extension * 0.75), 1.0, true)
+
 func on_hit() -> void:
 	reactions.hit()
 

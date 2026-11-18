@@ -1,8 +1,11 @@
 [gd_scene format=3]
 
-[sub_resource type="StandardMaterial3D" id="r1"]
-albedo_color = Color(0.78039,0.63922,0.42745,1)
-roughness = 0.8
+[ext_resource type="Shader" path="res://resources/environment/store_materials.gdshader" id="surface_finish"]
+
+[sub_resource type="ShaderMaterial" id="r1"]
+shader = ExtResource("surface_finish")
+shader_parameter/base_color = Color(0.78039,0.63922,0.42745,1)
+shader_parameter/material_kind = 0
 
 [sub_resource type="BoxMesh" id="r2"]
 size = Vector3(3, 1.65, 3)
